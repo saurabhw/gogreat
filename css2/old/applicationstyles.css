@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#headerTop{
+	background: no-repeat;
+	background-position: right top;
+	width: 1024px;
+	height: 130px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	z-index: 3;
+}
+
+form#login label{
+	float: none;
+	}
+form#login input[type=text]{
+	margin-left: 10px;
+	}
+form#login input[type=password]{
+	margin-left: 31px;
+	}
+	
+body{
+	margin: 0;
+	padding: 0;	
+}
+h1,h2,h3,h4,h5,h6,p,ul,label,input, table{
+	font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+	width: 1024px;
+	margin: 0 auto;
+	padding: 0;
+}
+#content{
+	width: 858px;
+	margin: 0px 0 50px 0;
+	padding: 0px 0px 50px 0px;
+	float: left;
+	position: relative;
+	top: -50px;
+}
+#clear{
+	clear: left;
+}
+#column1{
+	left: 0;
+	width: 404px;
+	float: left;
+}
+#column2{
+	left: 50%;
+	width: 404px;
+	margin-left: 50px;
+	float: left;
+}
+	
+form.application{
+	width: 858px;
+	background-color: #ccc;
+	margin: 4px 5px;
+	padding: 4px 5px;
+	line-height: 90%;
+}
+br{
+	line-height: 90%;
+}
+
+form.application label{
+	display: inline-block;
+	width: 200px; 
+	float: left; 
+	margin: 4px 5px;
+	padding: 4px 5px;
+}
+form.application span{
+	display: inline-block; 
+	width: 858px;
+	float: left;
+	margin: 0px; 
+	padding: 0px 4px;
+	font-size: .9em;
+}
+form.application select{
+	display: inline-block;
+	border: 1px solid #666;
+	margin: 0; 
+	padding: 0px;
+
+}
+form.application input{
+	display: inline-block;
+	border: 1px solid #666;
+	margin: 0 5px; 
+	padding: 4px;
+}
+
+form.application label#FName{width: 100px; height: 12px; font-size: .8em;}
+input[type=text]#FName{width: 100px; height: 12px; font-size: .8em;}
+form.application label#MName{width: 80px; height: 12px; font-size: .8em;}
+input[type=text]#MName{width: 80px; height: 12px; font-size: .8em;}
+form.application label#LName{width: 125px; height: 12px; font-size: .8em;}
+input[type=text]#LName{width: 125px; height: 12px; font-size: .8em;}
+
+form.application  label#address1, label#address2{width: 162px; height: 12px; font-size: .8em;}
+form.application input[type=text]#address1, input[type=text]#address2{width: 162px; height: 12px; font-size: .8em;}
+form.application label#city{width: 120px; height: 12px; font-size: .8em;}
+input[type=text]#city{width: 120px; height: 12px; font-size: .8em;}
+form.application label#state{width: 25px; height: 12px; font-size: .8em;}
+input[type=text]#state{width: 25px; height: 12px; font-size: .8em;}
+form.application label#zip{width: 78px; height: 12px; font-size: .8em;}
+input[type=text]#zip{width: 78px; height: 12px; font-size: .8em;}
+
+form.application label#homephone{width: 90px; height: 12px; font-size: .8em;}
+input[type=text]#homephone{width: 90px; height: 12px; font-size: .8em;}
+form.application label#cellphone{width: 90px; height: 12px; font-size: .8em;}
+input[type=text]#cellphone{width: 90px; height: 12px; font-size: .8em;}
+form.application label#workphone{width: 90px; height: 12px; font-size: .8em;}
+input[type=text]#workphone{width: 90px; height: 12px; font-size: .8em;}
+form.application label#extphone{width: 45px; height: 12px; font-size: .8em;}
+input[type=text]#extphone{width: 38px; height: 12px; font-size: .8em;}
+
+form.application label#email{width: 250px; height: 22px; font-size: .8em;}
+input[type=text]#email{width: 250px; height: 22px; font-size: .8em;}
+
+form.application label#username{width: 200px; height: 12px; font-size: .8em;}
+input[type=text]#username{width: 200px; height: 12px; font-size: .8em;}
+
+form.application label#loginPass, #confirmPass {width: 155px; height: 12px;}
+form.application input[type=text]#loginPass, input[type=password]#confirmPass{
+	border: thin solid #666;
+	height: 12px;
+	width: 150px
+}
+
+form input[type=submit]{
+	border: thin solid #666;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+	}
+form input[type=reset]{
+	border:thin solid #666;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+	}
+form.application label#fundtype{width: 110px; height: 12px font-size: .8em;}
+form.application select#fundtype, span#fundtype{
+	width: 110px;
+	height: 22px;
+	font-size: .8em;
+	margin: 1px;
+	padding: 0px;
+}
+form.application label#groupname{width: 150px; height: 12px; font-size: .8em;}
+input[type=text]#groupname{width: 150px; height: 12px; font-size: .8em;}
+form.application label#websiteURL{width: 200px; height: 12px; font-size: .8em;}
+input[type=text]#websiteURL{width: 200px; height: 12px; font-size: .8em;}
+form.application label#stateD{width: 90px; height: 12px; font-size: .8em;}
+input[type=text]#stateD, span#stateD{
+	width: 90px;
+	height: 22px;
+	font-size: .8em;
+	margin: 1px;
+	padding: 0px;
+}
+form.application label#allclubs{width: 60px; height: 12px; font-size: .8em; padding: 5px;}
+input[type=checkbox]#allclubs{width: 60px; height: 12px; font-size: .8em; padding: 5px;}
+
+form.application #comment{
+	width: 600px;
+	height: 150px;
+	margin: 5px 5px 0px 5px;
+	padding: 0;
+	float: left;
+}
+
+#tableWrapper{
+	float:left;
+	width:858px;
+	position:relative;
+	top:0px;
+	margin: 0px;
+	padding: 0px;
+	}
+#tableWrapper h3{
+	padding: 20px 20px 10px 0;
+	}
+th, td {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 100%;
+	font-weight: normal;
+	}
+th {
+	vertical-align: bottom;
+	}
+table{
+	width: 857px;
+	clear: left;
+}
+
+.tableHeader{
+	clear: both;
+	width: 100%;}
+
+table.calculatorTable{
+	float:left;
+	clear: both;
+	margin:0;
+	border-radius:7px;
+	width: 857px;
+	margin-bottom: 10px;
+	}
+
+table.calculatorTable th{
+	background-color:#cc0000;
+	color:#fff;
+	font-weight:lighter;
+	padding:3px 3px 5px 5px;
+	text-align: center;
+	}
+	
+table.calculatorTable th:first-child {
+	-moz-border-radius: 7px 0 0 0;
+	-webkit-border-radius: 7px 0 0 0;
+	border-radius: 7px 0 0 0;
+	font-size: 16px;
+	text-align: left;
+}
+
+th:last-child {
+    -moz-border-radius: 0 7px 0 0;
+    -webkit-border-radius: 0 7px 0 0;
+    border-radius: 0 7px 0 0;
+}
+
+th:only-child{
+    -moz-border-radius: 7px 7px 0 0;
+    -webkit-border-radius: 7px 7px 0 0;
+    border-radius: 7px 7px 0 0;
+}
+
+table.calculatorTable td{
+	padding:0;
+	text-align:center;
+	background-color:#ccc;
+	border:thin solid #ccc
+	}
+.calcCategoryHead {
+	
+	}
+table.calculatorTable td.fl {text-align: left; }
+table.calculatorTable td:first-child{padding: 10px; }
+table.calculatorTable td.{padding-left: 20px; }
+
+#redBar2{
+	width:100%;
+	margin: 0;
+	padding: 5px 0px;
+	background-color: #cc0000;
+	-moz-border-radius: 7px;
+    	-webkit-border-radius: 7px;
+    	border-radius: 7px;
+}
+#redBar2 p{
+	padding-top: 16px;
+	float:left;
+	color:#fff;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+#redBar2 .gTotal {
+	font-size: 1.2em;
+	width: 750px;
+	padding: 10px 0 10px 10px;
+	float:left;
+	color:#fff;
+	-moz-border-radius: 7px;
+    	-webkit-border-radius: 7px;
+    	border-radius: 7px;
+}
+	
+.gTotal1  {
+	font-size: 1.2em;
+	width: 20px;
+	padding: 10px 3px 10px 10px;
+	margin: 5px;
+	color:#fff;
+}
+.grandTotal {
+	width: 80px;
+	padding: 0px 5px 10px 0;
+	margin: -10px;
+}
+	
+input[type=text]#red{
+	float:right;
+	margin:10px 15px 0 0;
+}
+.hide{
+   visibility: hidden;
+}	
+
+#space{line-height: 5px}
+
+form.application #finish input[type=submit]{
+	border: thin solid #666;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 3em;
+	background-color: #CC0000;
+	color: white;
+}

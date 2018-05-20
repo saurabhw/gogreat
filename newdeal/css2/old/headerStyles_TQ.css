@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* CSS Document */
+#headerMain{
+	width:1024px;
+	}
+#headerArc{
+	background-image: url(../images/GMheader_redbackground.png);
+	background-repeat:no-repeat;
+	left:0;
+	top:0;
+	position:relative;
+	z-index:4;
+	width:800px;
+	height:240px;
+	}
+#GMlogo{
+	position:absolute;
+	z-index:5;
+	margin:12px 0 0 20px;
+	padding:0;
+	overflow:hidden;
+	
+	}
+#basket{
+	position:absolute;
+	top:5px;
+	left:250px;
+	z-index:6;
+	}
+/*
+input#search[type=text]{
+	width:200px;
+	position:absolute;
+	top:170px;
+	left:400px;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+*/
+p.user{
+	float:right;
+	margin:0;
+	padding:0px 100px 0 0;
+	
+	}
+p.user a{
+	color:#fff;
+	text-decoration:none;
+	}
+p.user a:hover{
+	text-decoration:underline;
+	}
+input#user[type=text]{
+	width:120px;
+	z-index:8;
+/*	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;*/
+}
+input#password[type=password]{
+	width:120px;
+	z-index:8;
+/*	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;*/
+	}
+input[type=submit]{
+	background-color:#fff;
+	color:#cc0000;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	}
+form#log{
+	width:250px;
+	position:absolute;
+	top:120px;
+	left:-15px;
+	z-index:5;
+	padding:0;
+	margin:0 0 0 25px;
+	color:#fff;
+	}
+table{
+	width:300px;
+	
+	}
+label#search{
+	color:#cc0000;
+	}
+label#user{
+	width:70px;
+	color:#fff;
+	line-height:25px;
+	}
+label#password{
+	width:70px;
+	color:#fff;
+	line-height:25px;
+	
+	}
+#searchBar{
+	position:absolute;
+	top:180px;
+	left:450px;
+	
+	}
+span img{
+	padding-top:5px;
+	}
+a#register{
+	font-size:12px;
+	color:#fff;
+	}
+form.register{
+	color:#00a261;
+	}
+	/*navigation menu*/
+.main{
+	background-color:#cc0000;
+	width:100%;
+	padding:5px 0;
+	position:relative;
+	-webkit-box-shadow: 0px 5px 5px #555;
+	box-shadow: 0px 10px 10px  #555;
+	_top:120px;/* ie 7 and below */
+	}
+#main{
+	top:-130px;
+	position:relative;
+	zindex:5;
+	background-color:red;
+	}
+#log label{
+	display:inline-block;
+    }	

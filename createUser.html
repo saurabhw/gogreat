@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Create An account</title>	
+		<link rel="stylesheet" href="form.css">
+		<link rel="stylesheet" href="greatmoods.css">
+		<script>
+			function validate() {
+				var x = document.forms['userForm']['FName'].value;
+				if(x == null || x == "") {
+					alert("Please Enter your first name");
+					return false;
+				}
+				x = document.forms['userForm']['LName'].value;
+				if(x == null || x == "") {
+					alert("Pleaseenter your last name");
+					return false;
+				}
+				x = document.forms['userForm']['username'].value;
+				if(x == null || x == "") {
+					alert("Please ener your username");
+					return false;
+				}
+				x = document.forms['userForm']['password'].value;
+				if(x == null || x == "") {
+					alert("please enter your password");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="createUser.php" method="POST" name="userForm" onsubmit="return validate()">
+			<fieldset>
+				<legend>Create an account</legend>
+				<ol>
+					<li>
+						<label for="FName">First Name</label>
+						<input name="FName" id="FName" />
+					</li>
+					<li>
+						<label for="LName">Last Name</label>
+						<input name="LName" id="LName" />
+					</li>
+					<li>
+						<label for="username">Username</label>
+						<input name="username" id="username" />
+					</li>
+					<li>
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" />
+					</li>
+				</ol>
+			</fieldset>
+			<input type="submit" value="Create Account" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	font-family: "arial";
+}
+
+div#errorbox{
+	width: 80%;
+	background: #ccc;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -6.5%;
+	margin-bottom: 0;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	box-shadow: 5px 5px 5px #999;
+	-moz-box-shadow: 5px 5px 5px #999;
+	-webkit-box-shadow: 5px 5px 5px #999;
+}
+
+div#errorbox h1{
+	font-size: 5em;
+	text-align: center;
+	color: #666;
+	padding: 6% 1% 5% 1%;
+	margin: 1%;
+}
+
+div#errorbox h2{
+	font-size: 2.5em;
+	text-align: center;
+	color: black;
+	padding: 1% 0;
+	margin: 1%;
+}
+
+div#errorbox h3{
+	font-size: 1.5em;
+	text-align: center;
+	color: black;
+	margin: 0;
+	padding: 1% 0;
+	margin: 1%;
+}
+
+div#errorbox #sign{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 2%;
+}
+
+div#errorbox a:link    {color: #0033ff; text-decoration: none;}
+div#errorbox a:visited {color: #666699; text-decoration: none;}
+div#errorbox a:hover   {color: #ffffff; text-decoration: none;}
+div#errorbox a:active  {color: #0033ff; text-decoration: none;}

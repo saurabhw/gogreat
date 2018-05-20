@@ -1,0 +1,829 @@
+/* CSS Document */
+
+/*
+  NOTE!!! Any attributes that start with a # need to stay in place!
+  These are dirty fixes for everything that IE messes up, and only IE interprets them.
+  LEAVE THEM ALONE!
+  I spent a long time figuring out the best balance...
+*/
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	margin: 0;
+	color: #373737;
+	font-size:14px;
+	text-align: center;
+}
+
+div#maincontainer {
+  margin: 0 auto;
+  width: 1010px;
+  background-color: #fff;
+  text-align: left;
+}
+
+div#mainsection {
+	background-color: #fff;
+}
+
+div#banner {
+	width:1010px;
+	text-align: left;
+}
+
+div#banneraddress {
+	text-align: left;
+}
+
+#menu {
+	margin-left: 2px;
+	height: 52px;
+}
+
+.menuitem {
+	float: left;
+	height: 52px;
+}
+
+
+/* Start Left Navigation */
+
+#leftnav {
+	text-align: left;
+	margin-top: 2px;
+	margin-left: 2px;
+	width: 116px;
+	margin-right: 2px;
+	float: left;
+}
+
+/* FYI, the # sign is needed - only IE interprets it, and the marked entries are used for IE only */
+.leftnav1 {
+    display: table; 
+    height: 61px; 
+    #position: relative; 
+    overflow: hidden; 
+    width: 116px; 
+    background-image:url(/Images/Menu/leftmenu/gmsidenav_01.png); 
+    margin-bottom: 2px;
+}
+.leftnav2 {
+    #position: absolute; 
+    #top: 50%;
+    display: table-cell; 
+    vertical-align: middle;
+}
+.leftnav3 {
+     #position: relative; 
+     #top: -50%;
+     margin-left: 12px;
+     font-size: 9pt;
+     font-weight: bold;
+}
+
+/* End Left Navigation */
+
+
+
+#mainbox {  // has the border
+	display: block; 
+	width: 615px;
+	#width: 615px;
+	float:left; 
+	border-style: solid;
+	border-color: #999999;
+	border-width: 1px;
+	
+	margin-top: 2px;
+	margin-left: 17px;
+	margin-bottom: 15px;
+	padding-top: 20px;
+	padding-left: 21px;
+	padding-right: 21px;
+	padding-bottom: 21px;
+}
+
+#mainboxproduct {  // has the border
+	display: block; 
+	width: 873px;
+	height: 507px;
+	float:left; 
+	border:1px, #999999; 
+	
+	margin-top: 2px; 
+	margin-left: 17px;
+	padding: 15px 0px 15px 15px;
+}
+
+#mainboxnoborder {  // has no border
+	display: block; 
+	width: 648px;
+	float:left; 
+	margin-top: 2px;
+	margin-left: 17px;
+}
+
+#mainboxleft {
+	display: block; 
+	float: left; 
+	text-align: left; 
+	margin-left: 3px; 
+	margin-right: 4px; 
+	width: 350px; 
+//	padding: 15px;
+}
+
+#mainboxright {
+	display: block; 
+	float: left; 
+	text-align: left; 
+	width: 242px; 
+	padding-left: 15px;
+	#padding-left: 0px;
+//	padding-top: 15px; 
+	padding-right: 2px;
+}
+
+
+
+/* Start Sample Website Pages */
+
+#church {
+	background-image: url(/Images/bg/church_bg.jpg);
+	background-repeat: no-repeat;
+ 	display: block;
+	width: 613px;
+	#width: 613px;
+	position: relative;
+	float: left;
+	margin-top: 2px;
+	margin-left: 17px;
+	padding: 21px;
+}
+
+#elementaryschool {
+	background-image: url(/Images/bg/elementaryschool_bg.jpg);
+	background-repeat: no-repeat;
+ 	display: block;
+	width: 613px;
+	#width: 613px;
+	position: relative;
+	float: left;
+	margin-top: 2px;
+	margin-left: 17px;
+	padding: 21px;
+}
+
+#middleschool {
+	background-image: url(/Images/bg/middleschool_bg.jpg);
+	background-repeat: no-repeat;
+ 	display: block;
+	width: 613px;
+	#width: 613px;
+	position: relative;
+	float: left;
+	margin-top: 2px;
+	margin-left: 17px;
+	padding: 21px;
+}
+
+#highschool {
+	background-image: url(/Images/bg/highschool_bg.jpg);
+	background-repeat: no-repeat;
+ 	display: block;
+	width: 613px;
+	#width: 613px;
+	position: relative;
+	float: left;
+	margin-top: 2px;
+	margin-left: 17px;
+	padding: 21px;
+}
+
+#organization {
+	background-image: url(/Images/bg/organization_bg.jpg);
+	background-repeat: no-repeat;
+ 	display: block;
+	width: 613px;
+	#width: 613px;
+	position: relative;
+	float: left;
+	margin-top: 2px;
+	margin-left: 17px;
+	padding: 21px;
+}
+
+/* End Sample Website Pages */
+
+
+
+#rightmenu {
+	display: block;
+	width: 200px;
+	text-align: center;
+	float: left;
+	margin-top: 2px;
+	margin-left: 12px;
+	padding-top: 20px;
+}
+
+#footer {
+	margin: auto; 
+	clear: both; 
+	text-align: center; 
+	height: 114px; 
+	width: 1010px; 
+// background image and color defined via PHP code
+}
+
+#aboutdetail {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.piccaption {
+	font-size: 8pt;
+	color: #6E6E6E;
+}
+
+.aboutright {
+	padding-left: 10px;
+}
+
+
+#menu dl {
+float: left;
+}
+#menu dt {
+cursor: 4;
+border: 0px;
+margin: 0px;
+}
+#menu dd {
+position:absolute;
+display: none;
+border: 0px;
+width: 437px;
+height: 165px;
+text-indent: 10px;
+padding-top: 8px;
+padding-bottom: 12px;
+background-image:url(/Images/Menu/menubg.gif);
+empty-cells:show;
+}
+#menu li {
+text-align: left;
+border: 5px #FFCC33;
+font: Arial;
+font-size: 12px;
+font-weight:400;
+padding: 1px;
+display:block;
+cursor: 4;
+}
+#menu li a, #menu dt a {
+color: #333333;
+text-decoration: none;
+display: block;
+height: 100%;
+border: 0 none;
+cursor: 4;
+}
+#menu li a:hover, #menu li a:focus, #menu dt a:hover, #menu dt a:focus {
+color: blue;
+border: 1px;
+cursor:hand;
+}
+
+
+select {
+	font-size: 10px;
+	color:#666666;
+}
+
+
+ul.leftnav {
+  list-style-type: none;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+}
+ul.leftnav li.leftnav {
+  float: left;
+  border: 1px solid #333;
+  border-bottom: none;
+  margin: 0 5px;
+}
+ul.leftnav li.leftnav a:hover {
+	color: #FF66FF;
+	border-color:#FF66FF;
+	text-decoration: none;
+	background-image:url(/Images/Menu/leftmenu/gmsidenav_01.png)
+}
+ul.leftnav li.leftnav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  height: 1%;
+  color: #333333;
+  background-image:url(/Images/Menu/leftmenu/gmsidenav_01.png)
+}
+
+
+form {
+	margin: 0;
+	font-size: 12px;
+}
+.select{
+	font-size: 12px;
+	background-color:#F98EC6;
+}
+p, div {
+	font-size:13px;
+}
+a:link {
+	color: #004F90;
+	border-color: #004F90;
+	text-decoration:none;
+}
+a:visited {
+	color: #004F90;
+	border-color: #004F90;
+	text-decoration:none;
+}
+a:hover {
+	color: #000000;
+	border-color:#666666;
+	text-decoration: underline;
+}
+a:active {
+	border-color:#666666;
+	text-decoration: none;
+}
+
+a.leftnav:link {
+	color: #333333;
+	text-decoration: none;
+	display: block;
+
+}
+a.leftnav:visited {
+	color: #333333;
+	border-color: #333333;
+	text-decoration: none;
+	display: block;
+
+}
+a.leftnav:hover {
+	color: #993366;
+	border-color:#993366;
+	text-decoration: none;
+	display: block;
+
+}
+a.leftnav:active {
+	border-color:#993366;
+	text-decoration: none;
+	display: block;
+
+}
+
+hr.header {
+	border: 0px;
+  	color: #003316;
+	background-color: #003316;
+	height: 5px;
+}
+
+.bordered {
+padding: 2px;
+border: solid #C0C0C0 2px;
+/** uncomment for debugging **/
+color: #C0C0C0;
+background-color: white;
+}
+.sales_small {font-size:12px; }
+.quicklink { color: #FFFFFF; font-size:13px;}
+.notfound {font-size: 36px}
+.sales {font-size:14px; }
+.vendor {font-size: 16px }
+.right { color:#FFFFFF; }
+
+.style1 {
+	font-size: 16px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+.style2 {
+	font-size: 16px;
+	color: #F98EC6;
+}
+
+
+/** Body:Headers **/
+.style3 {
+	font-weight: bold;
+	color: #993366;
+	font-size: 26px;
+	margin: auto;
+}
+
+.style3.2{
+	justify: left;
+}
+
+/** Body:Titles **/
+.style7 {
+	font-weight: bold;
+	color: #993366;
+	font-size:22px;
+	text-decoration:underline;
+}
+
+/** Body:Numbers **/
+.style9 {
+	font-weight: bold;
+	color: #003316;
+	font-size:24px;}
+
+/** Body:Content **/
+.style10 {
+	color: #003316;
+	font-size:18px;}	
+
+/** Body:Box **/
+.style11 {
+	background-color: #fff;
+	border: 1px solid #993366;
+	margin: 0px 0px 0px 2px;
+	padding: 10px; 
+	width: 840px;}
+	
+/** Body:Box **/
+.style12 {
+	background-color: #fff;
+	border: 1px solid #993366;
+	margin: 0px 0px 0px 2px;
+	padding: 10px; 
+	width: 615px;}
+
+
+
+.style4 {
+	font-size: 17px
+}
+.style5 {
+	font-size: 22px
+}
+.style6 {
+	font-size: 20px
+}
+.style8 {
+	font-size: 14pt;
+	color: #00a2da;
+}
+.style95 {color: #FFFFFF}
+.style117 {
+	font-size: 12px;
+}
+.style119 {font-size: 12px}
+.style125 {font-size: 11px}
+.style140 {font-weight: bold;
+	color: #DB1E26;
+	font-size: 11px;
+}
+.style14 {font-size: 14px; }
+.style95 {color: #FFFFFF; }
+.style98 {font-weight: bold; font-size: 10px;}
+.style142 {
+	font-size: 15px;
+	font-weight: bold;
+}
+.style145 {
+	font-size: 12px;
+	text-decoration:none;
+}
+.style147 {font-size: 13px}
+.style150 {
+	font-size: 13px;
+}
+.style153 {
+	color: #999999;
+	font-size: 10px;
+}
+.style154 {
+	font-size: 25px;
+	font-weight: bold;
+	color: #00a2da;
+}
+.style160 {
+	font-size: 10px;
+	color: #999999;
+}
+.style147 {font-size: 13px
+}
+.style150 {	font-size: 14px;
+			color: #666666;
+}
+.style158 {	font-size: 30px;
+	color: #FF0000;
+}
+.style161 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 20px;
+	font-style: italic;
+}
+.style162 {
+	color: #333333;
+	font-weight: bold;
+}
+a.customstyle2:hover {
+	color:#923473;
+}
+a.customstyle3:hover {
+	color:#923473;
+	text-decoration:none;
+}
+.javastyle {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+.info {
+	text-align:left;
+	font-size:17px;
+	margin-left:20px;
+	margin-right:30px;
+}
+.prod-title {
+	font-size: 24px;
+	color: #F38EC6;
+	font-weight: bold;
+}
+.InStock {
+	font-size: 14px;
+	font-weight: bold;
+}
+.qty_sm {
+	text-align:center;
+	margin-right: 10px;
+	border:#333333 solid 1px;
+}
+.btn_sm {
+	background:#1e91d0;
+	color:#FFFFFF;
+	border:#333333 solid 1px;
+}
+.qty_lg {
+	text-align:center;
+	margin-right: 10px;
+	border:#333333 solid 1px;
+	height:40px;
+	font-size:20px;
+}
+.btn_lg {
+	background:#1e91d0;
+	color:#FFFFFF;
+	border:#333333 solid 1px;
+	width:130px;
+	height:40px;
+	font-size:20px;
+}
+.price {
+	color: #333333;
+	font-weight: bold;
+	font-size: 20px;
+	font-style: italic;
+	margin-right: 10px;
+	vertical-align:middle;
+}
+
+
+/* Start Lisa's Style Sheet */
+#mainboxtopnav {  /* this is for the pages of the top nav (Holidays, Friends & Family, etc.) */
+	display: block; 
+	width: 819px;
+	#width: 819px;
+	float:left; 
+	border: 1px solid #999999; 
+	margin-top: 2px;
+	margin-left: 17px;
+	padding: 21px;
+}
+.giftbasketordering { /* this is for the OLD left nav Gift Basket Ordering */
+	font-weight: bold;
+	color: #993366;
+	font-size:17px;
+}
+
+
+/* Start Sample Websites & About Page */
+.customstyle {
+	color: #923473;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.customstyle2 {
+	color: #923473;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.customstyle3 {
+	font-size: 1.3em;
+	font-weight: bold;
+	font-style: italic;
+}
+.customstyle4 {
+	margin: -2.5px;
+}
+.customheader {
+	font-weight: bold;
+	color: #993366;
+	font-size: 30px;
+	text-decoration: underline;
+}
+.imagestyle {
+	border: 7px solid white;
+	border-top: 0px;
+	border-right: 0px;
+}
+.imagestyle2 {
+	border-right: 7px solid white;
+}
+.buttonsize {
+	#width: 190px;
+}
+/* End Sample Websites & About Page */
+
+
+/* Start Login Screen */
+.salesrep {
+	margin-left: 15px;
+	padding: 0px;
+}
+.salesrep1 {
+	border-right: 1px solid black;
+	padding: 0px .5em 0px .5em;
+	text-align: center;
+}
+.salesrep2 {
+	padding: 0px .5em 0px .5em;
+	text-align: center;
+}
+.salesrep3 {
+	padding-left: 27px;
+}
+.salesrep3b {
+	padding-left: 54px;
+}
+.salesrep4 {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+.custombullets {
+	list-style-type: none;
+	margin-left: -40px;
+}
+.underlinefirmowner {
+	text-decoration: underline;
+	color: blue;
+}
+.underlinesalesrep {
+	text-decoration: underline;
+	color: red;
+}
+/* End Login Screen */
+
+
+/* Start Lavendar Navigation Bar */
+div#loginnav {
+			/* This portion is to center the loginnav */
+	float: left;
+	position: relative;
+	width: 100%;
+	background-color: #CCCCFF; /* this is the lavendar background color */
+	overflow: hidden;
+			/* Center the loginnav ends here */
+	margin-top: 10px;
+	font-size: .8em;
+}
+div#loginnav ul { /* this ensures the navigation is aligned correctly */
+	margin: 0px;
+	padding: 0px;
+			/* This portion is to center the loginnav */
+	clear: left;
+	float: left;
+	position: relative;
+	left: 50%;
+			/* Center the loginnav ends here */
+}
+div#loginnav li {
+	display: block;
+	float: left; /* this puts the <li> tags into one row */
+			/* This portion is to center the loginnav */
+	position: relative; /* IE needs relative in order to center the loginnav */
+	right: 50%;
+			/* Center the loginnav ends here */
+	list-style-type: none; /* this takes away the black bullet points */
+	border-right: 1px solid black; /* this adds a border "|" line on the right after a 5px padding */
+}
+div#loginnav li:first-child {
+	border-left: 1px solid black; /* this is needed to add the very first border on the left only */
+}
+* html div#loginnav ul { /* this is specifically for IE because IE doesn't read first-child elements */
+	border-left: 1px solid black;
+}
+div#loginnav a {
+	display: block;
+	color: black; /* this makes the links black */
+	padding: 0px 5px; /* this ensures the padding is clickable; only works if the text is a link */
+}
+div#loginnav a:hover {
+	color: #923473; /* this is the purple link hover */
+	background-color: #F0F0F0; /* this is the light gray background hover */
+}
+li.loginnavclicked { /* this simply differentiates what nav you are on */
+	cursor: default; /* this keeps the cursor an arrow instead of changing it to a text cursor */
+	color: #923473;
+	background-color: #F0F0F0;
+	text-decoration: underline;
+	padding: 0px 5px; /* this is needed because the clickable padding up above doesn't work on plain text */
+}
+.clearfix {
+	clear: both;
+}
+/* End Lavendar Navigation Bar */
+
+
+/* Start Yellow Navigation Bar */
+div#loginnav2 {
+	float: left;
+	position: relative;
+	width: 100%;
+	background-color: #FFFFAA; /* this is the yellow background color */
+	overflow: hidden;
+	margin-top: 4px;
+	font-size: .8em;
+}
+div#loginnav2 ul {
+	margin: 0px;
+	padding: 0px;
+	clear: left;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+div#loginnav2 li {
+	float: left;
+	position: relative;
+	right: 50%;
+	list-style-type: none;
+	border-right: 1px solid black;
+}
+div#loginnav2 li:first-child {
+	border-left: 1px solid black;
+}
+* html div#loginnav2 ul {
+	border-left: 1px solid black;
+}
+div#loginnav2 a {
+	color: black;
+	padding: 0px 5px;
+}
+div#loginnav2 a:hover {
+	color: green;
+	background-color: #F0F0F0; /* this is the light gray background hover */
+}
+li.loginnavclicked2 {
+	cursor: default; /* this keeps the cursor an arrow instead of changing it to a text cursor */
+	color: green;
+	background-color: #F0F0F0;
+	text-decoration: underline;
+	padding: 0px 5px;
+}
+/* End Yellow Navigation Bar */
+
+
+/* Start Lavendar Drop-Down */
+div#loginnav ul li ul {
+	margin: 0px;
+	background-color: #FFFFAA; /* this is a light yellow color */
+	border-top: 1px solid black;
+	position: absolute; /* this ensures the second set of <ul> remains on the page after hovering */
+	display: none; /* this makes the second set of <ul> disappear */
+}
+div#loginnav ul li:hover ul, div#loginnav ul li ul:hover {
+	display: block; /* this makes the second set of <ul> appear after hovering */
+}
+/* End Lavendar Drop-Down */
+/* End Lisa's Style Sheet */
+
+
+.listrow td {
+	color: #923473;
+	font-weight: bold;
+	border-bottom: 1px solid black !important;
+}

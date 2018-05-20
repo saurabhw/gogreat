@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Recover account</title>
+		<link rel="stylesheet" href="greatmoods.css">
+		<script>
+			function validateForm() {
+				var field = document.forms['recover']['email'].value;
+				if (field==null || field=="") {
+					alert("please enter your email address");
+					return false;
+				}
+				if(field.indexOf(".") == -1 || field.indexOf("@") == -1) {
+					alert("please enter a valid email");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<p>Enter your Email and a temporary password will be sent to your account.</P>
+		<form name='recover' onsubmit='return validateForm()' action="makeNewPassword.php" method="post">
+			Email: <input type="text" name="email" /><br />
+			<input type="submit" value="Recover" />
+		</form>
+	</body>
+</html>

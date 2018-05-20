@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* CSS Document */
+.setupLeft{
+	width: 430px;
+	padding: 0;
+	}
+.setupRight{
+	clear: both;
+	float: right;
+	padding: 0;
+	width: 404px;
+	}
+
+/*form{width: 430px; padding: 0 10px;}
+*/
+form{width:430px; background-color: #ccc; padding: 0 ; margin: 0;}
+
+/*form#distributor1 input{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+}*/
+form input[type=text]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+}
+form input[type=list]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+}
+form input[type=password]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+}
+form input[type=file]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+	}
+form input[type=submit], form#distributor1 input[type=reset] {
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+}
+
+form label { /*width: 130px; float:left; display: inline; */
+	margin: 0 12px 0 0;
+	padding-top:18px;
+	font-size: 0.8em;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+
+form table input { /*display:inline;*/ width: 125px; border: thin solid #777;  padding: 3px; }
+form table.contactInfo input { /*display:inline; width: 125px; border: 1px solid #000; padding: 3px;*/ }   /*width makes table width correct, but screws up radio & checkboxes*/ 
+
+
+/*form#distributor1 input[type=checkbox] {width: 10px;}
+*/
+
+/*form#distributor1 td { display: block;}
+form#distributor1 input[type=text] {display: block;}
+*/
+/*form#distributor1 input[type=text]#address1, input[type=text]#address2{}
+form#distributor1 input[type=radio] {width: 10px;}
+
+form#distributor1 label#firmName{width:430px;} 
+input[type=text]#firmName{width:225px;}
+
+form#distributor1 label#FName{width:130px;} 
+input[type=text]#FName{width:120px;}
+form#distributor1 label#MName{width:130px;} 
+input[type=text]#MName{width:120px;}
+form#distributor1 label#LName{width:130px;} 
+input[type=text]#LName{width:120px;}
+*/
+form#distributor1 label#address1{width:430px;} 
+input[type=text]#address1{width:225px;}
+form#distributor1 label#address2{width:430px;} 
+input[type=text]#address2{width:225px;}
+
+form#distributor1 label#websiteURL{width:430px;} 
+input[type=text]#websiteURL{width:225px;}
+
+
+/*form#distributor1 label#city{width:140px;} 
+input[type=text]#city{width:150px;}
+form#distributor1 label#state{width:120px;} 
+input[type=text]#state{width:120px;}
+form#distributor1 label#zip{width:100px;} 
+input[type=text]#zip{width:100px;}
+*/
+/*form#distributor1 label#email{width:145px;} 
+input[type=text]#email{width:145px;}
+form#distributor1 label#phone{width:145px;} 
+input[type=text]#phone{width:145px;}
+form#distributor1 label#ext{width:50px;} 
+input[type=text]#ext{width:50px;}
+
+form#distributor1 label#fbPage{width:130px;} 
+input[type=text]#fbPage{width:125px;}
+form#distributor1 label#twitter{width:130px;} 
+input[type=text]#twitter{width:125px;}
+form#distributor1 label#linkedin{width:130px;} 
+input[type=text]#linkedin{width:125px;}
+*/
+form#distributor1 label#ssn{width:130px;} 
+input[type=text]#ssn{width:120px;}
+form#distributor1 label#tin{width:130px;} 
+input[type=text]#tin{width:120px;}
+
+form#distributor1 label#AddPersonalPhoto{width:100px;} 
+input[type=text]#AddPersonalPhoto{width:30px;}
+form#distributor1 label#AddGroupPhoto{width:100px;} 
+input[type=text]#AddGroupPhoto{width:30px;}
+
+form#distributor1 label#RemovePersonalPhoto{width:100px;} 
+input[type=checkbox]#RemovePersonalPhoto{width:10px;}
+form#distributor1 label#RemoveGroupPhoto{width:100px;} 
+input[type=checkbox]#RemoveGroupPhoto{width:10px;}
+
+
+
+/*h1.setupEmail{
+	text-decoration:;
+	line-height:22px;
+	}*/
+/*h4{
+	margin:0;
+	padding:0;
+	}
+h2, h3{
+	margin-top:45px;
+	}
+*/
+h2.contentMain858{
+	color: blue;
+	}
+/*.hr{
+	width: 90%;
+	height: 1px;
+	background: #777;
+	clear:left;
+	position:relative;
+	top:25px;
+	}*/
+p.footnote {
+	font-size: 0.6em;
+	color: #CC0000;
+	padding-top: 10px;
+	}
+	
+.red {color: #CC0000;
+	}
+#distributor1 p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	margin: 0;
+	}
+/*form#login label{
+	float:none;
+	}
+form#login input[type=password]{
+	margin-left:10px;
+	}
+form#login input[type=password]{
+	margin-left:31px;
+	}*/
+	
+	
+/*#distributor1 .formSelect{
+	font-size: 1em;
+	}*/
+ul .formSelect {
+/*	font-size: .8em;
+*/	display: block;
+	width 100%;
+	}
+li .formSelect{
+	display: block;
+	}
+#distributor1 table td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	}
+th {
+	font-weight: 100;
+	padding-top: 6px;
+	}
+#contentMain858 h3 {
+/*	clear: both;
+*/	padding-top: 30px;
+	padding-bottom: 10px;
+	}
+#contentMain858 h4 {
+	padding: 0;
+	margin: 0;
+}	
+
+

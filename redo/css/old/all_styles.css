@@ -1,0 +1,391 @@
+/* Reset/Universal */
+
+* { margin: 0; padding: 0; }
+html { height: 100%; overflow-y: scroll; }
+body { height: 100%; background: #fff; font-size: 13px; color: #444; font-family: Arial; }
+footer, header, menu, nav, #logo, #login, #search { display: block; }
+a { outline: none; border: none; text-decoration: none; color: #3300ee; }
+	a:hover	{ text-decoration: underline; }
+img { outline: none; border: none; display: block; /*width: 100%;*/ }
+	img#one, img#two, img#three { padding: 1%; border-radius: .8em; }
+	img#one { width: 55%; float: right; }
+	img#two { width: 25%; float: left; }
+	img#three { width: 25%; float: right; }
+h1		{ font-size: 1.7em; color: #000; margin: 0; display: inline-block; }
+h2 		{ font-size: 1.3em; color: #cc0000; display: inline-block; }
+h3 		{ font-size: 1.1em; color: #000; }
+h4		{ font-size: .85em; font-weight: bold; text-transform: uppercase; color: #111; }
+p 		{ font-size: .9em; color: #333; font-weight: normal; }
+h2, h3, h4, p 	{ margin: .15em 0; }
+hr		{ height: 2px; border: none; color:#ccc; background-color: #ccc; }
+hr#gray2	{ height: 1px; border: none; color:#aaa; background-color: #aaa; }
+#quote{
+	width: 90%;
+	background: #eee;
+	color: #333;
+	font-size: .9em;
+	margin: 1.5em .75em;
+	padding: .5em;
+	border-radius: 2em;
+	border-right: .8em solid #bbb;
+	border-left: .8em solid #bbb;
+	box-shadow: 0 0 1em #999;
+}
+	#quote ul{ list-style: disc inside; }
+	#quote ul#col2{ column-count: 2; -moz-column-count: 2; -webkit-column-count: 2; }
+	#quote h1{ font-size: 1.1em; color: #000; text-transform: uppercase; }
+	#quote h2{ font-size: 1.1em; color: #cc0000; text-transform: uppercase; }
+
+ol, ul { list-style: none; margin: 0; padding: 0; }
+	ul li { margin: 0; padding: 0;}
+ol { padding: 0; counter-reset: item;  }
+	ol li {
+		margin: 0 0 .75em 0;
+		padding: 0;
+		list-style-type: none;
+		counter-increment: item;
+		list-style-position: inside;
+	}
+	ol li:before {
+		display: inline-block;
+		padding-right: 0.35em;
+		font-weight: bold;
+		text-align: right;
+		content: counter(item) ".";
+		color: #222;
+		font-size: 1.1em;
+	}
+	
+ul.bulleted { list-style-type: disc; list-style-position: inside; font-size: .9em; margin-top: .5em; }
+
+.indent { margin-left: 1.5em; }
+.indent2 { margin-left: 3em; }
+
+/* Fixes FireFox Padding Issue */
+span::-moz-focus-inner, button::-moz-focus-inner, input::-moz-focus-inner { 
+	border: 0; 
+	padding: 0; 
+	margin-top:-2px; 
+	margin-bottom: -2px; 
+}
+
+#graybackground, .graybackground { background: #eee; padding: .5em; border-radius: .8em; }
+.clear { clear: both; }
+	
+/* Structure */
+#wrapper {
+	display: table;
+	height: 100%;
+	width: 98%;	
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0% 1%;
+}
+
+/* 2 or 3 column layout*/
+.leftcol { width: 16%; float: left; margin-right: 1%; background: #ddd; position: relative; z-index: 10; }
+.fullrightcol { width: 83%; margin-bottom: 1%; float: right; }
+
+.midcol { width: 66%; float: left; margin-right: 1%; }
+.rightcol { width: 16%; float: right; background: #ddd; }
+
+
+footer { display: table-row; height: 1px; padding: .4em; background: #ccc; }
+	footer p { margin: .4em; }
+
+
+/* Structure within column */
+.colgrp1 { display: inline-block; float: left; width: 50%; }
+.colgrp2 { display: inline-block; float: right; width: 50%; }
+
+
+/* Top Bar */
+#examp_user {color: black; border:1px solid #777; line-height: .75em;}
+#examp_pass {color: black; border:1px solid #777; line-height: .75em;}
+
+#search img{ 
+		width: 6%;
+		height: 75%;
+		//margin: 1.5% 2%;
+		float: right;
+		background: transparent;
+		border: none; /* IE Fix */
+	}
+
+#topbar{ width: 100%; }
+	/*#logo { float: left; width: 12%; margin: .3% 0; }
+		#logo img { width: 100%; }*/
+
+	#login{	float: right; margin: .5% 1% .5% 0; }
+	#search{
+		float: right;
+		margin: .5% 0;
+		font-size: .75em; font-family: Arial;
+		color: black;
+	}
+		#searchbar{ display: inline; margin: .5% 0; }
+		#searchbutton{
+			display: inline-block;
+			position: relative;
+			padding: .1em .5em;
+			background: -webkit-linear-gradient(#dd0000, #aa0000); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#dd0000, #aa0000); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#dd0000, #aa0000); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(#dd0000, #aa0000); /* Standard syntax */
+			border-top: .1em solid #ee0000;
+			border-right: .1em solid #cc0000;
+			border-bottom: .1em solid #9a0000;
+			border-left: .1em solid #bb0000;
+			border-radius: .4em;
+			box-shadow: 0 .1em 0 #bf0000;
+			color: #fff;
+			cursor: pointer;
+		}
+		#searchbutton:hover{
+			background: -webkit-linear-gradient(#cc0000, #ee0000); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#cc0000, #ee0000); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#cc0000, #ee0000); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(#cc0000, #ee0000); /* Standard syntax */
+		}
+
+		
+/* Banner Area */			
+header #banner { float: left; width: 100%; background: #cc0000; }
+	header #banner .logo {
+		position: relative;
+		float: left;
+		width: 18%; 
+		height: 103px; 
+		margin: 0;
+	}
+	
+	header #banner img { 
+		position: relative;
+		float: left;
+		width: 64%; 
+		height: 103px; 
+		margin: 0 auto; 
+	}
+	
+	ul.acctnav {
+		display: block;
+		position: relative;
+		float: left;
+		width: 18%;
+		margin-top: 5.6em;
+		font-size: .9em;
+	}
+		ul.acctnav li { 
+			display: inline-block;
+			position: relative;
+			float: left;
+			text-align: left;
+			vertical-align: bottom;
+			height: 2em;
+			line-height: 1em;
+			background: #cc0000; 
+			border: .1em solid #cc0000; 
+			padding: .43em;
+			margin: 0;
+		}
+		ul.acctnav li.loginlink { width: 35.8%; }
+			
+		ul.acctnav li.shoppingcart { width: 29.5%; }
+			ul.acctnav li.shoppingcart span { padding-top: 1em; font-weight: bold; font-size: 1em; }
+			header #banner ul.acctnav li.shoppingcart img.cart { display: inline-block; width: 2.5em; height: 2em; vertical-align: text-bottom; }
+			
+		ul.acctnav li.wishlist { width: 17.8%; }
+			ul.acctnav li:hover { 
+				border: .1em solid #fff; 
+				border-radius: .5em; 
+				cursor: pointer; 
+			}
+			ul.acctnav li:hover ul { 
+				display: block;
+				z-index: 1000;
+			}
+				ul.acctnav li a { color: #fff; text-decoration: none; }
+				.triangle-down {
+					display: inline-block;
+					margin-left: .2em;
+					
+					/* shape */
+					width: 0;
+					height: 0;
+					border-left: .35em solid transparent;
+					border-right: .35em solid transparent;
+					border-top: .4em solid #ccc;
+				}
+	
+			/* Account Nav Dropdown */
+			ul.acctnav ul{
+				display: none;
+				position: absolute;
+				top: 100%;
+				right: 0;
+				background: #fff;
+				padding: .5em;
+				box-shadow: 0 0 .5em #888;
+			}
+			
+			ul.acctnav ul li {
+				float: none;
+				width: 14em;
+				background: #fff;
+				text-align: left;
+				height: 1em;
+				line-height: 1em;
+				vertical-align: middle;
+				background: #fff; 
+				border: .1em solid #fff; 
+				padding: .43em;
+				margin: 0;
+			}	
+			ul.acctnav ul li.nohover { height: 2.5em; }
+			ul.acctnav ul li.nohover2 { height: 1.1em; }
+			
+				ul.acctnav li ul li input { width: 95%; }
+				ul.acctnav ul li a { color: #222; }
+					ul.acctnav ul li:hover { background: #3300ee; border-radius: 0; }
+						ul.acctnav ul li:hover a { color: #fff; }
+						
+					ul.acctnav ul li.nohover:hover, ul.acctnav ul li.nohover2:hover { background: #fff; cursor: default; }
+						ul.acctnav ul li.nohover:hover a, ul.acctnav ul li.nohover2:hover a { color: #222; }
+
+/* Buttons */
+.graybutton, .redbutton, .button {
+	margin: 0em .4em .2em .4em;
+	padding: .1em .55em .15em .55em;
+	border-radius: .4em;
+	font-size: .85em;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.graybutton{
+	background: -webkit-linear-gradient(#eee, #ccc); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#eee, #ccc); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#eee, #ccc); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#eee, #ccc); /* Standard syntax */
+	border-top: .1em solid #eee;
+	border-right: .1em solid #ccc;
+	border-bottom: .1em solid #aaa;
+	border-left: .1em solid #bbb;
+	box-shadow: 0 .1em 0 #ccc;
+	color: #000;
+	
+}
+	.graybutton:hover{
+		background: -webkit-linear-gradient(#bbb, #ddd); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#bbb, #ddd); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#bbb, #ddd); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#bbb, #ddd); /* Standard syntax */
+	}
+.redbutton{
+	background: -webkit-linear-gradient(#dd0000, #aa0000); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#dd0000, #aa0000); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#dd0000, #aa0000); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#dd0000, #aa0000); /* Standard syntax */
+	border-top: .1em solid #ee0000;
+	border-right: .1em solid #cc0000;
+	border-bottom: .1em solid #9a0000;
+	border-left: .1em solid #bb0000;
+	box-shadow: 0 .1em 0 #bf0000;
+	color: #fff;
+}
+	.redbutton:hover{
+		background: -webkit-linear-gradient(#cc0000, #ee0000); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#cc0000, #ee0000); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#cc0000, #ee0000); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#cc0000, #ee0000); /* Standard syntax */
+	}
+.button{
+		background: -webkit-linear-gradient(#dd0000, #aa0000); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#dd0000, #aa0000); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#dd0000, #aa0000); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#dd0000, #aa0000); /* Standard syntax */
+		border-top: .1em solid #ee0000;
+		border-right: .1em solid #cc0000;
+		border-bottom: .1em solid #9a0000;
+		border-left: .1em solid #bb0000;
+		box-shadow: 0 .1em 0 #bf0000;
+		color: #fff;
+}
+	.button:hover{
+		background: -webkit-linear-gradient(#cc0000, #ee0000); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#cc0000, #ee0000); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#cc0000, #ee0000); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#cc0000, #ee0000); /* Standard syntax */
+	}
+		.button a{
+			margin: 0 .4em 0 0;
+			padding: 0;
+			background: -webkit-linear-gradient(#dd0000, #aa0000); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#dd0000, #aa0000); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#dd0000, #aa0000); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(#dd0000, #aa0000); /* Standard syntax */
+			border-top: .1em solid #ee0000;
+			border-right: .1em solid #cc0000;
+			border-bottom: .1em solid #9a0000;
+			border-left: .1em solid #bb0000;
+			border-radius: .4em;
+			box-shadow: 0 .1em 0 #bf0000;
+			color: #fff;
+			cursor: pointer;
+		}
+		.button a:hover{
+			background: -webkit-linear-gradient(#cc0000, #ee0000); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#cc0000, #ee0000); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#cc0000, #ee0000); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(#cc0000, #ee0000); /* Standard syntax */
+		}
+		
+div#rtalign { display: inline-block; float: right; }
+
+/* Top Info/Marketing Box */
+#topbox { width: 100%; height: 30em; margin: 10px 0; /*border: 1px solid #ccc;*/ overflow-y: scroll; }
+	/* #topbox img{ box-shadow: 0 0 .8em #999; } */
+div#layout1{ display: block; position: relative; width: 98%; margin: 1%; float: left; }
+	#layout1 img.lg{ 
+		display: block; 
+		position: relative; 
+		float: left; 
+		width: 75%; 
+		height: 28.8em; 
+		margin-right: 2%;
+	}
+	#layout1 img.sm{ 
+		display: block; 
+		position: relative; 
+		float: left; 
+		width: 23%;
+		height: 14em; 
+		margin-bottom: .8em;
+	}
+
+
+/* Actions Dropdown */
+#actions{
+	display: inline-block;
+	width: 11%;
+	margin-right: .5em; 
+	font-size: .9em;
+	background: #ddd;
+}
+
+
+/* Store Slider */
+#storeslider{ width: 100%; margin: 0 0 2% 0; }
+
+/* Marketing Images/Ads */
+#marketingads{ width: 100%; margin: 0 2%; }
+	#marketingads img{ 
+		display: inline; 
+		height: 16em; 
+		overflow: hidden; 
+		margin: 1%;
+		border-radius: .8em;
+	}
+		#marketingads #img1{ width: 35%; }
+		#marketingads #img2{ width: 55%; }	
+		

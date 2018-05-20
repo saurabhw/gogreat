@@ -1,0 +1,129 @@
+lazy mofo - php data grid for mysql - send feedback to lazymofo@wdschools.com
+
+version 2013-10-31
+------------------
+  Added child grid system to edit child data while editing a record.
+  Added ability to upload images and docs directly to the grid.
+  Added query_string_list to hold variables names to preserve in the query string while paging.
+  Added multi delete from grids feature.
+  Added more placeholders for custom text on save changes and search buttons 
+  Changed css classes and ids
+  Changed form_user_function to form_additional_html, now just a variable to hold a string to add html to the bottom of a form.
+  Changed insert_user_function to on_insert_user_function
+  Changed update_user_function to on_update_user_function
+  Changed delete_user_function to on_delete_user_function
+  Changed update_grid_user_function to on_update_grid_user_function
+  Added after_insert_user_function
+  Added after_update_user_function
+  Added after_delete_user_function
+  Added after_update_grid_user_function
+  Changed after_insert_action to be controlled by boolean return_to_edit_after_insert
+  Changed after_update_action to be controlled by boolean return_to_edit_after_update
+
+
+version 2013-07-09
+------------------
+  preg_replace on $sql_count missing case insensitive flag
+
+version 2013-07-05
+------------------
+  Changed insert() so user is redirected to the default view (no pagination or search) after adding a record
+
+version 2013-06-30
+------------------
+  Added lm class name to forms for easier styling.
+  Added @ and other fixes to avoid notice messages when accessing array elements and appending strings.
+  Fixed date_in() so that d/m/Y dates should work. found out strtotime does not look at locale info.
+  New variables to edit individual form buttons; form_add_button, form_update_button, form_back_button, form_delete_button
+  Added delete button to form. Move grid delete javascript out to delete_form().
+  Added grid_default_order_by to specify the default sort order, otherwise sort by identity_id is used. Adding a sort fixes weird natural sort behavior.
+  Form Back/Cancel button now highlights last viewed record on the grid view.
+  Renamed grid_delete_confirm to delete_confirm since delete button has been added to the form view.
+  Added success message for when records are deleted.
+  Fixed csv export() bug related to erasing existing buffers.
+  
+version 2013-05-08
+-------------------
+  Fixed upload_rename_if_exists()
+  Added form_default_value to allow defaults when adding a record, also populates from column default.
+  Changed all string functions to multibyte to hopefully work properly in other languages.
+  Added magic_quotes warning
+  Added "set names charset" to make sure communications are in proper characterset
+  Changed redirect(), triple equals used for auto-redirect.
+
+version 2013-04-07
+-------------------
+  Bug fix, sql_param not passed in grid() record count. grrrr, thought this was already fixed...
+
+version 2013-03-07
+-------------------
+  form_user_function was implemented wrong, should be populated from user function.
+  image_resize() was not resizing.
+  query_insert() missing optional called_from parameter.
+
+version 2013-02-27
+-------------------
+  Added uri_path variable to be more flexible. Weird URI seems to be required in WordPress admins.
+  Added upload_file_multiple(). It's not used in lazy_mofo but handy to have around.
+  Changed export() to work with large datasets and not run out of memory. Also displays errors when ob_start was not started.
+  Added after_insert_action and after_update_action to alter default action after updates and inserts. An entry like 'edit' will redirect the user back to the edit/form screen after updates or inserts.
+  Added $form_user_function to allow html injection before </form> in form.
+  Changed search back to POST. I think there was some kind of issue with WordPress admin that prompted this.
+
+version 2013-01-16
+-------------------
+  Bug fixed in insert(), failed to get error string from user function.
+
+version 2013-01-08
+-------------------
+  Bug fixes introduced from version 2012-12-16.
+
+version 2012-12-31
+-------------------
+  Fixed bug, change grid search to use get. No need to post on search and check csrf.
+  Moved .grid and .form css class names from form to table.
+
+version 2012-12-19
+-------------------
+  Fixed bug. grid_sql_param was not being passed in.
+
+version 2012-12-16
+-------------------
+  Added optional grid_sql_count variable to help count results for pagination. useful when using grid() for complex queries/reporting.
+
+version 2012-12-11
+-------------------
+  Removed cr & lf from sql strings in grid() which caused row count magic to break.
+
+version 2012-12-10
+-------------------
+  Oops, refixed calls to udf to render input/output controls
+
+version 2012-11-13
+-------------------
+  Swapped $_SERVER['SCRIPT_NAME'] to uri path to allow this script to be used on pretty urls.
+  Fixed bug in sql_update_grid(), this function should not have been calling a global variable.
+  Added form_title public variable to allow custom form title/header when editing or adding a record.
+  Added export_csv_file_name public variable to allow download to be named, if empty the table name is used.
+  Fixed calls to udf to render input/output controls. first parameter removed. changed to: call_user_func($column_name, $value, $command, $called_from).
+  Fixed pagination select dropdown, off by one error.
+
+version 2012-06-30
+-------------------
+  Added csv export feature.
+  Changed query() method to return PDO::FETCH_ASSOC instead of PDO::FETCH_BOTH to save memory. many methods altered.
+
+version 2012-01-06
+-------------------
+  Bug fix - grid() search changed to only filter out aggregates functions in where clause.
+
+version 2012-01-05
+-------------------
+	grid() pagination changed to work with large datasets. limit & offset in sql statements now.
+	grid() search changed to accommodate pagination update. lot's of hacks required. this is where ORM would be better.
+	all links and posts now carry search and pagination variables to maintain position when editing records.
+	sql_update_grid() now uses transactions for better performance
+
+version 2011-11-01
+-------------------
+	Initial release

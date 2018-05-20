@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h2{
+	line-height:16pt;
+	}
+p{
+	line-height:16px;
+	}
+ol{
+	margin:15px;
+	
+	}
+ul.list{
+	list-style-type:disc;
+	}
+li{
+	
+	}
+#infoBox{
+	width:350px;
+	background:#aaa;
+	padding-bottom:10px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	}
+#redInfoBar{
+	width:350px;
+	margin:0;
+	background:#cc0000;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	}
+#redInfoBar h3{
+	color:#fff;
+	padding:10px;
+	text-align:center;
+	}

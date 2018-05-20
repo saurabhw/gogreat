@@ -1,0 +1,37 @@
+fieldset {
+  padding:1em 0;
+  font:80%/1 sans-serif;
+  width:500px;
+  }
+label {
+  float:left;
+  width:25%;
+  margin-right:0.5em;
+  padding-top:0.2em;
+  text-align:right;
+  font-weight:bold;
+  }
+legend {
+  padding: 0.2em 0.5em;
+  border:1px solid green;
+  color:green;
+  font-size:90%;
+  text-align:left;
+  }
+h4{
+	margin:0 0 1em 0;
+	padding:1em 0 0 9em;
+	float:left;
+ 	text-align:right;
+  	font-weight:bold;
+	width:50%;
+	}
+input#image[type=text]{
+	margin-left:10.5em;
+	
+	}
+#setupWebInfo{
+	width:100%;
+	background-color:#cc0000;
+	padding-bottom:10px;
+	}

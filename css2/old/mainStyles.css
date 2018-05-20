@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+margin:0;
+padding:0;	
+}
+h1,h2,h3,h4,h5,h6,p,ul,label,input, table{
+	font-family: Arial, Helvetica, sans-serif;
+	}
+#container{
+	width:1024px;
+	margin:0 auto;
+	padding:0;
+	overflow:hidden;
+	}
+ul{
+	list-style-type:none;
+	}
+.clearfloat {clear: both;}
+

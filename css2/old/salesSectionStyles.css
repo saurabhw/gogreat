@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.redBar{
+	width:800px;
+	height:65px;
+	background-color:#cc0000;
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	}
+.redBar h1{
+	width:700px;
+	color:#fff;
+	padding:25px;
+	font-weight:normal;
+	}
+.redBar .icon{
+	margin:7px 5px 8px 10px;
+	float:left;
+	}
+.redBar .icon2{
+	margin:0px 0px 0px 0px;
+	float:right;
+	}
+.redBar .icon3{
+	margin:0px 0px 0px 0;
+	float:right;
+	}
+#salesGoals{
+	}
+#addEditProspects{
+	}
+form#viewProspects{
+	}
+table#activeProspect{
+	width:775px;
+	margin:0;
+	pading:0;
+	float:left;
+	}
+table#activeProspect th{
+	width:100px;
+	}
+td.icons{text-align:center;}

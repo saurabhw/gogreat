@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#columnWrapper{
+	width:500px;
+	background-color:#9F0;
+	font-color:color:#0066ff;
+	font-family:Arial, Helvetica, sans-serif
+	}
+#columnArea1{
+	width:125px;
+	color:#0066ff;
+	font-size:12px;
+	float:left;
+	}
+h4{
+	color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+
+	
+	

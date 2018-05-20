@@ -1,0 +1,235 @@
+<?
+   session_start();
+   if(!isset($_SESSION['authenticated']))
+       {
+            header('Location: ../index.php');
+            exit;
+       }
+   include '../includes/connection.inc.php';
+   $link = connectTo();
+   $table = "Dealers";
+   $table1 = "orgMembers";
+   $table2 = "user_info";
+   $user = $_SESSION['email']; 
+   $query1 = "SELECT * FROM $table WHERE userName='$user'";
+   $result1 = mysqli_query($link, $query1)or die ("couldn't execute query on query 1.".mysql_error());
+   $row1 = mysqli_fetch_assoc($result1);
+   $fundraiserid = $row1['loginid'];
+   $fgoal = $row1['FundraiserGoal'];
+   $fstart = $row1['FundraiserStartDate'];
+   $fend = $row1['FundraiserEndDate'];
+   $groupName = $row1['Dealer'];
+   $club = $row1['DealerDir'];
+   $group = $row1["loginid"];
+   $banner_path = $row1['banner_path'];
+   $_SESSION['fundid'] = $fundraiserid;
+   $_SESSION['banner'] = $banner_path;
+   //get email address of sender
+   $query3 = "SELECT * FROM $table1 WHERE fundraiserID='$fundraiserid'";
+   $result3 = mysqli_query($link, $query3)or die ("couldn't execute query on query 3.".mysql_error());
+   $row3 = mysqli_fetch_assoc($result3);
+   $user_email = $row3['orgEmail'];
+   
+   //get members
+   $query2 = "SELECT * FROM $table1 WHERE fund_owner_id='$fundraiserid'";
+   $result2 = mysqli_query($link, $query2)or die ("couldn't execute query on query 2.".mysql_error());
+   
+   
+   include_once("grid/config.php");
+
+// set up DB
+//mysql_connect(PHPGRID_DBHOST, PHPGRID_DBUSER, PHPGRID_DBPASS);
+//mysql_select_db(PHPGRID_DBNAME);
+mysql_connect(localhost, amoodf5_ryan, nb]]mFg2ZU.n);
+mysql_select_db(amoodf5_gm2012);
+
+// include and create object
+include(PHPGRID_LIBPATH."inc/jqgrid_dist.php");
+
+// set few params
+$grid["caption"] = "Sample Grid";
+$g->set_options($grid);
+
+// set database table for CRUD operations
+$g->table = "orgMembers";
+
+// render grid and get html/js output
+$out = $g->render("list1");
+ 
+   
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>GreatMoods | Coordinator Account Home</title>
+		<link href="../css/mainRecruitingStyles.css" rel="stylesheet" type="text/css" />
+		<link href="../css/headerSampleWebsiteStyles.css" rel="stylesheet" type="text/css">
+		<link href="../css/setupFormStyles.css" rel="stylesheet" type="text/css" />
+		
+		  <link rel="stylesheet" href="../../lib/js/themes/redmond/jquery-ui.custom.css"></link>  
+    <link rel="stylesheet" href="grid/lib/js/jqgrid/css/ui.jqgrid.css"></link> 
+    <script src="grid/lib/js/jquery.min.js" type="text/javascript"></script>
+    <script src="grid/lib/js/jqgrid/js/i18n/grid.locale-en.js" type="text/javascript"></script>
+    <script src="grid/lib/js/jqgrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>  
+    <script src="grid/lib/js/themes/jquery-ui.custom.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+	
+	<div style="margin:10px">
+
+    <!-- display grid here -->
+    <?php echo $out?>
+    <!-- display grid here -->
+
+    </div>  
+		<div id="container">
+			<div id="headerMain"> <img id="banner" src="../<?php echo $_SESSION['banner'];?>" width="1024" height="150" alt="banner placeholder" /> 
+				<div id="menuWrapper"> </div>
+				<div id="login">
+					<?php
+						if(!isset($_SESSION['LOGIN']) || $_SESSION['LOGIN'] == "FALSE") {
+							echo '<form id="log" action="../logInUser.php" method="post">';
+							echo '<label class="user" id="user">Username: </label>
+								<input type="text" name="email" id="user" value="">';
+							echo '<label class="user" id="user"> Password: </label>
+								<input type="password" name="password" id="password" value="" >';
+							echo '<input class="user" id="user" name="login" type="submit" value="login" />';
+							echo '</form>';
+							echo '<div id="register">';
+							echo '<p class="forgotpw"><a href="">Forgot Password?</a><br />';
+							echo '<a href="">Register Now</a></p>';
+							echo '</div>';   
+						} 
+						elseif($_SESSION['LOGIN'] == "TRUE") {
+							include('../includes/logout.inc.php');
+						}
+					?>
+				</div> <!--end login--> 
+				<div id="mainNav">
+					<ul id="menuSample">
+						<li><a href="../index.php">GreatMoods <br/>Homepage</a></li>
+						<li><a href="../fundbaskets.php?groupid=<? echo $groupID;?>">Gift Baskets<br>& Products</a></li>
+						<li><a href="../fundgettingstarted.php?group=<?php echo $fundraiserid; ?>">Getting<br>Started</a></li>
+						<li><a href="information.php?groupid=<?echo $fundraiserid;?>">Setup/Edit<br>Website</a></li>
+						<li><a href="members.php?groupid=<?echo $fundraiserid;?>">Setup/Edit<br>Members</a></li>
+						<li><a href="emails.php?groupid=<?echo $fundraiserid;?>">Setup/Edit<br>Emails</a></li>
+						<li><a href="../fundhelp.php?group=<?php echo $fundraiserid; ?>">Help</a></li>
+					</ul>
+				</div> <!--end mainNav-->
+			</div> <!--end headerMain-->
+			<link href="../css/leftSidebarNav.css" rel="stylesheet" type="text/css">
+			<!--<div id="leftSideBarSample">
+				<ul id="sideNavSample">
+					<li><a href="club_website_TQ.php?group=<?php echo $groupID; ?>"><em>Fundraiser<br>Homepage</em></a></li>
+					<li>About Our Fundraiser</li>
+					<li>Gift Baskets & Products<br>Order Now!</li>
+					<li>Fundraising Contacts</li>
+					<li>Help<br>Training Tips,<br>Tools & Forms</li>
+					<li><a href="#">My Account</a></li>
+				</ul>
+			</div>-->
+			<br />
+			<?php include 'fundSidebar.php' ; ?>
+			<div id="contentMain858"><br>
+			
+			<div class="nav2">
+        <ul class="setupNav">
+        <li><a href="coordhome.php" class="infonav">Account Home</a></li>
+        <li>|</li>
+        <li id="current"><a href="information.php?groupid=<?echo $fundraiserid;?>" class="infonav">Information</a></li>
+        <li>|</li>
+        <li><a href="reasons.php?groupid=<?echo $fundraiserid;?>" class="reasonsnav">Reasons</a></li>
+        <li>|</li>
+        <li><a href="contacts.php?groupid=<?echo $fundraiserid;?>" class="contactsnav">Contacts</a></li>
+        <li>|</li>
+        <li><a href="photos.php?groupid=<?echo $fundraiserid;?>" class="photosnav">Photos</a></li>
+        <li>|</li>
+        <li><a href="goals.php?groupid=<?echo $fundraiserid;?>" class="goalsnav">Goals</a></li>
+        <li>|</li>
+        <li><a href="members.php?groupid=<?echo $fundraiserid;?>" class="goalsnav">Add Members</a></li>
+        <li>|</li>
+        <li><a href="emails.php?groupid=<?echo $fundraiserid;?>" class="goalsnav">Send Emails</a></li>
+      </ul>
+        </div>
+    <!--end nav2--> 
+				
+				<h3>Welcome <? echo $groupName;?></h3>
+				<h5>My Fundraiser Members</h5>
+				<div class="distributor1">
+				<?
+				      if($row = mysqli_fetch_assoc($result2) < 1)
+                                         {
+                                            echo'You have no members set up.<br /><a href="members.php?groupid='.$_SESSION['fundid'].'">
+                                            Lets Get Started</a>';
+                                         }
+                                         else
+                                         {
+                                             echo'
+					         <table id="contacts">
+						<tr>
+							<th align="left"><b>First<br>Name</b></th>
+							<th align="left"><b>Last<br>Name</b></th>
+							<th align="left"><b>Email<br>Address</b></th>
+							<th align="left"><b>Phone<br>Number</b></th>
+							<!--<th align="left"><b>Amount<br>Raised</b></th>-->
+						</tr>';
+						
+						  while ($row4 = mysqli_fetch_assoc($result2))
+                                                 {
+        
+	                                              $site = $row4['fundraiserID'];
+	                                               echo '				
+				                       <tr>
+							<td><input type="text" value="'.$row4['orgFName'].'" /></td>
+							<td><input type="text" value="'.$row4['orgLName'].'" /></td>
+							<td><input type="text" value="'.$row4['orgEmail'].'" /></td>
+							<td><input type="text" value="'.$row4['orgPhone'].'" /></td>
+							<td>
+							<a href="information.php?groupid='.$row4['fundraiserID'].'">
+							<input type="button" value="Edit Account" />
+							</a>
+							</td>
+							<td>
+							<a href="../fundSite.php?groupid='.$row4['fundraiserID'].'">
+							<input type="button" value="View Site" />
+							</a>
+							</td>
+							
+							<td>
+							<form action="email.php" method="post">
+							<input type="hidden" name="to" value="'.$row4['orgEmail'].'" /> 
+				                        <input type="hidden" name="from" value="'.$user_email.'" />
+				                        <input type="hidden" name="clubidemail" value="'.$row4['fundraiserID'].'" />
+							<input type="submit" name="submit1" value="Send Email" />
+							</form>
+							</td>
+							<td>
+							<form action="deleteFundraiser.php" method="post">
+							<input type="hidden" name="who" value="'.$row4['orgEmail'].'" /> 
+							<input type="hidden" name="clubid" value="'.$row4['fundraiserID'].'" />
+							<input type="submit" name="submit2" value="Delete Account" />
+							</form>
+							</td>							
+						        </tr>
+						        ';
+						 }
+						       
+					} ?>	
+				</table>
+				</div>
+				<p>&nbsp;</p>
+				<div class="nav3">
+					<ul class="setupNav">
+						<li><a href="fundtype.php"><<&nbsp;Previous</a></li>
+						<li>|</li>
+						<li><a href="information.php">Next&nbsp;>></a></li></ul>
+						<p>&nbsp;</p>
+				</div>
+			</div> <!--end content-->
+			<div class="clearfloat">
+			</div>
+			<?php include '../includes/footer.php' ; ?>
+		</div> <!--end container-->
+	</body>
+</html>

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*footer*/
+#footer{
+	 clear:both;
+	 font: 100%/1.4 Arial, Helvetica, sans-serif;
+	 background:#FFF;
+	 padding:10px 0 0 0;
+	 margin:20px 0 0 0;
+	 border-top:2px solid #ccc;
+	 z-index:23;
+	 width:1024px;
+	 position:relative;
+	}
+#footer_info{
+	float:right;
+	overflow:hidden;
+	width:900px;
+	margin:0;
+	padding:0;
+	}
+#footer_info p{
+	color:#0000ff;
+	float:right;
+	position:relative;
+	margin:0px 12px 0 0;
+	padding-bottom: .6em;
+	font-size: .7em;
+	text-align: right;
+	}
+p#copyright{
+	color: #666;
+	}
+#footer_info a{
+	color:#0000ff;
+	text-decoration:none;
+	}
+#footer_info a:visited, #footer_info a:hover{
+	color:#666;
+	text-decoration:none;
+	}
+#footer_logo{
+	float:left;
+	margin:-70px 0 0 15px;
+	z-index:24;
+	position:relative;
+	}	
+
+
+/*#footer_info ul.footerMenu{
+	float:right;
+	overflow:hidden;
+	margin:7px 0 0 0;
+	padding:0;
+}
+#footer_info ul.footerMenu li{
+	border-right:solid 1px #999;
+	float:left;
+	padding:0 8px;
+	margin:0;
+	display:block;
+	font-size:10px;
+	}
+#footer_info ul.footerMenu li:last-child{
+	border-right:solid 1px #fff;
+	}
+#footer_info ul.footerMenu li a{
+	display:block;
+	color:#000;
+	margin-right:1px;
+	padding:0;
+	color:#777;
+	text-align:center;
+	text-decoration:none;
+	}
+*/
+	

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* CSS Document */
+#callListWrapper{
+	width:800px;
+	background:#aaa;
+	padding-top:5px;
+	}
+#call1{
+	width:790px;
+	height:35px;
+	background-color:#fff;
+	margin:0 auto;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	
+	}
+
+#dropdown{
+	padding:;
+	width:800px;
+	background:#ddd;
+}
+p{padding:9px 0 9px 5px;}
+ul{
+	margin-left:15px;
+	padding:0;
+	}
+ul li{
+	vertical-align:middle;
+	list-style-type:none;
+	display:inline-block;
+	}
+label{
+	}
+input[type=text]{
+	margin-bottom:5px;
+	}	
+input.edit[type=submit]{
+	float:right;
+	position:absolute;
+	top:22px;
+	left:725px;
+	
+	}
+p#textfield{
+	margin-left:15px;
+	}
+label.notes{
+	margin-left:15px;
+	 }
+label textarea{
+ 	vertical-align:top;
+	
+}

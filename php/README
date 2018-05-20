@@ -1,0 +1,12 @@
+Code written by Jon Harder at Greatmoods ltd
+2012
+
+Connect.php used as a connection object to access database
+$conn = new Connection(); // will create an object and automatically connect to default database
+
+
+make a query to database via make_query($query); method
+$conn->make_query($query); // makes a query to database and stores result in private result feild
+			   // get the result through get accessor
+$result = $conn->get_result();
+

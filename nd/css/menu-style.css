@@ -1,0 +1,775 @@
+
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.col-flex-item {
+    display: flex;
+    flex-flow: column;
+}
+
+/*allign center row items */
+.row-centered {
+    text-align:center;
+}
+
+/* odd number rows adjusted for main nav dropdowns */
+@media (min-width: 1200px) {
+    .col-lg-5-12 {
+        width: 20%;
+        float: left;
+    }
+    .col-lg-8-12 {
+        width: 12.5%;
+        float: left;
+    }
+    .col-lg-10-12 {
+        width: 10%;
+        float: left;
+    }
+    .col-lg-7-12{
+        width: 14.285714285714285714285714285714%;
+    }
+}
+
+
+
+@media(min-width:1200px){ 
+    
+
+    .navbar .navbar-nav{
+        float: none !important;
+        vertical-align: top;
+        display:inline-block;
+        width:100vw !important;
+        position:relative;
+    }
+    
+    .navbar .divider-vertical {
+        height: 56px;
+        margin: 0 6px;
+    }
+    
+    .navbar {
+        position: relative;
+        margin: 0 !important;
+        min-width:100% !important;
+    }
+    
+    .multi-column-dropdown {
+        line-height:5px;
+        margin-bottom:1em;
+   }
+    
+    /*allows for hover of dropdowns | only used for non-collapsed navigation*/
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block !important;
+    }
+    
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+    
+    /* need for fund examples dropdown */
+    .dropup:not(#mainCategoryType), .dropdown:not(#mainCategoryType){
+        position: inherit;
+    }
+    
+    #dropdownrow {
+        width: 750px;
+    }
+    
+    
+    /*left and right borders of fundraiser example navigation section */
+    #fund-border{
+        padding-left: 1em;
+        margin:0;
+    }
+    
+        /* 
+    info alert used inside fund examples dropdown menus 
+    */
+    ul > .alert-info {
+        border-radius: 0; 
+        margin-bottom: 0 !important;
+        -webkit-min-logical-height: fit-content;
+        line-height: .1rem;
+    }
+    
+    .education-list .example-list-type {
+        font-size: 14px;
+        color: black !important;
+        padding: .25em 0;
+        /* margin-top: -.5em; */
+        /* line-height: 1.428571429; */
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    
+    .education-list .example-list-title{
+        padding-top: .5em;
+        margin-bottom: -.2em;
+    }
+    
+    /*divides Schools and Organizations navigation links */
+    .fund-divider{
+        border-left:1px solid white !important;
+        padding:7px 0 10px 0 !important;
+    }
+    
+    /* Schools and Organizations navigation links */
+    .navbar .navbar-nav #navbar-examples-title{
+        padding:6px 0 5px 0;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid white !important;
+    }
+    
+    /* span wrap around Fundraiser Examples portion of the navigation */
+    .navbar .navbar-nav #navbar-examples-wrap{
+        float:left;
+        }
+    
+    .navbar .navbar-nav #fund-example-item{
+        display:inline-block;
+        padding:7px 6px 0 5px;
+    }
+    
+    .navbar .navbar-nav #school-drop-link{
+        color:white;
+        text-decoration:none;
+        padding:7px 10px 0 15px;
+    }
+    
+    .navbar .navbar-nav #orgs-drop-link{
+        color:white;
+        text-decoration:none;
+        margin:0;
+        padding: 0 1rem 0 1rem;
+    }
+    
+    .dropdown-menu.women:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left:2em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.kids{
+        margin-left: -16em;
+    }
+    
+    .dropdown-menu.kids:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 17.15em;
+        z-index: 751;
+    }
+    
+    .dropdown-menu.accessories{
+        margin-left: -4em;
+    }
+    
+    .dropdown-menu.accessories:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left:7em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.men{
+        margin-left: -7em;;
+    }
+    
+    .dropdown-menu.men:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 8.4em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.juniors{
+        margin-left: -13em;
+    }
+    
+    .dropdown-menu.juniors:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left:15em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.entertainment{
+        margin-right:-27em;
+    }
+    
+    .dropdown-menu.entertainment:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 21em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown ul.dropdown-menu.fitness{
+        margin-left:-18em;
+    }
+    
+    .dropdown-menu.fitness:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 19.85em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.home{
+        margin-right:-19em;
+    }
+    
+    .dropdown-menu.home:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 31em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.health{
+        margin-right:-19em;
+    }
+    
+    .dropdown-menu.health:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 31em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.inspirational:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 48.5em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.holiday:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 49.75em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-menu.biz:after{
+        content: "";
+        border-bottom: 13px solid white;
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        position: absolute;
+        top: -12px;
+        left: 49.25em;
+        z-index: 751;at:left;
+    }
+    
+    .dropdown-submenu {
+        position: relative;
+    }
+    
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        right: 100%;
+        margin-top: -1px;
+    }
+    
+    .dropdown-submenu .dropdown-menu li a:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #cc0000;
+        flex-flow: column;
+        text-align:left !important;
+    }
+    
+    .dropdown-submenu .dropdown-menu li a{
+        font-size:12px;
+    }
+    
+    #fund-example-item a:hover{
+        background-color:#cc0000  !important;
+        color:white !important;
+    }
+    
+    .example-list-title{
+        font-weight:bold;
+        font-size:18px;
+        color:black !important;
+        padding:.25em 0;
+        margin:.5em 0;
+        line-height: 1.428571429;
+    }
+    
+    .example-list-type{
+        font-size:16px;
+        color:black !important;
+        padding:1em 0;
+        line-height: 1.428571429;
+        text-decoration:underline;
+    }
+    /* font styling for dropdown li options that describe a gender || In Kids category, non clickable */
+    #accessoriesGender {
+        font-size:18px;
+        color:#cc0000;
+        text-align:center;
+        font-weight:bold;
+    }
+    
+    /* font styling for dropdown li options that describe a gender || In Accessories category, clickable */
+    #accessoriesGender a{
+        font-size:18px;
+        color:#000;
+        text-align:center;
+    }
+    
+    .multi-column-dropdown li a {
+        display:flex;
+        line-height: 1.428571429;
+        color: black;
+        margin:0;
+        padding-bottom: .25rem;
+    }
+    
+    .multi-column-dropdown li a:hover,
+    #accessoriesGender a:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #cc0000;
+        flex-flow: column;
+    }
+    
+    /* vertical divider between columns inside large dropdown menus 
+    | vertical divider combined with col-flex-item class allows for this divider to always be the max height of the column */
+    .vertical-divider {
+        border-right: 1px solid #cc0000;
+        dispay:flex;
+    }
+    
+    /*spacing in org exaample category where there is no header in the column */
+    .list-align{
+        margin-top: 8.45rem !important;
+    }
+    
+    /* spacing for athletics title in school examples */
+    .list-align.example-list-type {
+        margin-top: 6.25rem !important;
+    }
+}/*end min-width 1200px media query */
+
+@media(min-width:1900px) and (max-width:2200px){
+
+  .dropdown-menu.example-list-edu{
+        min-width: 1600px !important;
+        left: 6.2em;
+        top: 54px;
+    }
+    
+    .dropdown-menu.example-list-org {
+        max-width: 1605px !important;
+        left: 6em;
+        top: 54px;
+    }
+    
+
+    .dropdown-menu.example-list-edu:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 9.25em;
+        z-index: 751;
+    }
+  
+    .dropdown-menu.example-list-org:after {
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 2.25em;
+        z-index: 751;
+    }
+    .nav > li {
+        position: relative;
+        display: initial;
+    }
+    /* spacing for org col with no title */
+    .list-align {
+        margin-top: 6.2rem !important;
+    }
+}/* end media query (min-width:1900px) and (max-width:2200px) */
+
+@media(min-width:1700px) and (max-width:1899px)  {
+
+  .dropdown-menu.example-list-edu{
+    min-width:1600px !important;
+    left: 1.7em;
+    top: 54px;
+   }
+   
+   .dropdown-menu.example-list-org{
+    max-width: 1225px !important;
+    left: 28.6em;
+    top: 54px;
+   }     
+   
+    .dropdown-menu.example-list-org:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 0.7em;
+        z-index: 751;
+    }
+    
+    .dropdown-menu.example-list-edu:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 7.65em;
+        z-index: 751;
+  }
+}
+
+@media(min-width:1545px) and (max-width:1699px){
+  
+    .dropdown-menu.example-list-edu{
+        min-width: 1396px !important;
+        left: 3em;
+        top: 54px;
+    }
+    
+  .dropdown-menu.example-list-org{
+        max-width:1225px !important;
+        left: 15.2em;
+        top: 54px;
+    }     
+  .dropdown-menu.example-list-edu:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 9.35em;
+        z-index: 751;
+    }
+    .dropdown-menu.example-list-org:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 2.5em;
+        z-index: 751;
+    }
+}
+
+@media(max-width:1544px) and (min-width:1425px){
+ 
+    .navbar-default .navbar-nav > li > a{
+        margin:0 -5px 0 0  !important;
+    }
+  
+  
+  
+    .dropdown-menu.example-list-edu{
+        min-width: 1300px !important;
+        left: 3.7em;
+        top: 54px;
+    }
+    
+    .dropdown-menu.example-list-org{
+        max-width:1225px !important;
+        left: 9em;    
+        top: 53px;
+    }     
+
+    .dropdown-menu.example-list-edu:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 9.4em;
+        z-index: 751;
+    }
+  
+    .dropdown-menu.example-list-org:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -6.5px;
+        right: 2.35em;
+        z-index: 751;
+    }
+}
+
+@media(max-width:1424px) and (min-width:1325px){
+
+  
+    .dropdown-menu.example-list-edu{
+           max-width: 1192px !important;
+        left: 99px;
+        top: 48px;
+    }
+  
+  .dropdown-menu.example-list-org{
+        max-width: 1192px !important;
+        left: 3.9em;
+        top: 50px;
+    }     
+  
+    .dropdown-menu.example-list-edu:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -6.5px;
+        right: 9.25em;
+        z-index: 751;
+    }
+  
+    .dropdown-menu.example-list-org:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -6.5px;
+        right: 2.25em;
+        z-index: 751;
+    }
+}
+
+@media(max-width:1324px) and (min-width:1200px){
+  
+    .dropdown-menu.example-list-edu{
+        left: 3.35em;
+        top: 54px;
+        max-width: 1120px;
+    }
+    
+    .dropdown-menu.example-list-org{
+        max-width: 1150px;
+        left: 1.2em; 
+        top: 54px;
+    }   
+    
+    .dropdown-menu.example-list-edu:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -6.5px;
+        right: 9.5em;
+        z-index: 751;
+    }
+    
+    .dropdown-menu.example-list-org:after{
+        content: "";
+        border-bottom: 10px solid white;
+        border-right: 35px solid transparent;
+        border-left: 35px solid transparent;
+        position: absolute;
+        top: -6.5px;
+        right: 2.5em;
+        z-index: 751;
+    }
+    
+ 
+}
+
+
+@media(max-width: 1199px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
+
+@media(max-width: 1199px) {
+    /*side nav styles */
+    .dropdown-menu{
+        width: 225px !important;
+        margin-left: 17px !important; 
+    }
+    
+    .multi-column-dropdown li a:hover{
+        background-color:#cc0000;
+        text-decoration:none;
+        color:white;
+        display:flex;
+        flex:column wrap;
+    }
+    
+    .multi-column-dropdown > li > a {
+        max-width:224px;
+        font-size:14px;
+        line-height: 2.5;
+        color: black;
+    }
+    
+    .dropdown-menu-right{
+        left:0 !important;
+        overflow:hidden !important;
+    }
+    
+    .row-flex {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    
+ 
+    
+    .example-list-title{
+        font-weight:bold;
+        font-size:18px;
+        color:black !important;
+        padding:.25em 0;
+        margin:.5em 0;
+        line-height: 1.428571429;
+    }
+
+    .example-list-type{
+        font-size:16px;
+        color:black !important;
+        padding:1em 0;
+        line-height: 1.428571429;
+        text-decoration:underline;
+    }
+    
+    #mainCategoryType{
+        font-size:18px;
+    }
+    
+    /*hide vertical divider lines in dropdowns */
+    .vertical-divider{
+        border-right: 0 !important;
+    }
+    
+    .dropdown-menu .row {
+        margin-right: -15px;
+        margin-left: 0 !important;
+    }
+    
+    #accessoriesGender {
+        font-size:16px;
+        color:black;
+        text-align:left;
+        font-weight:bold;
+    }
+    
+    /* font styling for dropdown li options that describe a gender || In Accessories category, clickable */
+    #accessoriesGender a{
+        font-size:16px;
+        color:#cc0000;
+        text-align:left;
+        font-weight:bold;
+    }
+    
+    .navmenu {
+        background-color: #cc0000 !important;
+        border-color: #e7e7e7 !important;
+        padding-top:3em !important;
+        width:280px !important;
+    }
+    .navmenu-default .navmenu-nav>li>a {
+        color:white !important;
+        padding:1em;
+    }
+    
+    .navmenu-default .navmenu-nav > .open > a,
+    .navbar-default .navbar-offcanvas .navmenu-nav > .open > a,
+    .navmenu-default .navmenu-nav > .open > a:hover,
+    .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover,
+    .navmenu-default .navmenu-nav > .open > a:focus,
+    .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus {
+        background-color: #7A0000 !important;
+        width:auto;
+    }
+}
+
+
+
+@media (max-width: 500px){
+  /* hide scroll bar on dropdown */
+  .dropdown-menu {
+    max-width:290px !important;
+    overflow-y: hidden;
+    overflow: hidden;
+    justify-content:center;
+  }
+}
+

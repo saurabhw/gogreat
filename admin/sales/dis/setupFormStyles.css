@@ -1,0 +1,792 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/******COLORS******/
+/*Red - #CC0000 */
+/*Blue - #0000FF */
+/*Grey Text - #666 */
+/*Grey Box - #CCC */
+
+.setupLeft{
+	position: relative;
+	float: left;
+	width: 430px;
+	padding: 0;
+	}
+.setupRight{
+	position: relative;
+	float: right;
+	width: 404px;
+	padding: 0 6px 6px 6px;
+	background-color: #CCC;
+	}
+.setupRightPhoto{
+	position: relative;
+	float: right;
+	width: 404px;
+	padding: 15px 0 0 0;
+	}
+#contentMain858 h3 {
+/*	clear: both;
+*/	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+#contentMain858 h4 {
+	padding: 0;
+	margin: 0;
+}	
+
+form {
+	width:100%; padding: 0 ; margin: 0; padding-bottom: 10px;  
+	}
+form#addOrg{
+	width:428px; padding: 0 ; margin: 0; padding-bottom: 10px;  
+	}
+#groupInfoForm{
+	width: 856px;
+	}
+.addmember {
+	background-color: #ccc;
+	padding: 6px;
+	width: 500px; 
+}
+.clubsleft{
+	width: 200px;
+	float: left;
+	}
+.clubsright{
+	width: 200px;
+	float: right;
+	}
+
+.distributor1 {
+	background-color: #ccc;
+	padding: 2px; 
+}
+
+.photos {
+	background-color: #ccc;
+	padding: 10px 3px 10px 3px; 
+}
+
+/*form.distributor1 input{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+}*/
+/*form.reasons {padding: 0 ; margin: 0; 
+	}*/
+form input[type=text]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+	width: 60px;
+}
+form input[type=list]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+}
+form input[type=password]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 16px;
+}
+form input[type=file]{
+	border: none;
+/*	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;*/
+	height: 24px;
+	}
+
+form input[type=submit], form input[type=reset], form input#redbutton{
+	border:thin solid #777;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+	font-size: .75em;
+}
+form input[type=checkbox] {
+	text-align: left;
+	display: inline;
+	color: blue;
+	}
+input[type=textarea] {
+	width: 500px;
+	height: 100px;
+	}
+	
+input[type=button]{
+	border:thin solid #777;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+	font-size: .75em;
+}
+	
+/*input#redbutton {
+	color: #FFF;
+	background-color: #CC0000;
+	}*/
+
+/*for Setup/Edit Emails page*/
+/*Remove button*/
+td .remove {
+	text-align: center;
+	width: 50px;
+}
+form input#remove[type=button] {
+	width: 24px;
+	text-align: left;
+	display: inline;
+	color: #FFF;
+	background-color: #CC0000;
+	}
+/*Send Email*/
+form#sendemail{
+	padding: 10px;
+	}
+	
+
+/*for 2 column checkbox - reasons page*/
+div.checkboxForm {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	float: left; 
+	width: 48%; 
+	margin: 0;
+	padding: 6px;
+}
+	
+form label { /*width: 130px; float:left; display: inline; */
+	margin: 0 12px 0 0;
+	padding-top:20px;
+	font-size: 0.8em;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+.checkboxForm label {
+	padding: 0;
+	font-size: 0.8em;
+	line-height: 1em;
+	text-align: left;
+	display: inline;
+}
+.checkboxForm input[type="submit"] {
+	clear: both;
+	float: right;
+}
+
+
+
+form table input { /*display:inline;*/ width: 130px; border: thin solid #777;  padding-right: 3px; }
+form table#contacts input{ 
+	/*display:inline;*/ 
+	display: table;
+	width: 157px; 
+	border: thin solid #777;  
+	padding-right: 3px; 
+}
+form table#viewcontacts input { /*display:inline;*/ width: 147px; border: thin solid #777;  padding-right: 3px; }
+form table.contactInfo input { /*display:inline; width: 125px; border: 1px solid #000; padding: 3px;*/ }   /*width makes table width correct, but screws up radio & checkboxes*/ 
+form table#editaccts input { /*display:inline;*/ width: 10px; border: thin solid #777;  padding-right: 3px; }
+form table#viewmembers input { /*display:inline;*/ width: 106px; border: thin solid #777;  padding-right: 3px; }
+form table#viewmembers input#emailsSetup5,
+form table#viewmembers input#earnings5,
+form table#viewmembers input#ytdearnings5
+ { /*display:inline;*/ width: 53px; border: thin solid #777;  padding-right: 3px; }
+
+.leadercontact2{
+	padding: 5px;
+	margin: 0px;
+}
+table.leadercontact1{
+	display: table;
+	table-layout: fixed;
+	max-width: 800px;
+	vertical-align: top;
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: separate;
+	border-spacing: 1px 3px;
+	padding: 5px;
+	margin: 5px 10px;
+	
+}
+
+input#lcFname{
+	min-width: 70px;
+	min-height: 14px;
+	padding: 1px;
+	font-size: .9em;
+}
+input#lcLname{
+	min-width: 92px;
+	min-height: 14px;
+	padding: 1px;
+	font-size: .9em;
+}
+input#lctitle{
+	min-width: 70px;
+	min-height: 14px;
+	padding: 1px;
+	font-size: .9em;
+}
+input#lcemail{
+	min-width: 150px;
+	min-height: 14px;
+	padding: 1px;
+	font-size: .9em;
+}
+input#lcphone{
+	min-width: 80px;
+	min-height: 14px;
+	padding: 1px;
+	font-size: .9em;
+}
+#addcontactphoto{
+	min-width: 210px;
+	max-width: 210px;
+	min-height: 20px;
+	padding: 1px;
+	font-size: .9em;
+}
+
+/*form.distributor1 input[type=checkbox] {width: 10px;}
+*/
+
+/*form.distributor1 td { display: block;}
+form.distributor1 input[type=text] {display: block;}
+*/
+/*form.distributor1 input[type=text]#address1, input[type=text]#address2{}
+form.distributor1 input[type=radio] {width: 10px;}
+
+form.distributor1 label#firmName{width:430px;} 
+input[type=text]#firmName{width:225px;}
+
+form.distributor1 label#FName{width:130px;} 
+input[type=text]#FName{width:120px;}
+form.distributor1 label#MName{width:130px;} 
+input[type=text]#MName{width:120px;}
+form.distributor1 label#LName{width:130px;} 
+input[type=text]#LName{width:120px;}
+*/
+form.distributor1 label#address1{width:430px;} 
+input[type=text]#address1{width:225px;}
+form.distributor1 label#address2{width:430px;} 
+input[type=text]#address2{width:225px;}
+
+form.distributor1 label#websiteURL{width:430px;} 
+input[type=text]#websiteURL{width:225px;}
+
+form.contactInfo label#groupName{width:430px;} 
+input[type=text]#groupName{width:225px;}
+.uniform{width:225px;}
+/*form.distributor1 label#city{width:140px;} 
+input[type=text]#city{width:150px;}
+form.distributor1 label#state{width:120px;} 
+input[type=text]#state{width:120px;}
+form.distributor1 label#zip{width:100px;} 
+input[type=text]#zip{width:100px;}
+*/
+/*form.distributor1 label#email{width:145px;} 
+input[type=text]#email{width:145px;}
+form.distributor1 label#phone{width:145px;} 
+input[type=text]#phone{width:145px;}
+form.distributor1 label#ext{width:50px;} 
+input[type=text]#ext{width:50px;}
+
+form.distributor1 label#fbPage{width:130px;} 
+input[type=text]#fbPage{width:125px;}
+form.distributor1 label#twitter{width:130px;} 
+input[type=text]#twitter{width:125px;}
+form.distributor1 label#linkedin{width:130px;} 
+input[type=text]#linkedin{width:125px;}
+*/
+form.distributor1 label#ssn{width:130px;} 
+input[type=text]#ssn{width:120px;}
+form.distributor1 label#tin{width:130px;} 
+input[type=text]#tin{width:120px;}
+
+form.distributor1 label#AddPersonalPhoto{width:100px;} 
+input[type=text]#AddPersonalPhoto{width:30px;}
+form.distributor1 label#AddGroupPhoto{width:100px;} 
+input[type=text]#AddGroupPhoto{width:30px;}
+
+form.distributor1 label#RemovePersonalPhoto{width:100px;} 
+input[type=checkbox]#RemovePersonalPhoto{width:10px;}
+form.distributor1 label#RemoveGroupPhoto{width:100px;} 
+input[type=checkbox]#RemoveGroupPhoto{width:10px;}
+
+
+
+/*h1.setupEmail{
+	text-decoration:;
+	line-height:22px;
+	}*/
+/*h4{
+	margin:0;
+	padding:0;
+	}
+h2, h3{
+	margin-top:45px;
+	}
+*/
+h2.contentMain858{
+	color: blue;
+	}
+/*.hr{
+	width: 90%;
+	height: 1px;
+	background: #777;
+	clear:left;
+	position:relative;
+	top:25px;
+	}*/
+/*p.footnote {
+	font-size: 0.6em;
+	color: #CC0000;
+	padding-top: 10px;
+	}*/
+	
+.required {color: #CC0000;
+	}
+.distributor1 p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	margin: 0;
+	}
+
+.warning {
+	background-color: #ccc;
+	padding: 6px; 
+	border: 5px solid#CC0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	margin-left:auto;
+	margin-right:auto;
+	width: 500px;
+	text-align: center;
+	vertical-align: middle;
+}
+.warning table {
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	vertical-align: middle;
+	padding: 6px 6px 6px 6px;
+}
+.warning input[type=submit] {
+	border:thin solid #777;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+}
+
+.emailform table, th{
+	margin: 6px 6px 6px 6px;
+	padding: 6px 6px 6px 6px;
+}
+.emailform td{
+	padding: 0;
+	margin-right: auto;
+}
+.emailform input[type=submit]{
+	margin-left: 6px;
+	border:thin solid #777;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+	}
+
+/*form#login label{
+	float:none;
+	}
+form#login input[type=password]{
+	margin-left:10px;
+	}
+form#login input[type=password]{
+	margin-left:31px;
+	}*/
+	
+	
+/*.distributor1 .formSelect{
+	font-size: 1em;
+	}*/
+ul .formSelect {
+    display: block;
+	width 100%;
+	}
+li .formSelect{
+	display: block;
+	}
+#addOrg2 li {
+	list-style-type: none;
+}
+	
+/****for Edit My Account page*****/
+input#long{
+	width: 180px;
+}
+input#short{
+	width: 100px;
+}
+table.editmyacct td{
+	font-size: 1em;
+}
+	
+/*****Table Styles*****/
+.distributor1 table td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	padding-right: 6px;
+	width: 125px;
+	}
+th {
+	font-weight: 100;
+	padding-top: 6px;
+	vertical-align: bottom;
+	}
+table.genInfo1{
+	width: 419px;
+	border: 0;
+}
+.genInfo1 td, .distributor1 td{
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	padding: 0;
+	border: 0;
+}
+
+table.tableBox{
+/*	border: 2px ;*/	
+	width: 404px; 
+	border-style: solid;
+	border-width: thick;
+	border-color: #ccc;
+	margin-top: 4px;
+	}
+.tableBox td{
+	width: 200px;
+	border-collapse: separate;
+	border-spacing: 0px 0px;
+	padding: 0;
+	border: 0;
+	}
+.tableWide{
+	width: 800px;
+	border-collapse:separate;
+	border-spacing:0px 0px;
+	border: 0;
+	}
+.tableWide td{
+	border-collapse:separate;
+	border-spacing:0px 0px;
+	padding: 0;
+	border: 0;
+}
+
+.contactstitle{
+	font-size: 1em;
+	font-style: strong;
+}
+table#contacts{
+	display: table;
+	max-width: 858px;
+	border: 0;
+	border-collapse: collapse;
+	font-size: .9em;
+	margin: 5px;
+}
+table#contacts td{
+	display: table-cell;
+	vertical-align: top;
+	border-collapse: collapse;
+	padding: 3px;
+	border: 0;
+}
+#contacts a:link {text-decoration:none;}
+#contacts a:visited {text-decoration:none;}
+#contacts a:hover {text-decoration:none;}
+#contacts a:active {text-decoration:none;}
+
+table td input[type="text"]#title{
+	width: 100px;
+	margin: 3px 3px 3px 3px;
+	border: 1px solid #666;	
+}
+table td input[type="text"]#FName{
+	width: 100px;
+	margin: 3px 3px 3px 3px;
+	border: 1px solid #666;	
+}
+table td input[type="text"]#LName{
+	width: 100px;
+	margin: 3px 3px 3px 3px;
+	border: 1px solid #666;	
+}
+table td input[type="text"]#phone{
+	width: 100px;
+	margin: 3px 3px 3px 3px;
+	border: 1px solid #666;	
+}
+table td input[type="text"]#email{
+	width: 100px;
+	margin: 3px 3px 3px 3px;
+	border: 1px solid #666;	
+}
+
+input#dhbutton {
+	border:thin solid #777;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.6em;
+	background-color: #CC0000;
+	color: white;
+	font-size: .9em;
+	vertical-align: middle;
+}
+
+input#dhgroup{
+	width: 80px;
+	font-size: .8em;
+}
+input#dhclub{
+	width: 80px;
+	font-size: .8em;
+}
+input#dhname{
+	width: 80px;
+	font-size: .8em;
+}
+input#dhemail{
+	width: 100px;
+	font-size: .8em;
+}
+input#dhphone{
+	width: 80px;
+	font-size: .8em;
+}
+input#dhytd{
+	width: 55px;
+	font-size: .8em;
+}
+
+table#contacts2{
+	width: 450px;
+	border: 0;
+}
+.table#contacts2 td{
+	border-collapse:separate;
+	border-spacing:0px 0px;
+	padding: 0 0 0 0;
+	border: 0;
+	}	
+table#editaccts th{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	padding: 0px;	}
+table#editaccts td{
+	font-size: .7em;
+	padding: 0px;	}
+
+/*******TABLE-goals*******/
+.goals th{
+	color: #FFF;
+	}
+
+/*******TABLE-members*******/
+table#viewembers td{
+	vertical-align: bottom;
+	}
+td#emailsSetup5,
+td#earnings5,
+td#ytdearnings5 {
+	font-size: 0.75em;
+	line-height: 1em;
+	padding: 0;
+	margin: 0;
+	}
+
+	
+/*******TABLES*******/
+/*#tableWrapper{
+	float:left;
+	width:858px;
+	position:relative;
+	top:0px;
+	margin: 0px;
+	padding: 0px;
+	}
+#tableWrapper h3{
+	padding: 20px 20px 10px 0;
+	}
+th, td {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 100%;
+	font-weight: normal;
+	}
+th {
+	vertical-align:bottom;
+	}
+table{
+	width: 857px;
+	clear: left;
+	}
+.tableHeader{
+	clear: both;
+	width: 100%;}
+
+table.calculatorTable{
+	float:left;
+	clear: both;
+	margin:0;
+	border-radius:7px;
+	width: 857px;
+	margin-bottom: 10px;
+	}
+
+table.calculatorTable th{
+	background-color:#cc0000;
+	color:#fff;
+	font-weight:lighter;
+	padding:3px 3px 5px 5px;
+	text-align: center;
+	}
+	
+table.calculatorTable th:first-child {
+	-moz-border-radius: 7px 0 0 0;
+	-webkit-border-radius: 7px 0 0 0;
+	border-radius: 7px 0 0 0;
+	font-size: 16px;
+	text-align: left;
+}
+
+th:last-child {
+    -moz-border-radius: 0 7px 0 0;
+    -webkit-border-radius: 0 7px 0 0;
+    border-radius: 0 7px 0 0;
+}
+
+th:only-child{
+    -moz-border-radius: 7px 7px 0 0;
+    -webkit-border-radius: 7px 7px 0 0;
+    border-radius: 7px 7px 0 0;
+}
+
+table.calculatorTable td{
+	padding:0;
+	text-align:center;
+	background-color:#ccc;
+	border:thin solid #ccc
+	}
+.calcCategoryHead {
+	
+	}
+table.calculatorTable td.fl {text-align: left; }
+table.calculatorTable td:first-child{padding: 10px; }
+table.calculatorTable td.{padding-left: 20px; }
+	*/
+	
+/******SetupNav******/
+.nav2 ul, 
+.nav3 ul {
+	float:right;
+	padding:0 4px;
+	margin:0;
+	list-style-type: none;
+}
+.nav2 ul li, 
+.nav3 ul li {
+	display:inline;
+	font-size:.75em;
+	}
+.nav2 ul li a, 
+.nav3 ul li a {
+	color: #0000ff;
+	text-decoration: none;
+	}
+li#current a {
+	text-decoration:none;
+	color: #CC0000;
+	}
+.nav2 ul li a:hover, .nav2 ul li a:active, 
+.nav3 ul li a:hover, .nav3 ul li a:active{
+	text-decoration:none;
+	color: #666;
+	}
+
+	
+	
+/*body#type a.typenav,
+body#info a.infonav,
+body#reasons a.reasonsnav,
+body#goals a.goalsnav,
+body#contacts a.contactsnav, 
+body#photos a.photosnav, {
+	text-decoration:none;
+	color:#red;
+	}*/
+
+.navAlpha {
+	color: #666;
+	text-decoration:none;
+	}	
+.navAlpha ul {
+	float:left;
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+.navAlpha ul li {
+	display:inline;
+	font-size:1.2em;
+	padding: 4px;}
+.navAlpha ul li a {
+	color: #0000ff;
+	text-decoration: none;
+	}
+.navAlpha ul li a:hover, .navAlpha ul li a:active {
+	text-decoration:none;
+	color: #CC0000;
+	}	

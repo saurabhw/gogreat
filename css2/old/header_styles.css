@@ -1,0 +1,468 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/******COLORS******/
+/*Red - #CC0000 */
+/*Blue - #0000FF */
+/*Gray Text - #666 */
+/*Gray Box - #CCC */
+/*Gray2 - #eee*/
+
+
+/***HEADER***/
+#headerMain{
+	margin: 0;
+	padding:0;
+	position: relative;
+	width: 1175px;
+	/*height: 178px; OLD */
+	height: 147px;
+}
+
+img#logo{ padding-bottom: 0; border: none; z-index:-10; max-height: 125px; }
+img#logo2{ 
+	padding-bottom: 0;
+    	border: none;
+    	max-width: 154px;
+    	max-height: 124px;
+    	display: block;
+    	position: absolute;
+    	margin: 30px 5px;
+}
+
+#menuWrapper{
+	margin: 0 0 0 0;
+	padding:0;
+	width: 1175px;
+	height: 20px;
+	position: absolute;
+	z-index:10;
+	overflow: hidden;
+	color: transparent;
+	background-color: #cc0000;
+}
+
+#collage{
+	margin:0 0 10px 0;
+	padding:0;
+	width:1175px;
+	max-height:124px;
+	position: absolute;
+	top:0;
+	left:0px;
+	z-index: -1;
+}
+
+#bannerwrapmain{ 
+	width: 1175px;
+	height: 124px;
+	z-index: -100;
+	margin-bottom: 3px;
+}
+
+#bannerwrap{ 
+	width: 1175px;
+	height: 124px;
+	z-index: -100;
+	background: #cc0000;
+	margin-bottom: 3px;
+}
+
+#banner{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 850px;
+    	max-height: 124px;
+}
+
+/***NEW LOGIN DROPDOWN***/
+.newlogin{
+	/*position: relative;*/
+	float: left;
+	z-index: 20;
+}
+	
+.newlogin form#newlogin{
+	margin: 1%;
+	z-index: 10;
+	color: #000;
+}
+
+.newlogin label.userlogin{
+	color: #000;
+	font-size: .6em;
+	line-height: 1.4em;
+	vertical-align: middle;
+	text-align:justify;
+	width: 48px;
+	display: inline-block;
+}
+
+.newlogin input#loginemail[type=text]{
+	z-index: 8;
+	width: 150px;
+	border: thin solid #ccc;
+}
+
+.newlogin input#loginpassword[type=password]{
+	width: 150px;
+	z-index: 8;
+	border: thin solid #ccc;
+	margin: .5em 0 1em 0;
+}
+
+.newlogin div#acct_buttons {
+	margin-left: 30px;
+}
+
+
+/***LOGIN AREA***/
+#login{
+	width: 415px;
+	height: 41px;
+	position: relative;
+	float: left;
+	margin-top: 6px;
+	padding-left: 4px;
+	z-index: 20;
+	}
+	
+form#log{
+	width: 415px;
+	z-index: 10;
+	padding: 0;
+	color: #cc0000;
+	background-color: transparent;
+	}
+
+input[type=text]{
+	position: relative;
+	z-index: 8;
+	width: 70px;
+	margin: 0px 3px 0px 0px;
+	vertical-align: middle;
+	}
+input#login1{
+	font-size: .75em;
+	width: 75px;
+	z-index: 8;
+	margin: 0px 3px 0px 0px;
+}
+input#password[type=password]{
+	font-size: .75em;
+	width: 75px;
+	z-index: 8;
+	margin: 0px 3px 0px 0px;
+	}
+
+
+/** BUTTONS **/	
+
+.redbutton{ 
+	border: none;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: none;
+    font-size: .75em;
+    cursor: pointer;
+    padding: 3px 5px;
+    margin: 0;
+    line-height: 12px;
+    vertical-align: middle;
+    color: #fff;
+    background: #cc0000; 
+}
+	.redbutton:hover{ outline: 1px solid #cc0000; color: #cc0000; background: #fff; }
+	
+	#content a:link.redbutton { padding: 2px 4px; color: #fff; background: #cc0000; }
+	#content a:hover.redbutton { padding: 2px 4px; outline: 1px solid #cc0000; color: #cc0000; background: #fff; }
+	#content a:visted.redbutton { padding: 2px 4px; color: #fff; background: #cc0000; }
+
+.medredbutton{ 
+	border: none;
+    	border-radius: 2px 2px 2px 2px;
+    	box-shadow: none;
+    	font-size: 1em;
+    	cursor: pointer;
+    	padding: 3px 8px;
+    	margin-right: 0;
+    	line-height: 15px;
+    	vertical-align: middle;
+    	color: #fff;
+    	background: #cc0000; 
+}
+	.medredbutton:hover{ outline: 1px solid #cc0000; color: #cc0000; background: #fff; }
+	.medredbutton:visted{ color: #fff; background: #cc0000; }
+	
+/*#graybutton:hover{
+	background: -webkit-linear-gradient(#eee, #fff, #eee) !important; /* For Safari 5.1 to 6.0 */
+	/*background: -o-linear-gradient(#eee, #fff, #eee) !important;*/ /* For Opera 11.1 to 12.0 */
+	/*background: -moz-linear-gradient(#eee, #fff, #eee) !important;*/ /* For Firefox 3.6 to 15 */
+	/*background: linear-gradient(#eee, #fff, #eee) !important;*/ /* Standard syntax */
+/*}
+#graybutton a:hover, a:visited, a:link, a:active{ text-decoration: none; }*/
+
+/*input#graybutton[type=submit]{
+	border: thin solid #777;	
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: none;
+	font-size: .75em;
+	cursor: pointer;
+	padding: 5px;
+	margin: 0px 2px;
+	line-height: 12px;
+	vertical-align: middle;
+	
+	color: #000;
+	background: -webkit-linear-gradient(#ccc, #eee, #ccc); /* For Safari 5.1 to 6.0 */
+	/*background: -o-linear-gradient(#ccc, #eee, #ccc); /* For Opera 11.1 to 12.0 */
+	/*background: -moz-linear-gradient(#ccc, #eee, #ccc); /* For Firefox 3.6 to 15 */
+	/*background: linear-gradient(#ccc, #eee, #ccc); /* Standard syntax */
+/*}*/
+
+/* Remove button padding in FF */
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+     padding: 0 !important;
+     border: 0 none !important;
+ }
+label.user, .forgotpw{
+	color:#fff;
+	font-size:.6em;
+	line-height:1.4em;
+	background-color: transparent;
+	text-shadow: 0 0 1px rgba(0,0,0,.35);
+	}
+#register{
+	position: relative;
+	width: 95px;
+	float: right;
+	font-size: .6em;
+	line-height: 1.4em;
+	margin-top: -25px;
+	text-shadow: 0 0 1px rgba(0,0,0,.35);
+}
+#register ul{
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#register ul li a{
+	color: #fff;
+	background-color: transparent;
+	text-decoration:none;
+}
+
+#register ul li a:hover{
+	text-decoration:underline;
+}
+	
+/***NAVIGATION***/
+.nav, .nav a, .nav ul, .nav li, .nav div, .nav form,  {
+    	margin: 0;
+    	padding: 0;
+    	border: none;
+    	outline: none;
+}
+ 
+.nav a { color: #000; text-decoration: none; }
+
+.nav {
+    	display: inline-block;
+    	position: relative;
+    	cursor: default;
+    	z-index: 500;
+    	width: 100%;
+    	height: 20px;
+}
+ 
+.nav > li {
+    	display: block;
+    	float: left;
+    	list-style: none;
+}
+	.nav li.indent { margin-left: 8px; }
+
+li.divider {
+	height: 31px;
+	padding: 0;
+	border-left: 1px solid #fff;
+}
+
+.nav > li > a:link {
+    	position: relative;
+    	display: block;
+    	z-index: 510;
+    	height: 12px;
+    	padding: 4px 9px;
+    	line-height: 10px;
+ 
+    	font-family: Helvetica, Arial, sans-serif;
+    	font-size: 11px;
+    	color: #fff;
+    	text-shadow: 0 0 1px rgba(0,0,0,.35);
+    	text-decoration: none;
+ 
+    	background: #cc0000;
+}
+
+.nav > li:hover > a:hover { 
+	background-color: #fff;
+	color: #000;
+	text-shadow: none;
+	text-decoration: none;
+}
+
+.nav > li > a:visited { 
+	color: #fff;
+	text-decoration: none;
+}
+ 
+
+/***MEGA DROPDOWN MENU***/
+.nav > li > div {
+    	position: absolute;
+    	display: block;
+    	width: 100%;
+    	top: 20px;
+    	right: 0;
+ 
+ 	/*Hides the dropdown*/
+    	opacity: 0;
+    	visibility: hidden;
+    	overflow: hidden;
+ 
+    	background-color: #fff;
+    	border: 0 1px 1px 1px solid #ccc;
+    	border-radius: 0 0 3px 3px;
+    	box-shadow: 0px 0px 10px #ccc;
+    	color: transparent;
+ 
+ 	/*Removed for iOS compatibility*/
+    	/*-webkit-transition: all .3s ease .15s;
+    	-moz-transition: all .3s ease .15s;
+    	-o-transition: all .3s ease .15s;
+    	-ms-transition: all .3s ease .15s;
+    	transition: all .3s ease .15s;*/
+}
+	
+.nav > li:hover > div {
+	/*Shows the dropdown*/
+    	opacity: 1;
+    	visibility: visible;
+    	overflow: visible;
+}
+
+.nav .nav-column {
+    	float: left;
+    	width: 11.5%;
+    	padding: .25% .25% .5% .5%;
+    	border-right: 1px dotted #ccc;
+}
+.nav .nav-column:last-child { border-right: none; }
+ 
+.nav .nav-column h3 {
+    	margin: 5px 0 0 5px;
+    	line-height: 13px;
+ 
+    	font-family: Helvetica, Arial, sans-serif;
+    	font-weight: bolder;
+    	font-size: 12px;
+    	color: #000;
+    	background-color: transparent;
+}
+ 
+.nav .nav-column h4 { 
+	margin: 2px 0 0 0;
+	line-height: 12px;
+ 
+   	font-family: Helvetica, Arial, sans-serif;
+    	font-weight: bold;
+    	font-size: 11px;
+    	color: #000; 
+    	background-color: transparent;
+    	text-align: left;
+}
+
+.nav .nav-column h4 a{
+    	margin: 5px 0 0 0;
+    	line-height: 14px;
+ 
+    	font-family: Helvetica, Arial, sans-serif;
+    	font-weight: bold;
+    	font-size: 12px;
+    	color: #0033ff;
+    	background-color: transparent;
+}
+.nav .nav-column h4 a:hover { text-decoration: underline; } 
+.nav .nav-column h4 a:visited { color: #0033ff; }
+
+.nav .nav-column ul { margin: 0 0 10px 0; }
+
+.nav .nav-column li a {
+    	display: block;
+    	margin: 0 0 0 5px;
+    	line-height: 14px;
+ 
+    	font-family: Helvetica, Arial, sans-serif;
+    	font-size: 11px;
+    	color: #333;
+    	background-color: transparent;
+}
+ 
+.nav .nav-column li a:hover { 
+	color: #000;
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+#lineup{ line-height: 20px; }
+
+@media screen and (max-width: 1024px) {
+   /***HEADER***/
+	#headerMain{
+		width: 1024px;
+		height: 174px;
+	}
+	
+	img#logo{ max-height: 120px; }
+	img#logo2{ 
+	    	max-width: 85px;
+   		max-height: 120px;
+    		margin: 45px 2px;
+	}
+	
+	#menuWrapper{
+		width: 1024px;
+		height: 20px;
+	}
+	
+	#collage{
+		margin: 7px 0 10px 0;
+		max-width:1024px;
+		max-height:110px;
+	}
+	
+	#bannerwrapmain{ 
+		max-width: 1024px;
+		height: 120px;
+	}
+	
+	#bannerwrap{ 
+		max-width: 1024px;
+		height: 120px;
+	}
+	
+	#banner{
+		max-width: 846px;
+	    	max-height: 120px;
+	}
+	
+	/***NAVIGATION***/
+	.nav > li > a {
+	    	padding: 4px 4px;
+	}
+}

@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#leftSideBar {
+	float:left; 
+	width:144px;
+	margin:-75px 10px 0 0;
+	padding: 0 5px;
+	position:relative;
+	font: Arial, Helvetica, sans-serif;
+	background: #ddd;
+	/*top:-70px*/;
+	}
+
+#leftSideBar h4{
+	font-size: .85em;
+   	font-weight: bold;
+    	text-transform: uppercase;
+    	color: #111;
+}
+
+ul#sideNav{
+	width:143px;
+	margin:0px;
+	padding:6px 3px 6px 3px;
+	float:left;
+	overflow:hidden;
+	z-index:21;	
+	} 
+ul#sideNav li{
+	width: 140px;
+	text-align: left;
+	padding: 4px 0;
+	margin: 0;
+	list-style-type: none;
+	/*font-size: .65em;*/
+	line-height: 1em;
+	display: block;
+	}
+ul#sideNav li a{
+	text-decoration:none;
+	color: #0033ff;
+	font-weight: 500;
+	}
+
+ul#sideNav li a:hover{
+	text-decoration:underline;
+	}
+	
+
+#acctname {
+	font-size: 1.3em;
+	font-weight: 9;
+	padding: 0 0 .5em 0;
+	margin: 0 0 0 5%;
+    	line-height: .8em;
+    	text-shadow: -.1em .1em .2em #aaa;
+}
+
+/****Sample Website Pages****/
+#leftSideBarSample {
+	float: left; 
+	width: 160px;
+	/*height: 90%;*/
+	height: 550px;
+	margin:-31px 10px 0 0;
+	position: absolute;
+	font: Arial, Helvetica, sans-serif;
+	font-size: .65em;
+	background: #ddd;
+	
+	}
+
+#leftSideBarSample img {
+	display: block;
+	margin: 10px auto;
+	padding: 0;
+	border-radius: 5px;
+	max-width: 140px;
+}
+
+#leftSideBarSample #acctname {
+	font-size: 1.3em;
+	font-weight: 9;
+	padding: 0 0 .5em 0;
+	margin: 5% 0 0 0;
+    	line-height: .8em;
+    	text-shadow: -.1em .1em .2em #aaa;
+}
+
+#leftSideBarSample h4{
+	font-size: .85em;
+	line-height: 1em;
+   	font-weight: bold;
+    	text-transform: uppercase;
+    	color: #111;
+    	margin: 0 0 .3em 0;
+}
+
+ul#sideNavSample{
+	width:150px;
+	margin:0 0 0 0;
+	padding:0 5px;
+	float:left;
+	/*overflow:hidden;*/	
+	z-index:21;
+	/*border-top-width: thick;
+	border-bottom-width: thick;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #ccc;
+	border-bottom-color: #ccc;*/	
+	} 
+ul#sideNavSample li{
+	width:145px;
+	text-align:left;
+	padding: 2px 0;
+	margin:0 0 0 5px;
+	list-style-type:none;
+	display:block;
+	}
+ul#sideNavSample li a{
+	text-decoration:none;
+	color:#0033ff;
+	}
+
+ul#sideNavSample li .red {
+	color: #CB2027;
+}
+
+ul#sideNavSample li .stylized {
+	font-size: .7em;
+	font-style: italic;
+}
+
+ul#sideNavSample li a:hover{
+	text-decoration:underline;
+	}
+.stuname{
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 1.05em;
+}
+.stylized{
+
+}
+	
+/***************************/
+/******Start Gift List******/
+/***************************/
+
+#giftlist_placeholder {
+	height: 175px;
+	width: 124px;
+	display: block;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+}
+
+.giftlist_side{
+	height: 80px;
+	width: 124px;
+	display: block;
+	padding: 2px 0;
+	margin: 0;
+	background-color: #fff;
+	overflow-y: scroll;
+	border: 1.2px solid #ccc;
+}
+.giftlist_side li{
+	font-size: .8em;
+}
+.giftlist_side li [type=checkbox]{
+	size: .5em;
+}
+#giftlist_newname [type=text]{
+	width: 120px;
+	margin: 5px 0 0 0;
+}
+
+/*************************/
+/******End Gift List******/
+/*************************/
+	
+/***Nav for Marketing - red box***/
+ul#sideNavMktg{
+	width:124px;
+	width:96px;
+	margin:8px 0px 0 0;
+	padding:12px 18px 12px 18px;
+	float:left;
+/*	overflow:hidden;
+*/	z-index:21;
+	background-color: #CC0000;
+	} 
+ul#sideNavMktg li{
+/*	width:124px;
+*/	text-align:left;
+	padding:6px 0;
+	margin:0;
+	font-size: .75em;
+	line-height: 1.2em;
+	list-style-type:none;
+	color: #FFF;
+	display:block;
+	}
+ul#sideNavMktg li a{
+	text-decoration:none;
+	color:#FFF;
+	}
+ul#sideNavMktg li a:hover{
+	text-decoration:underline;
+	color: #CCC;
+	}
+/*#sideNavMktg #whiterule {
+	padding: 10px 0 10px 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFF;
+}*/
+
+/*container dropdown*/
+.dropdown_4columns{
+	margin:4px auto;
+	float:left;
+	position:absolute;
+	left:-999em; /* Hides the drop down */
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	border:1px solid #777777;
+	border-top:none;
+	width: 900px;
+	width: 730px;
+	/* Gradient background */
+	background:#FFF;
+	
+}
+#menu li:hover .dropdown_4columns{
+		left:-240px;/*moves the dropdown position*/
+		top:auto;
+}
+
+/*columns in dropdown div*/
+ .col_1{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 0 5px 0 0;
+	width:130px;
+	border-right:thin dotted #777;
+}
+ .col_1:last-child{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 0;
+	width:130px;
+	border:none;
+}
+
+/* -- Styles for dropdown menu #2 -- */
+.dropdown_1column{
+	margin:4px auto;
+	float:left;
+	position:absolute;
+	left:-999em; /* Hides the drop down */
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	border:1px solid #777777;
+	border-top:none;
+	width: 250px;
+	/* Gradient background */
+	background:#FFF;
+	
+}
+#menu li:hover .dropdown_1column{
+		left:0;/*moves the dropdown position*/
+		top:auto;
+}
+
+/* -- columns in dropdown #2 div -- */
+ .col_1{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 0 5px 0 0;
+	width:130px;
+	border-right:thin dotted #777;
+}
+ .col_1:last-child{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 0;
+	width:130px;
+	border:none;
+}
+
+/* -- End dropdown menu #2 -- */
+
+/*************************/
+/**BEGIN GETTING STARTED**/
+/*************************/
+
+.sidegraybackground{
+	background: #ccc;
+	padding: 5px;
+	border-radius: 10px;
+}
+ul#sidemenugettingstarted{
+	list-style-type: none;
+	line-height: 1em;
+}
+ul#sidemenugettingstarted li{
+	line-height: 1.4em;
+}
+ul#sidemenugettingstarted li a{
+	text-decoration: none;
+	color: #0033ff;
+	font-weight: 500;
+}
+ul#sidemenugettingstarted li a:hover{
+	color: #CC0000;
+}
+#sideRedbar{
+	width:100%;
+	margin: 0 0 5px 0;
+	padding: 1px 0px;
+	background-color:#cc0000;
+	-moz-border-radius: 7px;
+    	-webkit-border-radius: 7px;
+    	border-radius: 7px;
+	-moz-box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	-webkit-box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	}
+#sideRedbar h3{
+	font-size: 1.5em;
+	color:#fff;
+	text-align: center;
+	padding: 2px;
+	}
+
+/***********************/
+/**END GETTING STARTED**/
+/***********************/

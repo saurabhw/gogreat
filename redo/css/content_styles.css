@@ -1,0 +1,970 @@
+/* #########################################
+   #    Homepage Index element styles 
+   #    (elements can be used elsewhere as well    
+   ######################################### */
+   
+/* #########################################
+   #    Jumbotron elements     #
+   ######################################### */
+.jumbotron{
+    border-radius:0px!important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 6em;    
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ef473a, );  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.6), 0px 3px 10px 0 rgba(0,0,0,0.6);
+}
+
+.jumbotron p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* show hover underline on title for jumbotron */
+.jumbotron:hover .jumbotron hr  {
+	opacity: 1;
+}
+
+/* hover underline on title for jumbotron */
+.jumbotron:hover .hvr-underline-from-center:before, .jumbotron:focus .hvr-underline-from-center:before, .jumbotron:active .hvr-underline-from-center:before {
+    left: 25px !important;
+    right: 0;
+    height: 1px;
+    background:#f2f2f2;
+}
+
+/* jumobtron screen adjustments | max width */
+@media (max-width:991px){
+    .jumbotron{
+        padding: 1rem;
+        margin-bottom: 10em;
+    }
+    
+  .jumbotron p{
+        font-size: 1.1em;    
+        color:black;
+        padding: 0px 0rem 2rem 7rem;
+        width: 95%; 
+        margin: -1em 0 0em -1.5em;
+        line-height:1.7;
+  }
+  .jumbotron h1{
+        color:white;
+        font-size:32px;
+        display:flex;   
+        justify-content:center;
+  }
+  
+  .jumbotron:hover .hvr-underline-from-center:before, .jumbotron:focus .hvr-underline-from-center:before, .jumbotron:active .hvr-underline-from-center:before {
+      left: 0;
+      right: 0;
+      height: 1px;
+      background:#f2f2f2;
+      margin-left: 3% !important;
+  }
+}
+
+/* jumobtron screen adjustments | min width */
+@media (min-width:991px){
+  .jumbotron{
+        padding-bottom:4em;
+  }
+  .jumbotron p{
+        font-size: 1.3em;
+        color: black;
+        letter-spacing: .5px;
+        padding: 0 0 0 10rem;
+        line-height: 1.75;
+        width: 90%;
+    }
+    
+  .jumbotron h1{
+        margin: 0 0 .5em 1em;
+        color:white;
+        font-size:36px;
+        padding-left: 30px;
+  }
+}
+
+
+/* #########################################
+   #   Cards   #
+   ######################################### */
+ 
+/* possible background other than grey:   
+background-color: rgba(245, 245, 220, 0.25); <-- beige with opacity set low - yellowish look without an overpowering yellow
+background-color: rgba(255, 255, 175, 0.3); <-- light yellow with opacity
+background-color: rgba(255, 255, 143, .25); <-- another light yellow
+*/
+
+.img-card {
+    background-color: #f2f2f2;
+    margin:1em 0 0 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.19),0 2px 10px 0 rgba(0,0,0,0.19); 
+}
+
+.cardimage{
+    display: inline-block;
+    min-width: 100%;
+    height: auto;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.9),0 0 4px 0 rgba(0,0,0,0.9);
+}
+
+.cardbody{
+    text-align: left !important;
+    padding-left: 10px;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.imgcard-info {
+	color: black;
+	padding: 0 20px 25px 20px;
+	position: relative;
+}
+
+.card-title{
+	color: black;
+    letter-spacing: 1.2px;
+	padding: 0 0 .45em 0;
+	font-weight:bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Title description | Currently used for SECONDARY TITLE underneath images */
+.imgcard-info span {
+    text-align:center !important;
+    display:block;
+    font-size: 22px;
+    color: #4CB47A;
+    letter-spacing: 1.2px;
+    line-height:1.65;
+	font-weight:bold;
+	font-family: 'Roboto', sans-serif;
+	margin: -0.3em 0 0em 0;
+    white-space: pre-wrap;
+}
+
+.imgcard-info a {
+        text-decoration: none;
+}
+
+/* button placement/padding for size boots/ pre-wrap for line break when needed/ display flex and justify btn text */
+.img-card .btn{
+    font-size: 1.2em;
+    margin: 2rem 2rem 0 2rem;
+    padding: 1rem;
+    -webkit-min-logical-width: -webkit-fill-available;
+    white-space: pre-wrap;
+    color: white;
+    justify-content: space-around;
+    display: flex;
+}
+
+/*hover colors/animation for card button hover */
+.img-card .btn:hover{
+    background-color: black;
+    background-color:#cc0000;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border-color:transparent;
+}
+
+@media(min-width: 851px){
+    .img-card:hover .imgcard-info hr  {
+        opacity: 1;
+    }
+    
+    /*card row homepage*/
+        #homecards{
+        /*margin-top:2em;*/
+        margin: 2em 0px 5em;
+        max-height: 750px;
+    }
+    
+    .img-card:hover .card-title {
+        color:#cc0000;
+    }
+    
+    .img-card > a:hover {
+        text-decoration:none !important;
+    }
+    
+    /* Underline From Center - animations not defined for smaller viewports*/
+    .hvr-underline-from-center {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hvr-underline-from-center:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 52%;
+        right: 52%;
+        bottom: 0;
+        background: #cc0000;
+        border-radius: 50%;
+        height: 3px;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .5s;
+        transition-duration: .5s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    .img-card:hover .hvr-underline-from-center:before, .img-card:focus .hvr-underline-from-center:before, .img-card:active .hvr-underline-from-center:before {
+        left: 0;
+        right: 0;
+        height: 1px;
+        background:#8c8c8c;
+    }
+}
+
+@media (max-width:850px){
+  .cardimage{
+        height:auto;
+        width:auto;
+    }
+    
+    #img-card-one{
+        height: auto !important;
+        -webkit-min-logical-height: unset !important;
+        margin-top: 0;
+        margin-bottom: 6em;
+    }
+    
+    #img-card-two{
+        margin-bottom: 2em !important;
+        -webkit-min-logical-height: unset !important;
+
+    }
+    
+    #homecards{
+        margin-top:2em;
+        margin-bottom: 2em!important;
+        max-height: unset !important;
+    }
+    .cardbody{
+        width:100%;
+        padding:0;
+        margin-bottom:25px;
+    }
+  
+    .imgcard-info span{
+        border-bottom:2px solid #8c8c8c;
+        padding:0;
+        text-align:center;
+        line-height:1.6;
+        display:block;
+    }
+    .img-card .btn {
+        font-size: 14px;
+    }
+}
+
+/* #########################################
+   #   tab pannel styles  #
+   ######################################### */
+.tab-pane > p{
+    font-size: 17px;
+    padding: 2rem 2rem 0 2rem;
+}
+
+#collapse-myTab .panel-default > .panel-heading{
+    background: #cb2d3e;
+    background: -webkit-linear-gradient(to top, #ef473a, );
+    background: linear-gradient(to top, #ef473a, #cb2d3e);
+    color: white;
+    letter-spacing: .5px;
+    border: .1px solid #eeeeee;
+}
+
+#info-pannel > div.panel-heading.hidden-sm.hidden-xs{
+    background-image: -webkit-linear-gradient(right, #cc0000, #F00000);
+    background-image: -moz-linear-gradient(right, #cc0000, #F00000);
+    background-image: -o-linear-gradient(right, #cc0000, #F00000);
+    background-image: linear-gradient(to left, #cc0000, #F00000);
+    background: linear-gradient(to right, #cc0000, #F00000);
+    color: white;
+    background: #cc0000;
+}
+
+/*homepage tab list / tab title/header style */
+#myTab > li.test-class > a{
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* tab title turns red when chosen/active and stays red on if hovered over  */
+#myTab > li.test-class.active > a,
+#myTab > li.test-class.active > a:hover{
+    color:#cc0000 !important;
+}
+
+/*hover background and text color for tab titles */
+#myTab > li.test-class > a:hover{
+    color:black !important;
+    background-color:white;
+}
+
+/*homepage informational tabs pannel */
+#info-pannel{
+    margin-bottom:4em;
+}
+
+/*tab / pannel buttons */
+#tabButton{
+    padding: 10px !important;
+    float:right !important;
+    margin-right:1em !important;
+    margin-top: 2em;
+    min-width: 12em;
+    white-space:pre-wrap;
+}
+
+#tabButton:hover{
+    background-color: black;
+    background-color: #cc0000;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border-color: transparent;
+}
+
+blockquote{
+        margin: 0 0 0 2em !important;
+}
+
+@media(max-width:1200px){
+    #myTab > li.test-class > a{
+        font-size: 14px !important;
+        margin-right: -2px;
+        font-weight: bold;
+   }
+}
+
+/* smaller text elimnates button overflow  */
+@media(max-width: 360px){
+    #tabButton{
+        font-size: .8em;
+    }
+}
+
+
+/* #########################################
+   #   Non Homepage (index.php) Styles #
+   ######################################### */
+   
+/* #########################################
+   #   Sample sites progress bar and carousel elements  #
+   ######################################### */
+.carousel-indicators .active{
+    background-color:#cc0000 !important;   
+    border: 1px solid black !important;	  
+    width: 20px;
+    height: 20px
+}
+
+.carousel-indicators{
+    bottom: 0 !important;
+        left: 35%  !important;
+    z-index: 15 !important;
+    width: 90%  !important;
+}
+.carousel-indicators-numbers li{
+border: 1px solid black !important;
+    text-indent: 0px;
+    margin: 0 2px;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    border: none;
+    border-radius: 100%;
+    line-height: 20px;
+    color: #e7e7e7;
+    background-color: #999;
+    transition: all 0.25s ease;
+}
+#homeIndicators.carousel-indicators li{
+    border: 1px solid black !important;
+
+}
+#carousel-sample{
+    margin-bottom: 2em;
+}
+#carousel-presentation{
+    margin-top:2em;
+}
+.fa-pause-circle:active{
+    color:#cc0000 !important;
+}
+#pauseButton:focus,
+#playButton:focus{
+        color:#cc0000 !important;
+        outline:none;
+        background: #999999;
+        border:.1px solid black;
+}
+#playButton.active{
+        color:#cc0000 !important;
+        outline:none;
+        background: #999999;
+        border:.1px solid black;
+    
+}
+#carouselButtons{
+    color: #cc0000;
+    padding: .5rem;
+    position: inherit;
+    width: 100%;
+    border-left: .1px solid #cc0000;
+    border-right: .1px solid #cc0000;
+    border-bottom: .1px solid #cc0000;
+    border-top: .1px solid black;
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6em;
+}
+/*container div around presentation and all indicators / btns */
+#presentationWrap{
+        padding-bottom:4em;
+}
+
+/* adjusting carousel indicators at smaller viewports */
+@media(min-width:626px){
+    ol.carousel-indicators{
+        margin-bottom: -14rem !important;    
+    }
+    .carousel-indicators-numbers li{
+        margin: 5px 2px;
+    }
+}
+
+@media (max-width:626px) and (min-width:445px){
+    ol.carousel-indicators{
+        margin-bottom: -14rem !important;
+    }
+    .carousel-indicators-numbers li{
+        margin: 5px 2px;
+    }
+}
+
+@media (max-width:445px) and (min-width:351px){
+    ol.carousel-indicators{
+        margin-bottom: -17rem !important;
+    }
+    .carousel-indicators-numbers li{
+        margin: 5px 2px;
+    }
+}
+
+@media (max-width:351px) and (min-width:5px){
+    ol.carousel-indicators{
+        margin-bottom: -20rem !important;
+    }
+    #presentationWrap{
+            padding-bottom:6em;
+    }
+}
+
+#pauseButton.btn-sm,
+#playButton.btn-sm{
+    font-size: 1.1em !important;    
+}
+#pauseButton.fa{
+    font-size:.75em !important;
+}
+@media only screen and (max-width: 990px){
+    #reasoncontent li{
+        font-size:16px !important;
+        line-height:1.6em !important;
+        margin-left: 25px !important;
+    }
+    #reasons{
+        font-size:20px !important;
+        margin-bottom:.4em;
+    }
+    h3.sample {
+        padding: 1em 0 .25em 0 !important;
+    }
+    .contactinfo2 .title {
+        font-weight: bold;
+        font-size: .9em;
+        margin-top: 5px !important;
+    }
+}
+
+/*thermo wrap*/
+#thermo-wrap {
+width:300px;
+margin:30px auto;
+}
+
+#thermometer {
+    width:70px;
+    height:300px;
+    position: relative;
+    background: #ddd;
+    border:1px solid #aaa;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+         -o-border-radius: 12px;
+            border-radius: 12px;
+
+    -webkit-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+       -moz-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+        -ms-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+         -o-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+            box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+}
+
+/*inner part of thermometer */
+#thermometer .track {
+    height:280px;
+    top:10px;
+    width:20px;
+    border: 1px solid #aaa;
+    position: relative;
+    margin:0 auto;
+    /*background:white;*/
+    background: rgb(200,255,255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(0,0,0)), color-stop(1%,rgb(255,255,255)));
+    background: -webkit-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:      -o-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:     -ms-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:    -moz-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:   linear-gradient(to bottom, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background-position: 0 -1px;
+    background-size: 100% 5%;
+}
+
+#thermometer .raised {
+    height:0%;
+    width:100%;
+    background: rgb(204,0,0);
+    background: rgba(204,0,0,.7);
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+#thermometer .goal {
+    position:absolute;
+    top:0;
+}
+
+#thermometer .amount {
+    display: inline-block;
+    padding:0 5px 0 60px;
+    border-top:1px solid black;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    color:green;
+}
+/*text and line for raised money amount */
+#thermometer .raised .amount {
+    padding:0 60px 0 5px;
+    position: absolute;
+    border-top:1px solid #060;
+    color:#cc0000;
+    right:0;
+}
+
+/* used in account sidebars */
+#accountIconSidebarHeader{
+    color:white !important;
+}
+
+
+/* #########################################
+    left sidebar for profiles and sample sites  // possiblly could be placed in more specific stylesheets // profile-block.css? roles.css? fundSites.css? 
+   ######################################### */
+   
+.profile-block{
+	position:relative;
+    overflow: -webkit-paged-y;
+    min-width: 185px;
+}
+
+.profile-block .user-heading {
+  background: #c5251e none repeat scroll 0 0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-block .user-heading a img {
+    display: block;
+}
+
+.profile-block .user-heading h1 {
+    color: #fff;
+    font-size: 25px !important;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom:0;
+}
+
+.profile-block .user-heading h2 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 1rem
+}
+
+.profile-block .user-heading h3 {
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    padding: 5px 0;
+    margin: 1px 0px -1px -6px;
+
+}
+
+.profile-block .user-heading h3 > span{
+    color: white;
+    font-size: 14px;
+    float:right;
+}
+
+.profile-block ul{
+	padding:0;
+	margin:0;
+}
+
+.profile-block ul > li {
+  border-bottom: 1px solid #ddd;
+  line-height: 30px;
+  margin-top: 0;
+}
+
+.profile-block .nav > li > a {
+    background: #e7e7e7;
+    border-radius: 0;
+    color: #000;
+    display: block;
+    font-size: 14px;
+    padding: 6px 18px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    /*white-space: pre*/
+}
+
+.profile-block ul > li > a > i {
+  color: #000;
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.profile-block ul > li > a:hover, 
+.profile-block ul > li > a:focus, 
+.profile-block ul li.active a {
+  background: #fff !important;
+  border-radius: 0;
+  color: #000 !important;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #cccccc !important;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    /*box-shadow: 0px 2px 8px rgba(0, 0, 0, .75) !important;*/
+}
+
+/* social media icons div block styling */
+#social-btns{
+    padding:5px 0;
+    border-top:.1px solid #cccccc;
+    border-bottom:.1px solid #cccccc;
+}
+
+/* social media icons on sm viewport */
+#social-btns-sm{
+    align-content: space-evenly !important;
+    float: right;
+    clear: inherit;
+    margin-right: 34%;
+    margin-left: auto;
+}
+
+/*social media icon hover effects */
+#fbicon:hover,
+#twittericon:hover,
+#emailicon:hover{
+    opacity:.6;
+    text-decoration:none !important;
+}
+
+#nav-label{
+    padding: 20px 0px 15px 15px;
+    letter-spacing: .25px;
+    font-size: 21px;
+    border-top: .1px solid #cccccc;
+    color: #cc0000;
+    text-align: left !important;
+}
+
+#general-links li a{
+    font-size:12px !important;
+    border:.1px solid #cccccc;
+
+}
+
+#general-links li a:hover{
+    color:#cc0000 !important;
+}
+
+.panel > hr{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 0;
+    border-top: 1px solid white;
+}
+
+#reasoncontent li{
+    font-size:16px !important;
+    line-height:1.6em !important;
+    margin-left: 25px !important;
+}
+
+#reasons{
+    font-size:20px !important;
+    margin-bottom:.4em;
+}
+
+h3.sample {
+    padding: 1em 0 .25em 0 !important;
+}
+
+.contactinfo2 .title {
+    font-weight: bold;
+    font-size: .9em;
+    margin-top: 5px !important;
+}
+
+/* display chevron down when a menu is not expanded | default display for these icons are hidden */
+[aria-expanded="false"] .fa.fa-chevron-down {
+    display: inline-block !important;
+}
+
+/* display chevron up when a menu is expanded */
+[aria-expanded="true"] .fa.fa-chevron-up {
+    display: inline-block !important;
+}
+
+/*this is specifically needed for account administration collapse - it behaves differently than all other titles with hidden .fa chevrons (maybe due to it starting in collapsed state) - 
+- had to remove hidden class from chevron up - THIS CSS will hide chevron-up when menu is collapsed. Chevron down works as intended with hidden class */
+[aria-expanded="false"] .fa.fa-chevron-up {
+    display: none !important;
+}
+
+/* expanded div styles. Pulled in through PHP - this is simpler than marking up every 'accounts#' page where li's are */
+#sidenavSectionAccounts{
+    background-color: rgb(231, 231, 231);
+    border-top:1px solid  #cccccc;
+    vertical-align: middle;
+}
+
+.sidenavList > li > h4 > a{
+    color: black !important;
+    vertical-align: middle;
+    display: inline-grid;
+    text-decoration:none;
+}
+
+/*btns loaded through PHP, located inside profile block under "my accounts"*/
+div.accountsBtn{
+    text-align: -webkit-center;
+    padding: 1.5rem 1rem 0 1rem;
+}
+
+/*dropdowns currently in use on profile block || No longer in use, her to keep option open */
+#profileDrop {
+    -webkit-min-logical-width: -webkit-fill-available !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none;
+}
+
+.sidenavList{
+    border-top:1px solid #cccccc;
+    text-align:left;
+}
+
+/* fundmember account home previous inline styles */
+/*alert button close styling on focus event */
+button.close:focus{
+    text-decoration:none;
+    -webkit-focus-ring-color: auto 0 !important;
+    outline: -webkit-focus-ring-color auto 0 !important;
+    }
+
+/* Float profile block IMG to the left while leaving text and icon to the right. Removes social row and brings icons into profile block */
+@media(max-width: 991px) and (min-width: 556px){
+    .user-heading > img{
+        /*float: left !important;*/
+        float: none !important;
+        clear: initial;
+        margin-top: .85rem;
+        margin-left: 0 !important;
+    }
+    
+    .profile-block .user-heading h1 {
+        font-size: 25px !important;
+        line-height: 10px !important;
+        float: left !important;
+        clear: inherit !important;
+    }
+    
+    /*profile blocks h1 titles that do not have Goal and Raised value inside the header block */
+    #sidebarTitleNoMoney{
+        float: none !important;
+        text-align: left !important;
+    }
+    
+    .profile-block .user-heading h2 {
+        float: left;
+        clear: both;
+    }
+    
+    .profile-block .user-heading h3 {
+        text-align: right !important;
+        margin-left: 0 !important;
+        /* clear: both; */
+        font-size: 16px;
+    }
+    
+    .profile-block .user-heading h3 > span {
+        padding-left: 30px;
+        float:none !important;
+    }
+    
+    #accountIconSidebarHeader > i{
+        font-size:4em !important;
+    }
+}
+
+@media(max-width: 555px){
+    #accountIconSidebarHeader {
+        margin: -0.75em -0.75em;
+    }
+}
+
+
+/* *********************************
+FORM and TABLE styles - role pages 
+************************************* */
+/*.form-area*/
+/*{*/
+/*    background-color: #fcfcfc;*/
+/*	padding: 0 20px 60px;*/
+/*	margin: 10px 0px 60px;*/
+/*	border: 1px solid lightgrey;*/
+/*	box-shadow: darkgrey 0px 0px 2px 0.2px;*/
+/*}*/
+#myForm .form-area {
+    background-color: #fcfcfc;
+    padding: 0 20px 60px;
+    margin: 10px 0px 60px;
+    border: 1px solid lightgrey;
+    box-shadow: darkgrey 0px 0px 2px 0.2px;
+}
+/*page title subsitute to allow for both page title and alert message */
+#header{
+    min-height: 4em; 
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/*#sidenavTitle{*/
+/*    float: left;*/
+/*    text-decoration: none;*/
+/*    padding: .4rem 0rem 1rem 1rem;*/
+/*}*/
+
+/* overriding bootstrap magin presets */
+.pagination {
+    margin: 0 0 20px 0 !important;
+}
+
+#deleteCell{
+    display: flex !important;
+    justify-content: center !important;
+    min-height: 91px; /*heights added to avoid uneven borders - the form for this button led to unaligned borders */
+    max-height: 20em;
+}
+thead{
+    background: #cb2d3e;  /* fallback for old browsers */ background: -webkit-linear-gradient(to left, #ef473a, );/* Chrome 10-25, Safari 5.1-6 */ 
+    background: linear-gradient(to left, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:white
+}
+
+/* view contacts selections table - displats after selections are made and member is chosen */
+div #memberContacts{
+    margin-top: 3rem;
+}
+
+/* usually a redbutton class. For FORM SUBMISSIONS */
+#saveChangesButton{
+    width: 65% !important;
+}
+
+/* alert message wraps */
+#userMsgAlertWrap{
+    padding: 0;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+/* alert message close button positioning */
+.alert-dismissable .close, .alert-dismissible .close {
+     top: 0 !important; 
+     right: 0 !important; 
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #cc0000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

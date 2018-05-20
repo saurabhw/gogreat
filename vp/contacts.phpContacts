@@ -1,0 +1,104 @@
+<?php
+   session_start();
+   if(!isset($_SESSION['authenticated']))
+       {
+            header('Location: ../index.php');
+            exit;
+       }
+   include '../includes/connection.inc.php';
+   $link = connectTo();
+   /*
+   $group = $_GET['group'];
+   // Get fundraiser name 
+   
+   $fund_query = "SELECT * FROM Dealers WHERE loginid = '$group'";
+   $fund_result = mysqli_query($link, $fund_query) or die(mysqli_error($link));
+   if($fund_result){
+    $row = mysqli_fetch_assoc($fund_result);
+    $fund_name = $row['Dealer']." ".$row['DealerDir'];
+    $fund = $row['Dealer'];
+    } 
+  */
+   $userID = $_SESSION['userId'];
+   $myQuery = "SELECT * FROM user_info WHERE userInfoID='$userID'";
+   $myResult = mysqli_query($link, $myQuery)or die ("couldn't execute query.".mysql_error());
+   $myRow = mysqli_fetch_assoc($myResult);
+  
+   $pic = $myRow['picPath'];
+?>
+
+<!DOCTYPE html>
+<head>
+<title>View Contacts | Contacts</title>
+</head>
+
+<body>
+<div id="container">
+      <?php include 'header.inc.php' ; ?>
+      <?php include 'sidenav.php' ; ?>
+	       	
+    <div id="content">
+	<h1>Fundraising Contacts</h1>
+    	<h3>Current Contacts</h3>
+     	
+     	
+      	<div id="graybackground">
+      	<select name="scid" onChange="fetch_select2(this.value);" required>
+                                <option>Select Sales Coordinator</option>
+                                <option value="<?  echo $bob;?>">GreatMoods Coordinator</option>
+      		                <?
+      		                     $sql = "SELECT * FROM distributors WHERE vpID = '$userID' AND role = 'SC'";
+		                     $result2 = mysqli_query($link, $sql)or die ("couldn't execute query distrubutors.".mysql_error());
+		                     while($row2 = mysqli_fetch_assoc($result2))
+		                     {
+                                        echo '<option value="'.$row2[loginid].'">'.$row2['FName'].' '.$row2[LName].'</option>';
+	                             }
+	                         ?>
+      		                 </select>
+      		                 <select name="rpid" id="rpid" onChange="fetch_select3(this.value);" required>
+      		                 </select>
+				 <select name="groupid" onChange="fetch_select(this.value);" id="groupid">
+				 </select>
+				 <select name="memberid" id="memberid" required>
+				 </select>
+      	<select class="" name="groupid" id="groupid" onChange="fetch_select2(this.value);">
+							<option value="">Select FR Account</option>
+							<?php 
+						$getAccount = "SELECT * FROM Dealers WHERE setuppersonid = '$userID'";
+						$result = mysqli_query($link, $getAccount)
+						or die("MySQL ERROR om query 1: ".mysqli_error($link));
+						while($row = mysqli_fetch_assoc($result))
+						{
+						  $dealerName = $row['Dealer'];
+						  echo '
+						  <option value="'.$row['loginid'].'">'.$dealerName.' '.$row[DealerDir].'</option>
+						  ';
+					        }
+						?>
+						</select>
+						 <span id="ma"></span>
+						<select class="" name="memberid" id="memberid" onChange="fetch_select3(this.value);">
+						
+
+						</select>
+		
+      <table id="memberContacts">
+      <?
+     //include 'getRepContacts.php';
+      ?>
+      </table>
+        </div>
+       
+        <br>
+       <!-- <p><a href="addContacts.php?group=<? echo $_GET['group'];?>"><input type="button" class="redbutton" value="Add Contacts" title="Add Contacts"/></a>-->
+       <!-- <a href="editMembers.php?group=<? echo $_GET['group'];?>"><input type="button" class="redbutton" value="Continue to Members" title="Continue to Members"/></a></p>-->
+        </div>
+        </div> <!--end content-->
+          
+      <?php include '../includes/footer.php' ; ?>
+    </div> <!--end container-->
+
+</body>
+<?php
+   ob_end_flush();
+?>

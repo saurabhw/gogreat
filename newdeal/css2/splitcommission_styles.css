@@ -1,0 +1,55 @@
+/* Split Commission */
+#table { display: table; border-collapse: collapse; width: 100%; }
+#row { display: table-row; }
+	span h2 { font-size: 1.3em; padding: 0; }
+#graybackground select, input { padding: 0 .1em; height: 1.55em; vertical-align: middle; }
+input [type="text"]{ border: 1px solid #aaa; }
+input[readonly] { background: transparent; border: 1px solid #aaa; cursor: default; }
+#graybackground { padding: .5em; background: #eee; }
+#graybackground2 { padding: .5em; background: #ddd; border-radius: .8em; }
+#redbackground { 
+	padding: .5em; 
+	color: #fff; 
+	background: #cc0000;  
+	border-radius: .8em;
+}
+	#redbackground h2 { font-size: 1.3em; color: #fff; }
+
+/* Text Headers */
+#graybackground span#hd_fname		{ width: 5.6em; }
+#graybackground2 span#hd_mname		{ width: 5.4em; }
+#graybackground span#hd_lname		{ width: 6.5em; }
+#graybackground2 span#hd_cname		{ width: 12em; }
+#graybackground2 span#hd_frname		{ width: 13.6em; }
+#graybackground2 span#hd_subtype	{ width: 11.5em; }
+#graybackground2 span#hd_group		{ width: 8.8em; }
+#graybackground2 span#hd_address1	{ width: 19em; }
+#graybackground2 span#hd_address2	{ width: 19em; }
+#graybackground2 span#hd_city		{ width: 8.8em; }
+#graybackground2 span#hd_state		{ width: 2em; }
+#graybackground2 span#hd_zip		{ width: 4.5em; }
+#graybackground span.hd_mycomm		{ width: 10.45em; }
+#graybackground span.hd_myfund		{ width: 6.2em; margin: 0 0 0 0; }
+#redbackground span.hd_totalcomm 	{ width: 13.5em; }
+#redbackground span.hd_totalfund 	{ width: 8.1em; margin: 0; padding: 0; }
+
+/* Dropdowns */
+#graybackground2 select#category 	{ width: 32%; }
+#graybackground2 select#type		{ width: 32%; }
+#graybackground2 select#group		{ width: 32%; height: 1.55em; }
+
+/* Inputs */
+input#fname		{ width: 4.2em; }
+input#mname		{ width: 4em; }
+input#lname		{ width: 5em; }
+input#pname		{ width: 5em; }
+input#cname		{ width: 10em; }
+input#frname		{ width: 15em; }
+input#group		{ width: 10em; }
+input#address1  	{ width: 16em; }
+input#address2 		{ width: 16em; }
+input#city		{ width: 10em; }
+input#state		{ width: 2.1em; }
+input#zip		{ width: 5.5em; }
+input.commission 	{ width: 3.8em; height: 1.4em; outline: 2px solid #cc0000; border: 1px solid #fff; }
+#redbackground input#totalcomm 	{ width: 2.55em; color: #fff; font-weight: bold; margin: 0; border: none; }

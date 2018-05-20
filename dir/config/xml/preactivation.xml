@@ -1,0 +1,6 @@
+
+Warning: Division by zero in /space/apache/vhosts/api.prestashop.com/partner/premium/get_partners.php on line 43
+<?xml version="1.0"?>
+<partners>
+
+</partners>

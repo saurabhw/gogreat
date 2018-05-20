@@ -1,0 +1,20 @@
+fix the following problems:
+	Jim said last week: sometimes if i am putting my hours in at the same time as someone else, the program doesn't work
+	Dave said last week: hey! did you know if I go to http://hourtracker/hours.db I can see everyone else's hours?! Jessica showed me last week!
+	Ashley said yesterday: every time i log in, all my hours are gone
+	Mary said today: Ralph fixed the program this morning but now it won't even load, it just says something about a problem
+		
+do the following:
+	1.) re-write the code to conform to best practices as you understand them
+	2.) implement two or more of the following enhancements:
+		a.) convert the application to a single page application with clear division between client-side code and server-side code
+		b.) migrate the application backend database to an appropriate database platform. Include instructions on how to create the DB schema (e.g. a .sql file)
+		c.) enhance the application security to conform with what you believe to be minimal industry standards
+		d.) migrate the application code to a popular PHP MVC framework such as CodeIgniter or Laravel
+		e.) utilize an ORM to interact with the database
+		f.) implement session handling. Assume this application will be running on multiple front-facing servers simultaneously
+		g.) implement the following business rules:
+			- a user cannot work more than 40 hours in a week
+			- a user cannot work more than 10 hours in a single day
+			- if a user works Saturday and Sunday, they must not work Monday
+	3.) this program is ugly! show us your front-end styling and javascript skills!

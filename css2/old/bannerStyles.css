@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#banner{
+	width:1024px;
+	height:160px;
+	box-shadow: 0px 5px 7px  #aaa;
+	-moz-box-shadow: 0px 5px 5px #aaa;
+	-webkit-box-shadow: 0px 5px 5px #aaa;
+	}

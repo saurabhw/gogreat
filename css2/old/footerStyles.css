@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*footer*/
+#footer{
+	 clear:both;
+	 background:#FFF;
+	 padding:10px 0 0 0;
+	 margin:0;
+	 border-top:1px solid #777;
+	 z-index:23;
+	 width:1175px;
+	 height:75px;
+	 position:relative;
+	}
+#footer_info{
+	float:right;
+	overflow:hidden;
+	width:751px;
+	margin:0;
+	padding:0;
+	}
+#footer_logo{
+	float:left;
+	margin:10px 10px 10px 10px;
+	z-index:24;
+	position:relative;
+	}
+#footer_info ul.footerMenu{
+	float:right;
+	overflow:hidden;
+	margin:7px 0 0 0;
+	padding:0;
+}
+#footer_info ul.footerMenu li{
+	border-right:solid 1px #999;
+	float:left;
+	padding:0 8px;
+	margin:0;
+	display:block;
+	font-size:10px;
+	}
+#footer_info ul.footerMenu li:last-child{
+	border-right:solid 1px #fff;
+	}
+#footer_info ul.footerMenu li a{
+	display:block;
+	color:#000;
+	float:right;
+	margin-right:1px;
+	padding:0;
+	color:#777;
+	text-align:right;
+	line-height:1.2em;
+	text-decoration:none;
+	}
+#footer_info p{
+	color:#999;
+	float:right;
+	position:relative;
+	margin:35px 12px 0 0;
+	font-size:10px;
+	
+	}
+	

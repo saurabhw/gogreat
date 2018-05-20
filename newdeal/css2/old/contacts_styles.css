@@ -1,0 +1,194 @@
+/* Basic Table Styles */
+div#table{ display: table; width: 100%; }
+div.row{ display: table-row; }
+table{ width: 100%; border-collapse: collapse; }
+div.row .button, table .graybutton { text-decoration: none; }
+table span { font-size: 1em; vertical-align: middle; margin: 0; }
+
+
+/* Top Row */
+select#sort, select#myacctlist { font-size: .9em; margin-right: .4em; }
+select#sort { width: 10%; margin-left: .4em; }
+select#myacctlist { width: 18%; }
+
+div#acctselect { width: 100%; }
+	select.acctlist { width: 13.8%; display: inline; margin: .5em .01em 0 0; font-size: .8em; font-size-adjust: .5; }
+
+
+/* All Contacts Styles */
+table{ margin: .7em 0; font-size: .875em; }
+	table tr:last-child { /*border: hidden;*/ }
+	table tr { padding: .5em 0; }
+	table tr.even { background: #fff; }
+	table tr.odd { background: #eee; }
+		table th { background: #cc0000; color: #fff; border-right: 1px solid #fff; line-height: 1em; text-align: left; padding-left: .3em; }
+		table td { text-align: left; line-height: 1em; padding: .3em; }
+		table tr th.checkbox, table tr td.checkbox { width: 1%; border-right: none; }
+		table tr td.checkbox { border-bottom: 1px solid #ddd; padding: .1em; }
+			table tr th.checkbox input[type="checkbox"] { text-align: center; margin-left: 3%; }
+			input[type="checkbox"] { cursor: pointer; vertical-align: middle; float: left; margin: 0 .2em; }			
+			
+div.tablelinks { display: inline-block; float: right; background: #fff600; padding: 0 .5em; }
+	.tablelinks p, .tablelinks input[type="radio"] { display: inline-block; vertical-align: middle; }
+	.tablelinks input[type="radio"] { cursor: pointer; }
+
+table tr input[type="text"]{ border: none; background-color: transparent; height: 100%; width: 100%; margin: 0; padding: 0;   }
+
+
+/* Alphabet Sort */
+table#alphabet{ margin: .7em 0 0 0; }
+	table#alphabet tr { border: 1px solid #ccc; }
+	table#alphabet td{ 
+		width: 3.8%;
+		background: #eee;
+		color: #000;
+		border: 1px solid #ccc; 
+		text-align: center; 
+		line-height: .2em;
+	}
+		table#alphabet td:hover { background: #ccc; cursor: pointer; }
+	
+
+/* Contacts */
+table#contacts 		{ border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#contacts td.fn 	{ width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.ln 	{ width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.title { width: 05%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.pph 	{ width: 13%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.email { width: 18%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.role 	{ width: 13%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  }
+table#contacts td.actions{ width: 33%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+
+/* Leads/Prospects */
+table#leads td.fn 	{ width: 13%; border-right: 1px solid #ddd; }
+table#leads td.ln 	{ width: 15%; border-right: 1px solid #ddd; }
+table#leads td.pph 	{ width: 13%; border-right: 1px solid #ddd; }
+table#leads td.email 	{ width: 20%; border-right: 1px solid #ddd; }
+table#leads td.role 	{ width: 18%; border-right: 1px solid #ddd;  }
+			/* width = 99% + checkbox = 1% */
+
+
+/* Sales Accounts */
+table#gms_accts  	  { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#gms_accts td.fn 	  { width: 7%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.ln 	  { width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.pph 	  { width: 10.5%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.email  { width: 19%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.role   { width: 12.5%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  }
+table#gms_accts td.sales  { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: right; }
+table#gms_accts td.actions{ width: 33%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			 /* width = 99% + checkbox = 1% */			
+
+/* Fundraiser Accounts */
+table#gmfr_accts 	  { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#gmfr_accts td.fg    { width: 14%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.pfl   { width: 13%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.pph   { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.email { width: 20%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.sales  { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: right; }
+table#gmfr_accts td.actions{ width: 34%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+
+/* Member Accounts */
+table#fm_accts 	 	 { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#fm_accts td.fn 	 { width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.ln 	 { width: 11%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.pph 	 { width: 11%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.email  { width: 28%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.sales  { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: right; }
+table#fm_accts td.actions{ width: 30%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+			
+table#fm_accts td.fg 	 { width: 16%; border-right: 1px solid #ddd; }
+table#fm_accts td.frn	 { width: 23%; border-right: 1px solid #ddd; }
+
+
+table#fm_accts2 	    { border-right: 1px solid #fff; border-bottom: 1px solid #fff; border-left: 1px solid #fff; background-color: #ddd; }
+table#fm_accts2 td.fn 	    { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.ln 	    { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.relation { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.pph 	    { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.email    { width: 36%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+			   /* width = 100% */
+	table#fm_accts2 td input[type="text"]{ border: 1px solid #ddd; background-color: #fff; height: 100%; width: 100%; margin: 0; padding: 0;   }
+
+/* Friends & Family Accounts */
+table#ff_accts 	 	{ border-right: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#ff_accts td.cn 	{ width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  }
+table#ff_accts td.fn 	{ width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.ln 	{ width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.role  { width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.address  { width: 16%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	.address #address1, .address #address2, .address #city, .address #state { float: left; display: inline-block; height: 50%; }
+	.address #address1 { width: 70%; }
+	.address #address2 { width: 30%; }
+	.address #city     { width: 84%; }
+	.address #state    { width: 16%; }
+table#ff_accts td.pph 	 { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.email	 { width: 17%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.actions{ width: 21%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+			
+table#fm_contacts 	    { border-right: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#fm_contacts td.cn     { width: 12%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.fn     { width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.ln     { width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.role   { width: 11%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.gender { width: 6%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	table#fm_contacts td.gender select { margin: 0 0 0 0; }
+table#fm_contacts td.address{ width: 16%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	.address #address1, .address #address2, .address #city, .address #state, .address #zip { float: left; display: inline-block; height: 50%; }
+	.address #address1  { width: 70%; }
+	.address #address2  { width: 30%; }
+	.address #city      { width: 60%; }
+	.address #state     { width: 15%; }
+	.address #zip	    { width: 25%; }
+table#fm_contacts td.hph    { width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.cph    { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.email  { width: 14%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+			
+/* Friends & Family Customer Accounts */
+table#fc_accts td.fn 	{ width: 15%; border-right: 1px solid #ddd; }
+table#fc_accts td.ln 	{ width: 20%; border-right: 1px solid #ddd; }
+table#fc_accts td.pph 	{ width: 12%; border-right: 1px solid #ddd; }
+table#fc_accts td.email	{ width: 27%; border-right: 1px solid #ddd; }
+table#fc_accts td.state { width: 05%; border-right: 1px solid #ddd; }
+table#fc_accts td.city	{ width: 21%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+
+/* Business Supporter Accounts */
+table#bb_accts td.bn 	{ width: 23%; border-right: 1px solid #ddd;  }
+table#bb_accts td.pba 	{ width: 23%; border-right: 1px solid #ddd; }
+table#bb_accts td.title { width: 14%; border-right: 1px solid #ddd; }
+table#bb_accts td.pph 	{ width: 11%; border-right: 1px solid #ddd; }
+table#bb_accts td.email { width: 28%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+			
+/* Business Associate Accounts */
+table#ba_accts td.fn 	{ width: 18%; border-right: 1px solid #ddd; }
+table#ba_accts td.ln 	{ width: 20%; border-right: 1px solid #ddd; }
+table#ba_accts td.title { width: 20%; border-right: 1px solid #ddd; }
+table#ba_accts td.pph 	{ width: 13%; border-right: 1px solid #ddd; }
+table#ba_accts td.email { width: 28%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+			
+/* Business Customer & Client Accounts */
+table#bc_accts td.ba 	{ width: 18%; border-right: 1px solid #ddd; }
+table#bc_accts td.fn 	{ width: 13%; border-right: 1px solid #ddd; }
+table#bc_accts td.ln 	{ width: 18%; border-right: 1px solid #ddd; }
+table#bc_accts td.title { width: 12%; border-right: 1px solid #ddd; }
+table#bc_accts td.pph 	{ width: 11%; border-right: 1px solid #ddd; }
+table#bc_accts td.email { width: 28%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+			
+
+/* Send Emails */
+.graybackground { background: #ddd; color: #000; padding: 10px; margin: 0; }
+
+td.align_right { text-align: right; padding-left: 10px; padding-right: 10px; }
+td.align_left { text-align: left; padding-right: 10px; }
+
+tr:first-child .align_right, tr:first-child .align_left { padding-top: 10px; }
+tr:last-child .align_right, tr:last-child .align_left { padding-bottom: 10px; }

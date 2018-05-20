@@ -1,0 +1,9 @@
+
+#lm div.error   { color: red; background: yellow; border: 1px solid red; margin: 4px; padding: 4px; border-radius: 3px; }
+#lm div.success { color: #fff; background: green; border: 1px solid green; margin: 4px; padding: 4px; border-radius: 3px; }
+#lm td.label                 { text-align: right; }
+#lm th a, #lm th             { color: white; background: black; }
+#lm tr.shaded, #lm_form tr   { background: #ddd; }
+#lm tr.shaded:hover, #lm tr.alt:hover, #lm tr.active { background: #d3efd4; }
+#lm input.button { margin: 3px; }
+#lm_child_grid tr td input[type=text] { width: 98%; }

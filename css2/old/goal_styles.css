@@ -1,0 +1,61 @@
+/* Form Styles Adjustment */
+.table { display: table; border-collapse: collapse; width: 100%; }
+table { border-collapse: collapse; width: 100%; }
+.hd_row, .num_row, .total_row { display: table-row }
+div.col1 { display: table-column; width: 50%; float: left; }
+div.col2 { display: table-column; width: 50%; float: right; }
+
+
+/* Goal Module */	
+.goalbarometer{
+	width: 90%;
+	border-radius: none;
+	margin: 5% auto 0 auto;
+	padding: 0;
+}
+	.goalbarometer img { position: relative; z-index: 0; }
+	.goalbarometer .goalamt { position: relative; z-index: 10; margin: 1em 1em 0 0; }
+	.goalbarometer .acheived { position: relative; z-index: 10; margin: 2em 1em 0 0; }
+
+
+/* Goal Setter */
+span, input { display: inline-block; }
+span.start, span.end { width: 13.5em; }
+input.date { width: 7em; }
+input.time { width: 4.5em; }
+.goaltitle { width: 97.5%; }
+textarea { width: 98%; }
+
+
+/* Goal Reports */
+.date { width: 6.75em; }
+span#buttons { margin: 0 1em 1em 0; }
+span#buttons .redbutton { margin: 0; }
+
+table.goalreport{ margin: 1em 0; font-size: .925em; }
+	table.goalreport tr:last-child { border: hidden; }
+	table.goalreport tr { padding: .5em 0; }
+	table.goalreport tr.even { background: #fff; }
+	table.goalreport tr.odd { background: #eee; }
+		table.goalreport th { background: #cc0000; color: #fff; border-right: 1px solid #fff; line-height: 1.4em; text-align: left; padding-left: .3em; }
+		table.goalreport td { text-align: left; line-height: 1em; padding: .6em .3em; }
+
+table.goalreport tr.total { background: #ccc; font-weight: bold; }
+
+table.goalreport .vp { border-right: 1px solid #ddd; }		
+table.goalreport .sc { border-right: 1px solid #ddd; }
+table.goalreport .rp { border-right: 1px solid #ddd; }
+table.goalreport .fr { border-right: 1px solid #ddd; }
+table.goalreport .gp { border-right: 1px solid #ddd; }
+table.goalreport .goal { border-right: 1px solid #ddd; }
+table.goalreport .actual { border-right: 1px solid #ddd; }
+table.goalreport .diff { border-right: 1px solid #ddd; }
+table.goalreport .items { border-right: 1px solid #ddd; }
+table.goalreport .whlsle {  }
+
+td.goal, td.actual, td.diff, td.items, td.whlsle { text-align: right; }
+td.total { text-align: right; }
+div.leaderBadge{
+  background: #cc0000;
+  color: #fff;
+}

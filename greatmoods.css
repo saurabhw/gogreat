@@ -1,0 +1,41 @@
+body {                                
+		background-color: #fff;
+        font-size: 15px;
+        font-family: Helvetica, Geneva, Arial,
+        SunSans-Regular, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color:;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	text-decoration: underline;
+	color: purple;
+	margin-bottom: 2px;
+}
+
+#mainContent {
+	position: relative;
+	left: 10px;
+}
+
+.shrink {
+	display: inline-block;
+}
+
+.subCat {
+	position: relative;
+	left: 20px;
+}
+
+p {
+	cursor: pointer;
+	margin: 10px;
+}
+

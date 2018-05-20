@@ -1,0 +1,300 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/******COLORS******/
+/*Red - #CC0000 */
+/*Blue - #0000FF */
+/*Gray Text - #666 */
+/*Gray Box - #CCC */
+/*Gray2 - #eee*/
+
+
+#table{
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+#row{
+	display: table-row;
+	width: 100%;
+}
+#hdcell{
+	display: table-cell;
+	font-weight: bold;
+}
+#cell{
+	display: table-cell;
+}
+
+span{display: inline-block; padding: 0; font-size: .95em;}
+
+#redbutton a:hover, a:visited, a:link, a:active{ text-decoration: none; }
+
+/*form input[type=submit], form input[type=reset], form input#redbutton{
+	border: thin solid #777;	
+	border-radius: 7px 7px 7px 7px;
+	box-shadow: 2px 2px 2px #888;
+	background-color: #CC0000;
+	color: #fff;
+	font-size: .75em;
+	cursor: pointer;
+	padding: 2px 3px;
+	margin: 2px;
+	line-height: 12px;
+	vertical-align: top;
+}
+input#redbutton{
+	border: thin solid #777;	
+	border-radius: 7px 7px 7px 7px;
+	box-shadow: 2px 2px 2px #888;
+	background-color: #CC0000;
+	color: #fff;
+	font-size: .75em;
+	cursor: pointer;
+	padding: 2px 3px;
+	margin: 2px;
+	line-height: 12px;
+	vertical-align: top;
+}
+#redbutton, .redbutton{
+	border: thin solid #777;	
+	border-radius: 7px 7px 7px 7px;
+	box-shadow: 2px 2px 2px #888;
+	background-color: #CC0000;
+	color: #fff !important;
+	font-size: .75em;
+	cursor: pointer;
+	padding: 0px 3px;
+	margin: 1px 2px;
+	line-height: 12px;
+	vertical-align: 10%;
+}*/
+
+/* Remove button padding in FF */
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+     padding: 0 !important;
+     border: 0 none !important;
+ }
+ 
+input[readonly]{
+	background-color: #eee;
+	padding: 2px 1px;
+	border: solid #999 1px;
+	cursor: default;
+}
+
+/*** Input Fields ***/
+.required {color: #cc0000;}
+
+span#acctid	{width: 40px; font-weight: bold; margin-right: 0px; float: right;}
+span#group	{width: 182px; font-weight: bold;}
+span#type	{width: 154px; font-weight: bold;}
+span#company	{width: 122px; font-weight: bold;}
+span#fname	{width: 74px; font-weight: bold;}
+span#mname	{width: 74px; font-weight: bold;}
+span#lname	{width: 100px; font-weight: bold;}
+span#title	{width: 147px; font-weight: bold;}
+span#loginemail	{width: 207px; font-weight: bold;}
+span#loginpass	{width: 177px; font-weight: bold;}
+span#confirmpass{width: 177px; font-weight: bold;}
+span#address1	{width: 171px; font-weight: bold;}
+span#address2	{width: 127px; font-weight: bold;}
+span#city	{width: 140px; font-weight: bold;}
+span#state	{width: 72px; font-weight: bold;}
+span#state2	{width: 50px; font-weight: bold;}
+span#zip	{width: 77px; font-weight: bold;}
+span#pphone	{width: 163px; font-weight: bold;}
+span#phone	{width: 91px; font-weight: bold;}
+span#ext	{width: 57x; font-weight: bold;}
+span#ppemail	{width: 207px; font-weight: bold;}
+span#ssn	{width: 84px; font-weight: bold;}
+span#or		{width: 32px; font-weight: bold;}
+span#tin	{width: 84px; font-weight: bold;}
+span#commission	{width: 32px; font-weight: bold;}
+span#url	{width: 277px; font-weight: bold;}
+span#date	{width: 87px; font-weight: bold;}
+span#goal	{width: 127px; font-weight: bold;}
+span#longtext	{width: 400px; font-weight: bold;}
+
+span#radio	{padding: 0 0 8px 5px;	font-size: 1em;}
+
+input#acctid	{width: 38px; margin-bottom: 3px; margin-right: 0px; float: right;}
+input#group	{width: 175px; margin-bottom: 3px; margin-right: 3px;}
+input#type	{width: 147px; margin-bottom: 3px; margin-right: 3px;}
+input#company	{width: 115px; margin-bottom: 3px; margin-right: 3px;}
+input#fname	{width: 65px; margin-bottom: 3px; margin-right: 3px;}
+input#mname	{width: 65px; margin-bottom: 3px; margin-right: 3px;}
+input#lname	{width: 95px; margin-bottom: 3px; margin-right: 3px;}
+input#title	{width: 140px; margin-bottom: 3px; margin-right: 3px;}
+input#loginemail{width: 200px; margin-bottom: 3px; margin-right: 3px;}
+input#loginpass	{width: 170px; margin-bottom: 3px; margin-right: 3px;}
+input#confirmpass{width: 170px; margin-bottom: 3px; margin-right: 3px;}
+input#address1	{width: 160px; margin-bottom: 3px; margin-right: 3px;}
+input#address2	{width: 120px; margin-bottom: 3px; margin-right: 3px;}
+input#city	{width: 135px; margin-bottom: 3px; margin-right: 3px;}
+input#state	{width: 70px; margin-bottom: 3px; margin-right: 3px;}
+input#state2	{width: 35px; margin-bottom: 3px; margin-right: 3px;}
+input#zip	{width: 70px; margin-bottom: 3px; margin-right: 3px;}
+input#ptype	{width: 62px; margin-bottom: 3px; margin-right: 3px;}
+input#phone	{width: 84px; margin-bottom: 3px; margin-right: 3px;}
+input#ext	{width: 50px; margin-bottom: 3px; margin-right: 3px;}
+input#ppemail	{width: 200px; margin-bottom: 3px; margin-right: 3px;}
+input#ssn	{width: 75px; margin-bottom: 3px; margin-right: 3px;}
+input#tin	{width: 75px; margin-bottom: 3px; margin-right: 3px;}
+input#commission{width: 20px; margin-bottom: 3px; margin-right: 3px;}
+input#url	{width: 268px; margin-bottom: 3px; margin-right: 3px;}
+input#date	{width: 140px; margin-bottom: 3px; margin-right: 3px;}
+input#goal	{width: 100px; margin-bottom: 3px; margin-right: 3px;}
+input#AddOrgBannerPhoto {width: 200px; margin-bottom: 3px; margin-right: 3px;}
+
+input#fundtotal	{width: 20px; margin-bottom: 3px;}
+#total	{width: 130px; float: right; margin-right: 1px;}
+#total2	{width: 152px; float: right; margin-right: 0px;}
+
+span#removefile{font-size: .7em; float: right;}
+input#removefile{padding: 0; margin: 0 2px 2px 0; vertical-align: bottom;}
+
+/*** TABLES ***/
+#bannertable{
+	display: table;
+	border-collapse: collapse;
+	width: 470px;
+}
+#commissiontable{
+	display: table;
+	border-collapse: collapse;
+	width: 848px;
+}
+#graybackground{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px;
+	width: 990px;
+}
+form#graybackground{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px;
+	width: 990px;
+}
+#fundtable{
+	display: table;
+	border-collapse: collapse;
+	width: 795px;
+}
+form#graybackground2{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px;
+	width: 785px;
+}
+form#graybackground3{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px;
+	width: 385px;
+}
+#graybackground4{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px 20px;
+	width: 425px;
+}
+#graybackground5{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px 10px;
+	width: 990px;
+}
+#graybackground6{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px 10px;
+	width: 390px;
+}
+#graybackground7{
+	background-color: #ccc;
+	border-radius: 7px;
+	padding: 10px 10px;
+	width: 990px;
+}
+
+
+/*** END TABLES ***/
+
+/*** Layouts ***/
+.setupLeft{
+	position: relative;
+	float: left;
+	width: 430px;
+	padding: 0;
+	background: #ddd;
+}
+.setupRight{
+	background-color: #ccc;
+	border-radius: 7px;
+	position: relative;
+	float: right;
+	width: 404px;
+	padding: 0 6px 6px 6px;
+}
+#clubsleft{
+	width: 200px;
+	float: left;
+}
+#clubsright{
+	width: 200px;
+	float: right;
+}
+.setupLeft h6{
+	color: #000;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 10px 0;
+}
+.setupRight h6{
+	color: #000;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 10px 0;
+}
+.photoRight{
+	float: right;
+	border: 2px #ccc solid;
+}
+/*** END Layouts ***/
+
+/*for 2 column checkbox - reasons page*/
+div.checkboxForm {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	float: left; 
+	width: 48%; 
+	margin: 0;
+	padding: 6px;
+}
+	
+form label { /*width: 130px; float:left; display: inline; */
+	margin: 0 12px 0 0;
+	padding-top:20px;
+	font-size: 0.8em;
+	line-height: 1em;
+	font-weight: normal;
+}
+
+.checkboxForm label {
+	padding: 0;
+	font-size: 0.8em;
+	line-height: 1em;
+	text-align: left;
+	display: inline;
+}
+.checkboxForm input[type="submit"] {
+	clear: both;
+	float: right;
+	cursor: pointer;
+}
+/*** END Reasons page ***/

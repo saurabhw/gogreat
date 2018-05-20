@@ -1,0 +1,32 @@
+/* Accordion
+----------------------------------*/
+.ui-accordion .ui-accordion-header { cursor: pointer; position: relative; margin-top: 2px; zoom: 1; color: #0033ff;}
+.ui-accordion .ui-accordion-header h3{color: #000; }
+.ui-accordion .ui-accordion-li-fix { display: inline; }
+.ui-accordion .ui-accordion-header-active { border-bottom: 0 !important; }
+.ui-accordion .ui-accordion-header a { display: block; font-size: 1em; padding: .8em .8em .9em 2.2em; 
+	background-color:#cc0000;
+	color: #e7e7e7;
+	-moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+	-moz-box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	-webkit-box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);}
+.ui-accordion .ui-accordion-header .ui-icon { position: absolute; left: .5em; top: 50%; margin-top: -2px; color: #000; }
+.ui-accordion .ui-accordion-content {
+	padding: 1.2em 2em 0 1.2em;
+	border-top: 0;
+	margin-top: -2px;
+	/*position: relative;*/
+	top: 1px;
+	margin-bottom: 0px;
+	overflow: auto;
+	display: none;
+	background-color: #e7e7e7;
+	color: #0033ff;
+	/*float: left;
+	width: 80px;*/
+	
+}
+.ui-accordion .ui-accordion-content-active { display: block; }

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* CSS Document */
+
+form{
+	width:850px;
+	
+	}
+fieldset{
+	width:700px;
+	
+	}
+legend{
+	
+	}
+label{
+	
+	}
+ul{
+	list-style-type:none;
+	}
+
+ul.editList1{
+	width:600px;
+	float:right;
+	}
+ul.editList1 li{
+	width:30%;
+	float:left;
+	text-align:right;
+	}
+ul.existingList{
+	float:left;
+	}
+ul.editList2{
+	width:500px;
+	float:right;	
+	}
+ul.editList2 li{
+	text-align:right;
+	}
+li{
+	padding:0 5px;
+	float:left;
+	}
+ol{
+	float:left;
+	}
+button.upload{
+	float:left;
+	}

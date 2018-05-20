@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/******COLORS******/
+/*Red - #CC0000 */
+/*Blue - #0000FF */
+/*Grey Text - #666 */
+/*Grey Box - #CCC */
+
+body{
+	font-family: Arial;
+}
+h1{
+	font-size: 2em;
+	color: #CC0000;
+	text-align: center;
+}
+h2{
+	font-size: 1.3em;
+	padding: 0px 0px 0px 5px;
+}
+a{
+	border:thin solid #777;	
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	-moz-box-shadow: 3px 3px 3px #777;
+	-webkit-box-shadow: 3px 3px 3px #777;
+	box-shadow: 3px 3px 3px #777;
+	height: 1.5em;
+	background-color: #CC0000;
+	color: white;
+	font-size: 1em;
+	text-decoration: none;
+	padding: 1px 5px;
+}
+ul li{
+	font-size: 1.2em;
+	padding: 0px 0px 2px 2px;
+}
+p{
+	font-size: 1.2em;
+	padding: 0px 0px 0px 15px;
+}
+#close{
+	text-align: center;
+}

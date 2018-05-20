@@ -1,0 +1,2 @@
+AuthUserFile "/home/amoodf5/.htpasswds/public_html/gmtest/salesTest/admin/passwd"
+AuthName "greatmoods_admin"

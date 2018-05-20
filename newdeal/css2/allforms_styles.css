@@ -1,0 +1,1303 @@
+/* Form Structure */
+#table, .table { display: table; border-collapse: collapse; width: 100%; }
+table { border-collapse: collapse; width: 100%; }
+.row, .hd_row, .num_row, .total_row { display: table-row; width: 100%; }
+span { display: inline-block; }
+#colgrp1, #colgrp2 { width: 49%; display: inline-table; }
+div.col1 { display: table-column; width: 50%; float: left; }
+div.col2 { display: table-column; width: 50%; float: right; }
+span { font-weight: bold; font-size: .9em; padding: 0;  margin: .5em .4em 0 0; vertical-align: top; }
+label { font-size: .9em; padding: 0;  margin: 0; vertical-align: middle; line-height: 1.2em; }
+select, input { margin: 0 .4em 0 0; padding: 0; border: 1px solid #A9A9A9; cursor: initial; }
+	select { height: 1.55em; /*vertical-align: top;*/ }
+	input[type="text"], input[type="email"], input[type="url"], input[type="number"] { height: 1.4em; vertical-align: middle; padding: 0 0 0 2px; }
+	input[type="radio"] { height: 1.4em; margin-bottom: .4em; padding: 0; vertical-align: top; }
+	input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button { cursor: pointer; }
+	input:readonly { background: #ccc; cursor: default;  }
+	input:-moz-readonly { background: #ccc; } /* For Firefox */
+#graybackground, .graybackground, #graybackground50 { background: #f7f7f7; padding: 6px; border-radius: 5px; border: #800 solid 1px; }
+#graybackground2 { background: #ddd; padding: .5em; border-radius: .8em; }
+#redbackground, #redbackground50 { background: #cc0000; padding: .5em; border-radius: .8em; color: #fff; }
+#whitebackground50 { background: #fff; padding: 6px; color: #cc0000; }
+	#graybackground50, #redbackground50, #whitebackground50 { display: inline-block; max-width: 47%; vertical-align: top; }
+	
+.clear{ clear: both; }
+
+.buttonform { display: inline; width: 20%; }
+
+table span { 
+	font-size: 1.3em; 
+	vertical-align: middle; 
+	padding: 0;
+    	margin: .5em .4em 0 0; 
+}
+
+table.nodisplayboxes input[type="text"] { 
+	border: none;
+	background: transparent;
+}
+	table.nodisplayboxes input[type="button"], 
+	table.nodisplayboxes input[type="submit"] { 
+		font-size: .9em;
+	}
+
+table tr input[type="text"]{ padding: 0; width: 100% }
+table tr:nth-child(even) {background: #fff}
+table tr:nth-child(odd) {background: #f7f7f7}
+
+/* Dropdown Selections */
+#labels.row { line-height: .9em; }
+span#hd_vp, span#hd_sc, span#hd_rp, span#hd_gmfr, span#hd_fg, span#hd_fl, span#hd__a, 
+span#hd_ff, span#hd_bb, span#hd_ba, span#hd_cc { 
+	font-size: .6em;
+    	width: 9.9%;
+    	margin: 0;
+    	padding: 0 .1% 0 0;
+    	vertical-align: text-bottom;
+}
+select.role { width: 9.9%; margin: 0 .1% 0 0; font-size: .7em; }
+
+span#hd_vp2, span#hd_sc2, span#hd_rp2, span#hd_gmfr2, span#hd_fg2, span#hd_fl2, span#hd_fm2, 
+span#hd_ff2, span#hd_bb2, span#hd_ba2, span#hd_cc2 { 
+	font-size: .95em;
+    	width: 17%;
+    	margin: 0 0 0 0;;
+    	padding: 0 .1% 0 0;
+}
+select.role2 { width: 17%; margin: 0 .1% 0 0; font-size: .8em; }
+
+span#hd_vp3, span#hd_sc3, span#hd_rp3, span#hd_gmfr3, span#hd_fg3, span#hd_fl3, span#hd_fm3, 
+span#hd_ff3, span#hd_bb3, span#hd_ba3, span#hd_cc3 { 
+	font-size: .84em;
+    	width: 13.8%;
+    	margin: 0;
+    	padding: 0 .1% 0 0;
+}
+select.role3 { width: 13.8%; margin: 0 .1% 0 0; font-size: .8em; }
+
+span#hd_vp4, span#hd_sc4, span#hd_rp4, span#hd_gmfr4, span#hd_fg4, span#hd_fl4, span#hd_fm4, 
+span#hd_ff4, span#hd_bb4, span#hd_ba4, span#hd_cc4 { 
+	font-size: .84em;
+    	width: 22%;
+    	margin: 0 0.5% 0 0;
+    	padding: 0;
+}
+select.role4 { width: 22%; margin: 0 .5% 0 0; padding: 0; font-size: .8em; }
+
+span#hd_vp5, span#hd_sc5, span#hd_rp5, span#hd_gmfr5, span#hd_fg5, span#hd_fl5, span#hd_fm5, 
+span#hd_ff5, span#hd_bb5, span#hd_ba5, span#hd_cc5 { 
+	font-size: .84em;
+    	width: 56%;
+    	margin: 0 1% 0 0;
+    	padding: 0;
+}
+select.role5 { width: 57%; margin: 0 1% 0 0; padding: 0; font-size: .8em; }
+
+
+/** Dropdown CSS Hack **/
+.dropdown{
+    position: relative;
+    display: inline-block;
+    font-size: .9em;
+    color: #FFF;
+}
+
+/**
+    Hide the checkbox itself. Checking and unchecking 
+    it we will be done via the label element.
+*/
+
+.dropdown input[type=checkbox]#checkbox-toggle{
+    display: none;
+}
+
+
+/* Click to expand button */
+
+.dropdown label{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding: 2px 5px 2px 4px;
+    
+    background-color: #fff;
+    color: #000;
+    border: 1px #A9A9A9 solid;
+    
+    cursor: pointer;
+    text-align: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+	.dropdown label:hover{
+		border: 1px #777 solid;
+	}
+
+/*  The ul will have display:none by default */
+
+.dropdown ul{
+    position: absolute;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    max-height: 380px;
+    overflow-y: auto;
+    z-index: 1;
+    margin: 1px 0 0 0;
+    padding: 0;
+    border: 1px #A9A9A9 solid;
+
+    display: none;
+}
+
+
+.dropdown ul li{
+    padding: 1px;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover{
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.dropdown ul li a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.dropdown input[type=checkbox]{
+    margin: 2px 1px 0px 2px;
+}
+
+
+/**
+
+    By using the Following-sibling selector (~),
+    we can target elements positioned after our checkbox in the DOM tree.
+
+    With the state pseudo selector (:checked),
+    we can make changes depending on the state of the checkbox.
+
+    Using this combination of selectors
+    allows to change the color of the label
+    and show the list of items
+    only when the checkbox is checked.
+
+*/
+
+.dropdown input[type=checkbox]:checked ~ label {
+    background-color: #fff;
+}
+
+
+.dropdown input[type=checkbox]:checked ~ ul {
+    display: block;
+}
+
+
+/*** Add Single or Multiple Members Tabs ***/
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #d7d7d7;
+    background-color: #d7d7d7;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    border: 1px solid #d7d7d7;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #fff;
+    color: #cc0000;
+    border: 1px solid #cc0000;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #cc0000;
+    border: 1px solid #cc0000;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+
+/* Information */
+td#td_1 				{ width: 100%; }
+#graybackground td			{ padding-top: 0; vertical-align: top; }
+td#td_2 				{ width: 0%; }
+span#hd_id				{ width: 3em; }
+span#hd_title		 		{ width: 4em; }
+span#hd_fname, span.hd_fname		{ width: 6.9em; }
+span#hd_mname				{ width: 4.2em; }
+span#hd_lname, span.hd_lname		{ width: 8.9em; }
+span#hd_pname				{ width: 5.2em; }
+span#hd_rel				{ width: 9.5em; }
+span#hd_cname				{ width: 10.4em; }
+span#hd_frname				{ width: 13.6em; }
+span#hd_subtype				{ width: 11.5em; }
+span#hd_group				{ width: 10.4em; }
+span#hd_mphone, span#hd_hphone		{ width: 6.7em; }
+span#hd_wphone, span.hd_wphone		{ width: 7.5em; }  /* adjusted for title "Primary Phone" */
+span#hd_ext				{ width: 3.5em; margin-left: -0.2em; }
+span#hd_mcarrier			{ width: 9em; }
+span#hd_bday				{ width: 10em; }
+span#hd_gender				{ width: 5.2em; }
+span#hd_address1, span#hd_address2	{ width: 16.5em; }
+span#hd_city				{ width: 10.4em; }
+span#hd_state				{ width: 3.8em; }
+span#hd_zip				{ width: 5.4em; }
+span#hd_zip1				{ width: 0em; }
+span#hd_country				{ width: 12.5em; }
+span#hd_description			{  }
+
+select#category				{ width: 10.5em; }
+select#subtype				{ width: 11em; }
+select#type				{ width: 9em; }
+input#id				{ width: 3em; }
+select#title				{ width: 4.05em; }
+input#title				{ width: 3.75em; }
+input#fname, input.fname		{ width: 6.5em; }
+input#mname				{ width: 4em; }
+input#lname, input.lname		{ width: 8.5em; }
+input#pname				{ width: 5em; }
+input#cname, input#cn			{ width: 10em; }
+input#rel				{ width: 9.5em; }
+input#frname				{ width: 15em; }
+
+input#group				{ width: 10em; }
+input#phone				{ width: 6.9em; }
+input#mphone1, #mphone2			{ width: 6.5em; margin: 0 .2em 0 0; }
+input#mphone3				{ width: 2.5em; }
+input#hphone1 				{ width: 6.5em; }
+input#hphone2				{ width: 2em; margin: 0 .2em 0 0; }
+input#hphone3				{ width: 2.5em; }
+input#wphone1, input.wphone1, input#wphone2 { width: 6.9em; /*margin: 0 .7em 0 0;*/ } /* margin adjusted for title "primary phone" */
+input#wphone3				{ width: 2.5em; }
+input#mphone3, input#hphone3, input#wphone3 { margin: 0 .2em 0 0; }
+input#ext				{ width: 4em; }
+input#birthdate				{ width: 9.2em; }
+select#mcarrier				{  }
+select#month				{  }
+select#day				{  }
+select#year				{  }
+select#gender				{  }
+input#address1  			{ width: 16em; }
+input#address2 				{ width: 16em; }
+input#city				{ width: 10em; }
+input#state				{ width: 3.7em }
+input#zip				{ width: 5.5em; }
+select#country				{  }
+textarea#description			{ width: 100%; height: 5em; }
+
+
+/* Account Login */
+span#hd_loginemail, span.hd_loginemail, span#hd_ppemail	{ width: 15.3em; }
+span#hd_password, #hd_cpassword, #hd_username, #accountno{ width: 10.4em; }
+
+input#loginemail, input.loginemail, input#paypalemail, input#email { width: 15em; }
+input#cpassword, input#pass1, input#pass2, input#username, input#accountno{ width: 10em; height: 1.4em; }
+input#password[type=password]{ width: 12.5em; height: 1.65em; vertical-align: top; }
+
+input#password2[type=password], 
+input#cpassword2[type=password], 
+input#opassword2[type=password] { width: 15em; height: 1.35em; vertical-align: middle; }
+	
+
+
+/* Payment */
+span#hd_ssn, span#hd_ftin, span#hd_stin, span#hd_nonp	{ width: 7.1em; }
+
+input#ssn1, input#ftin1, input#stin1, input#nonp1 { width: 6em; margin: 0 1em 0 0; }
+
+
+/*Social Media */
+span#hd_fb, span#hd_tw, span#hd_li, span#hd_pn, span#hd_gp { width: 4.8em; }
+input#fb, input#tw, input#li, input#pn, input#gp { width: 24em; }
+
+
+/*** PHOTOS ***/
+
+/* Profile Pic */
+img.preview { margin: .3em 0 0 0; border: 1px solid #A9A9A9; }
+
+
+
+/* Banner Upload */
+span#hd_url	{ width: 15.8em; }
+span#hd_banner	{ width: 11.8em; }
+
+input#url { width: 15.5em; }
+
+img#bannerPreview, img#groupPreview{
+	display: block;
+	max-width: 100%;
+    	height: auto;
+}
+
+img#leaderPreview, img#fmleaderPreview{
+	display: block;
+	max-width: 120px;
+    	height: auto;
+}
+
+img#profilePreview{
+	display: block;
+	max-width: 140px;
+	height: auto;
+}
+
+
+/* Select Type & Groups */
+.typecolumns{
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	-moz-column-count: 2; /* Firefox */
+    	column-count: 2;
+    	
+    	-webkit-column-gap: 10px; /* Chrome, Safari, Opera */
+    	-moz-column-gap: 10px; /* Firefox */
+    	column-gap: 10px;
+    	
+    	-webkit-column-width: 350px; /* Chrome, Safari, Opera */
+    	-moz-column-width: 350px; /* Firefox */
+    	column-width: 350px;
+}
+
+.typecolumns2{
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    	-moz-column-count: 2; /* Firefox */
+    	column-count: 2;
+    	
+    	-webkit-column-gap: 10px; /* Chrome, Safari, Opera */
+    	-moz-column-gap: 10px; /* Firefox */
+    	column-gap: 10px;
+    	
+    	-webkit-column-width: 231px; /* Chrome, Safari, Opera */
+    	-moz-column-width: 231px; /* Firefox */
+    	column-width: 231px;
+
+}
+	.typesection{
+		-webkit-column-break-inside: auto!important;
+         	page-break-inside: avoid;
+         	break-inside: auto;
+         	max-height: 265px;
+         }
+         	label.smfont { font-size: .78em; }
+
+	.subsection{	
+
+	}
+
+.groupcolumns{
+	-webkit-column-count: 4; /* Chrome, Safari, Opera */
+    	-moz-column-count: 4; /* Firefox */
+    	column-count: 4;
+    	
+    	-webkit-column-gap: 10px; /* Chrome, Safari, Opera */
+    	-moz-column-gap: 10px; /* Firefox */
+    	column-gap: 10px;
+    	
+    	-webkit-column-width: 232px; /* Chrome, Safari, Opera */
+    	-moz-column-width: 232px; /* Firefox */
+    	column-width: 232px;
+}
+	.groupcolumns span, .typecolumns span { margin: 0; font-size: .9em; }
+	
+	.groupcolumns h6, .typecolumns h6{
+		font-size: 1.1em;
+		font-weight: bold;
+		padding: 0px 0px 0px 0px;
+	}
+	
+	 h7{
+		font-size: 1em;
+		font-weight: bold;
+		margin: .3em 0 0 0;
+	}
+	
+.groupsection, .groupsection2{
+	-webkit-column-break-inside: auto!important;
+         page-break-inside: avoid;
+         break-inside: auto;
+}
+	.groupsection span.checkbox, .groupsection2 span.checkbox{
+		-webkit-column-break-inside: avoid!important;
+	         page-break-inside: avoid;
+	         break-inside: avoid;
+	         font-weight: normal;
+	         font-size: .9em;
+	         line-height: 1.5em;
+	}
+	
+	.shortbreak { margin-bottom: 2em; }
+	.medbreak { margin-bottom: 4em; }
+	.longbreak { margin-bottom: 8em; }
+
+.colnobreak {
+	-webkit-column-break-inside: avoid!important;
+         page-break-inside: avoid;
+         break-inside: avoid;
+}
+
+.colbreak{
+	-webkit-column-break-before: always!important;
+         page-break-before: always;
+         break-before: always;
+}
+
+.checkboxes{
+	margin: 0 0 .2em 0;
+	padding: 0;
+}
+.checkboxes input { 
+	margin: 0 .2em 0 0; 
+	-webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+}
+	.checkboxes input.group{
+		height: 1em;
+		vertical-align: top;
+		font-size: 1em;
+		padding: 1px 1px 1px 2px;
+		width: 10em;
+	}
+.checkboxes label{
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	-webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+}
+
+
+/*** Interim Form Styles ***/
+.interim-form{
+	display: inline-block;
+    	position: relative;
+    	width: 45%;
+    	min-height: 140px;
+    	vertical-align: top;
+	background: #f7f7f7;
+	padding: 0 20px 20px 20px;
+	font-size: .9em;
+	margin: 0 5px 10px 0;
+    	border: #800 solid 1px;
+    	border-radius: 5px;
+}
+	.interim-form table td { padding: 0; }
+
+.interim-header{
+	background: #cc0000;
+	padding: 7px 0 0px 7px;
+    	margin: 0 -20px 10px -20px;
+    	border-bottom: #800 solid 2px;
+    	border-radius: 4px 4px 0 0;
+}
+.interim-header h2 { color: #fff; font-size: 1.4em; }
+
+
+/* Goals */
+span#hd_fundgoal, span#hd_startdate, span#hd_enddate { width: 8.4em; }
+
+input#fundgoal { width: 6em; }
+input#startdate, input#enddate { width: 6em; }
+
+
+/* Reasons */
+.reasoncolumns{
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    	-moz-column-count: 3; /* Firefox */
+    	column-count: 3;
+    	
+    	-webkit-column-gap: 12px; /* Chrome, Safari, Opera */
+    	-moz-column-gap: 12px; /* Firefox */
+    	column-gap: 12px;
+    	
+    	-webkit-column-width: 321px; /* Chrome, Safari, Opera */
+    	column-width: 321px;
+}
+	.reasonscolumns label{
+		display: inline-block;
+	}
+	
+	
+/* Send Email */
+
+input[type=text].emailsubject { width: 99.5%; }
+textarea.emailmessage { width: 99.4%; }
+label.emailtitle { font-weight: bold; }
+
+.emailform table, .emailform th{
+	margin: 6px 6px 6px 6px;
+	padding: 6px 6px 6px 6px;}
+
+.emailform td{
+	padding: 0;
+	margin-right: auto;
+}
+.emailform input[type=submit].redbutton{
+	border-top: #cc0000 solid 1px;
+	border-right: #800 solid 2px;
+	border-bottom: #800 solid 2px;
+	border-left: #cc0000 solid 1px;
+    	box-shadow: none;
+    	font-size: .75em;
+    	cursor: pointer;
+    	padding: 3px 5px;
+    	margin: 2px;
+    	line-height: 12px;
+    	vertical-align: middle;
+    	color: #fff;
+    	background: #cc0000; 
+}
+	.emailform input[type=submit].redbutton:hover{ border-top: #800 solid 1px; border-left: #800 solid 1px; color: #cc0000; background: #fff; }
+
+table.emailcontacts { }
+	table.emailcontacts th.phone { border-right: none; }
+	table.emailcontacts td{
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		background: #fff;
+		color: #000;
+	}
+		table.emailcontacts th.checkbox, table.emailcontacts td.checkbox { width: 2%; }
+		table.emailcontacts th.title, table.emailcontacts td.title { width: 8%; }
+		table.emailcontacts th.fname, table.emailcontacts td.fname { width: 21%; }
+		table.emailcontacts th.lname, table.emailcontacts td.lname { width: 21%; }
+		table.emailcontacts th.email, table.emailcontacts td.email { width: 32%; }
+		table.emailcontacts th.phone, table.emailcontacts td.phone { width: 20%; }
+		
+table.emailcontacts_mbr { }
+	table.emailcontacts_mbr th.phone { border-right: none; }
+	table.emailcontacts_mbr td{
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		background: #fff;
+		color: #000;
+	}
+		table.emailcontacts_mbr th.checkbox, table.emailcontacts_mbr td.checkbox { width: 2%; }
+		table.emailcontacts_mbr th.title, table.emailcontacts_mbr td.title { width: 6%; }
+		table.emailcontacts_mbr th.fname, table.emailcontacts_mbr td.fname { width: 11%; }
+		table.emailcontacts_mbr th.lname, table.emailcontacts_mbr td.lname { width: 11%; }
+		table.emailcontacts_mbr th.cname, table.emailcontacts_mbr td.cname { width: 20%; }
+		table.emailcontacts_mbr th.role, table.emailcontacts_mbr td.role   { width: 16%; }
+		table.emailcontacts_mbr th.email, table.emailcontacts_mbr td.email { width: 24%; }
+		table.emailcontacts_mbr th.phone, table.emailcontacts_mbr td.phone { width: 10%; }
+	
+table.emailcontacts_sc { }
+	table.emailcontacts_sc th.phone { border-right: none; }
+	table.emailcontacts_sc td{
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		background: #fff;
+		color: #000;
+	}
+		table.emailcontacts_sc th.checkbox, table.emailcontacts_sc td.checkbox { width: 2%; }
+		table.emailcontacts_sc th.title, table.emailcontacts_sc td.title { width: 8%; }
+		table.emailcontacts_sc th.fname, table.emailcontacts_sc td.fname { width: 16%; }
+		table.emailcontacts_sc th.lname, table.emailcontacts_sc td.lname { width: 16%; }
+		table.emailcontacts_sc th.role, table.emailcontacts_sc td.role   { width: 18%; }
+		table.emailcontacts_sc th.email, table.emailcontacts_sc td.email { width: 25%; }
+		table.emailcontacts_sc th.phone, table.emailcontacts_sc td.phone { width: 15%; }
+
+
+/* Split Commission/Funds */
+span.hd_mycomm, span.hd_totalcomm, span.hd_myfund, span.hd_totalfund { margin: .2em; padding: 0; vertical-align: middle; }
+span.hd_mycomm 		{ width: 14.4em; }
+span.hd_totalcomm 	{ width: 15.8em; }
+span.hd_myfund 		{ width: 9.5em; }
+span.hd_totalfund 	{ width: 10.9em; }
+	span.hd_mycomm h2, span.hd_totalcomm h2, span.hd_myfund h2, span.hd_totalfund h2 { padding: 0; }
+
+input.commission, input#totalcomm { width: 4em; }
+
+
+/* Contact Us */
+table#contactus{
+	margin: 0;
+	padding: 0;
+}
+	table#contactus tr { background: transparent; }
+	table#contactus td, table#contactus th{
+		padding: 0;
+		vertical-align: middle;
+		line-height: 2.5em;
+	}
+	table#contactus th{
+		width: 10%;
+		background: transparent;
+		color: #666;
+	}
+	/*table#contactus td { width: 90%; }*/
+
+.right {
+	display: block;
+	text-align: right;
+	padding-right: 3px;
+}
+
+
+/* Warnings */
+.warning {
+	background-color: #ddd;
+	padding: 6px; 
+	border: 3px solid #CC0000;
+	font-size: 1.2em;
+	margin-left:auto;
+	margin-right:auto;
+	width: 500px;
+	text-align: center;
+	vertical-align: middle;
+}
+	.warning h3{
+		text-transform: uppercase;
+	}
+
+/* Top Row */
+select#sort, select#myacctlist { font-size: .9em; margin-right: .4em; }
+select#sort { width: 10%; margin-left: .4em; }
+select#myacctlist { width: 18%; }
+
+div#acctselect { width: 100%; }
+	select.acctlist { width: 13.8%; display: inline; margin: .5em .01em 0 0; font-size: .8em; font-size-adjust: .5; }
+
+
+/* All Contacts Styles */
+table{ margin: .7em 0; font-size: .7em; }
+	table tr:last-child { /*border: hidden;*/ }
+	table tr { padding: .2em 0; }
+	table tr.even { background: #fff; }
+	table tr.odd { background: #eee; }
+		table th { background: #cc0000; color: #fff; border-right: 1px solid #fff; line-height: 1.3em; text-align: left; padding: .5em .3em; }
+		table td { text-align: left; line-height: 1em; padding: .3em; }
+		table tr th.checkbox, table tr td.checkbox { width: 1%; border-right: none; }
+		table tr td.checkbox { border-bottom: 1px solid #ddd; padding: .1em; }
+			table tr th.checkbox input[type="checkbox"] { text-align: center; margin-left: 3%; }
+			input[type="checkbox"] { cursor: pointer; vertical-align: middle; float: left; margin: 0 .2em; }			
+			
+div.tablelinks { display: inline-block; float: right; background: #fff600; padding: 0 .5em; }
+	.tablelinks p, .tablelinks input[type="radio"] { display: inline-block; vertical-align: middle; }
+	.tablelinks input[type="radio"] { cursor: pointer; }
+
+table.acctdisplay{
+	width: 100%;
+	color: #cc0000;
+	font-size: .9em;
+	font-weight: bold;
+	background: #f7f7f7;
+	border: 1px solid #cc0000;
+}
+	table.acctdisplay th { line-height: .7em; background: #ccc; color: #333; border: 1px solid #333; }
+	table.acctdisplay td.faname { width: 25%; border-right: 1px solid #cc0000; }
+	table.acctdisplay td.ph { width: 20%; border-right: 1px solid #cc0000; }
+	table.acctdisplay td.add { width: 35%; border-right: 1px solid #cc0000; }
+	table.acctdisplay td.actions { width: 20%;  }
+	
+.link { display: inline-block; width: 20%; }
+
+
+/* Alphabet Sort */
+table#alphabet{ margin: .7em 0 0 0; }
+	table#alphabet tr { border: 1px solid #ccc; }
+	table#alphabet td{ 
+		width: 3.8%;
+		background: #eee;
+		color: #000;
+		border: 1px solid #ccc; 
+		text-align: center; 
+		line-height: .8em;
+	}
+		table#alphabet td:hover { background: #ccc; cursor: pointer; }
+	
+
+/* Contacts */
+table#contacts 		{ border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#contacts td.fn 	{ width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.ln 	{ width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.title { width: 05%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.pph 	{ width: 13%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.email { width: 18%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#contacts td.role 	{ width: 13%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  }
+table#contacts td.actions{ width: 33%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+
+/* Leads/Prospects */
+table#leads td.fn 	{ width: 13%; border-right: 1px solid #ddd; }
+table#leads td.ln 	{ width: 15%; border-right: 1px solid #ddd; }
+table#leads td.pph 	{ width: 13%; border-right: 1px solid #ddd; }
+table#leads td.email 	{ width: 20%; border-right: 1px solid #ddd; }
+table#leads td.role 	{ width: 18%; border-right: 1px solid #ddd;  }
+			/* width = 99% + checkbox = 1% */
+
+
+/* Sales Accounts */
+table#gms_accts  	  { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#gms_accts td.fn 	  { width: 7%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.ln 	  { width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.pph 	  { width: 10.5%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.email  { width: 19%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gms_accts td.role   { width: 12.5%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  }
+table#gms_accts td.sales  { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: right; }
+table#gms_accts td.actions{ width: 33%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			 /* width = 99% + checkbox = 1% */			
+
+/* Fundraiser Accounts */
+table#gmfr_accts 	  { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#gmfr_accts td.fg    { width: 14%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.pfl   { width: 13%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.pph   { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.email { width: 20%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#gmfr_accts td.sales  { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: right; }
+table#gmfr_accts td.actions{ width: 34%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+
+/* Member Accounts */
+table#fm_accts 	 	 { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#fm_accts td.title	 { width: 4%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.fn 	 { width: 7%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.ln 	 { width: 7%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.role   { width: 6%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.pph 	 { width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.check	 { width: 2%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: center; }
+table#fm_accts td.email  { width: 18%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_accts td.sales  { width: 7%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; text-align: right; }
+table#fm_accts td.actions{ width: 39%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			/* width = 99% + checkbox = 1% */
+			
+table#fm_accts td.fg 	 { width: 16%; border-right: 1px solid #ddd; }
+table#fm_accts td.frn	 { width: 23%; border-right: 1px solid #ddd; }
+
+
+table#fm_accts2 	    { border-right: 1px solid #fff; border-bottom: 1px solid #fff; border-left: 1px solid #fff; background-color: #ddd; }
+table#fm_accts2 td.fn 	    { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.ln 	    { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.relation { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.pph 	    { width: 16%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+table#fm_accts2 td.email    { width: 36%; border-right: 1px solid #fff; border-bottom: 1px solid #fff; }
+			   /* width = 100% */
+	table#fm_accts2 td input[type="text"]{ border: 1px solid #ddd; background-color: #fff; height: 100%; width: 100%; margin: 0; padding: 0;   }
+
+/* Friends & Family Accounts */
+table#ff_accts 	 	{ border-right: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#ff_accts td.cn 	{ width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  }
+table#ff_accts td.title	{ width: 4%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;  }
+table#ff_accts td.fn 	{ width: 7%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.ln 	{ width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.role  { width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.address  { width: 15%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	.address #address1, .address #address2, .address #city, .address #state { float: left; display: inline-block; height: 50%; }
+	.address #address1 { width: 70%; }
+	.address #address2 { width: 30%; }
+	.address #city     { width: 84%; }
+	.address #state    { width: 16%; }
+table#ff_accts td.pph 	 { width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.email	 { width: 17%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#ff_accts td.actions{ width: 22%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+			
+table#fm_contacts 	    { border-right: 1px solid #ddd; border-left: 1px solid #ddd; }
+table#fm_contacts td.cn     { width: 12%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.title  { width: 4%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.fn     { width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.ln     { width: 8%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.role   { width: 11%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.gender { width: 6%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	table#fm_contacts td.gender select { margin: 0 0 0 0; }
+table#fm_contacts td.address{ width: 18%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	.address #address1, .address #address2, .address #city, .address #state, .address #zip { float: left; display: inline-block; height: 50%; }
+	.address #address1  { width: 64%; }
+	.address #address2  { width: 29%; }
+	.address #city      { width: 55%; }
+	.address #state     { width: 12%; }
+	.address #zip	    { width: 23%; }
+table#fm_contacts td.hph    { width: 10%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.cph    { width: 9%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table#fm_contacts td.email  { width: 14%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+
+			
+/* Friends & Family Customer Accounts */
+table#fc_accts td.fn 	{ width: 15%; border-right: 1px solid #ddd; }
+table#fc_accts td.ln 	{ width: 20%; border-right: 1px solid #ddd; }
+table#fc_accts td.pph 	{ width: 12%; border-right: 1px solid #ddd; }
+table#fc_accts td.email	{ width: 27%; border-right: 1px solid #ddd; }
+table#fc_accts td.state { width: 05%; border-right: 1px solid #ddd; }
+table#fc_accts td.city	{ width: 21%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+
+/* Business Supporter Accounts */
+table#bb_accts td.bn 	{ width: 23%; border-right: 1px solid #ddd;  }
+table#bb_accts td.pba 	{ width: 23%; border-right: 1px solid #ddd; }
+table#bb_accts td.title { width: 14%; border-right: 1px solid #ddd; }
+table#bb_accts td.pph 	{ width: 11%; border-right: 1px solid #ddd; }
+table#bb_accts td.email { width: 28%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+			
+/* Business Associate Accounts */
+table#ba_accts td.fn 	{ width: 18%; border-right: 1px solid #ddd; }
+table#ba_accts td.ln 	{ width: 20%; border-right: 1px solid #ddd; }
+table#ba_accts td.title { width: 20%; border-right: 1px solid #ddd; }
+table#ba_accts td.pph 	{ width: 13%; border-right: 1px solid #ddd; }
+table#ba_accts td.email { width: 28%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+			
+/* Business Customer & Client Accounts */
+table#bc_accts td.ba 	{ width: 18%; border-right: 1px solid #ddd; }
+table#bc_accts td.fn 	{ width: 13%; border-right: 1px solid #ddd; }
+table#bc_accts td.ln 	{ width: 18%; border-right: 1px solid #ddd; }
+table#bc_accts td.title { width: 12%; border-right: 1px solid #ddd; }
+table#bc_accts td.pph 	{ width: 11%; border-right: 1px solid #ddd; }
+table#bc_accts td.email { width: 28%; border-right: none; }
+			/* width = 99% + checkbox = 1% */
+			
+
+/* Send Emails */
+.graybackground { background: #f7f7f7; color: #000; padding: 10px; margin: 0; border: #800 solid 1px; }
+
+#emailmessage{
+	line-height: 2em;
+}
+
+td.align_right { text-align: right; padding-left: 10px; padding-right: 10px; }
+td.align_left { text-align: left; padding-right: 10px; }
+
+tr:first-child .align_right, tr:first-child .align_left { padding-top: 10px; }
+tr:last-child .align_right, tr:last-child .align_left { padding-bottom: 10px; }
+
+
+/* Goal Module */	
+.goalbarometer{
+	width: 90%;
+	border-radius: none;
+	margin: 5% auto 0 auto;
+	padding: 0;
+}
+	.goalbarometer img { position: relative; z-index: 0; }
+	.goalbarometer .goalamt { position: relative; z-index: 10; margin: 1em 1em 0 0; }
+	.goalbarometer .acheived { position: relative; z-index: 10; margin: 2em 1em 0 0; }
+
+
+/* Goal Setter */
+input { display: inline-block; }
+span.start, span.end { width: 13.5em; }
+input.date { width: 7em; }
+input.time { width: 4.5em; }
+.goaltitle { width: 97.5%; }
+textarea { width: 98%; vertical-align: middle; }
+
+
+/* Goal Reports */
+.date { width: 6.75em; }
+span#buttons { margin: 0 1em 1em 0; }
+span#buttons .redbutton { margin: 0; }
+
+table.goalreport{ margin: 1em 0; font-size: .925em; border-right: 1px solid #ddd; border-left: 1px solid #ddd; }
+	/*table.goalreport tr:last-child { border: hidden; }*/
+	table.goalreport tr { padding: .2em 0; border-right: 1px solid #ddd; }
+	table.goalreport tr.even { background: #fff; }
+	table.goalreport tr.odd { background: #eee; }
+		table.goalreport th { background: #cc0000; color: #fff; border-right: 1px solid #fff; line-height: 1em; text-align: left; padding-left: .3em; }
+		table.goalreport td { text-align: left; line-height: 1em; padding: .6em .3em; }
+
+table.goalreport tr.total { background: #ccc; font-weight: bold; }
+
+table.goalreport .vp { border-right: 1px solid #ddd; }		
+table.goalreport .sc { border-right: 1px solid #ddd; }
+table.goalreport .rp { border-right: 1px solid #ddd; }
+table.goalreport .fr { border-right: 1px solid #ddd; }
+table.goalreport .gp { border-right: 1px solid #ddd; }
+table.goalreport .goal { border-right: 1px solid #ddd; }
+table.goalreport .actual { border-right: 1px solid #ddd; }
+table.goalreport .diff { border-right: 1px solid #ddd; }
+table.goalreport .items { border-right: 1px solid #ddd; }
+table.goalreport .whlsle {  }
+
+td.goal, td.actual, td.diff, td.items, td.whlsle { text-align: right; }
+td.total { text-align: right; }
+
+table.goalreport2 { margin: 1em 0; font-size: .925em; border-right: 1px solid #ddd; border-left: 1px solid #ddd; }
+	/*table.goalreport tr:last-child { border: hidden; }*/
+	table.goalreport2 tr { padding: .2em 0; border-right: 1px solid #ddd; }
+		table.goalreport2 th { background: #cc0000; color: #fff; border-right: 1px solid #fff; line-height: 1em; text-align: left; padding-left: .3em; }
+		table.goalreport2 td { text-align: left; line-height: 1em; padding: .6em .3em; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+		
+
+table.goalreport2 tr.total { background: #ccc; font-weight: bold; }
+	table.goalreport2 tr.total td { border-right: 1px solid #ccc; }
+
+table.goalreport2 td.order, table.goalreport2 th.order   { width: 7%; }
+table.goalreport2 td.date, table.goalreport2 th.date   	 { width: 10%; }
+table.goalreport2 td.buyer, table.goalreport2 th.buyer   { width: 15%; }
+table.goalreport2 td.email, table.goalreport2 th.email   { width: 25%; }
+table.goalreport2 td.product, table.goalreport2 th.product { width: 27%; }
+table.goalreport2 td.qty, table.goalreport2 th.qty       { width: 8%; }
+table.goalreport2 td.amt, table.goalreport2 th.amt    	 { width: 8%; }
+
+
+/** Income Calculator **/
+table.calculate_success		   { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+table.calculate_success td.frtype  { width: 20%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table.calculate_success td.funds   { width: 20%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	table.calculate_success td.funds input { width: 92%; }
+table.calculate_success td.percent { width: 20%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table.calculate_success td.price   { width: 20%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+table.calculate_success td.items   { width: 20%; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	table.calculate_success td.items input { width: 98%; text-align: center; }
+table.calculate_success tr.totalrow { border-top: 1px solid #ddd; color: #000; background: #ddd; }
+	table.calculate_success tr.totalrow label { font-weight: bold; font-size: 1.2em; }
+
+ul.buttonrow {  
+	width: 100%;
+	margin: 0 0 1% 0;
+	
+}
+	ul.buttonrow li {  
+		display: inline-block;
+		margin: 0 auto;
+	}
+	
+table.calculate_success_sc { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; }
+	table.calculate_success_sc td input { width: 95%; }
+
+table.calculate_success_sc th.category, table.calculate_success_sc td.category	   { width: 14%; }
+table.calculate_success_sc th.num, table.calculate_success_sc td.num   		   { width: 10%; } /* used 4 times */
+table.calculate_success_sc th.percent, table.calculate_success_sc td.percent	   { width: 7%; }
+	table.calculate_success_sc td.percent input { width: 71%; }
+table.calculate_success_sc th.items, table.calculate_success_sc td.items  	   { width: 8%; }
+table.calculate_success_sc th.price, table.calculate_success_sc td.price  	   { width: 5%; }
+table.calculate_success_sc th.numfr, table.calculate_success_sc td.numfr 	   { width: 7%; }
+table.calculate_success_sc th.commission, table.calculate_success_sc td.commission { width: 6%; }
+table.calculate_success_sc th.subtotal, table.calculate_success_sc td.subtotal 	   { width: 13%; }
+	
+table.calculate_success_sc td.category, table.calculate_success_sc td.num, table.calculate_success_sc td.percent, 
+table.calculate_success_sc td.items, table.calculate_success_sc td.price, table.calculate_success_sc td.numfr, 
+table.calculate_success_sc td.commission, table.calculate_success_sc td.subtotal { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+
+table.calculate_success_sc tr.totalrow { border-top: 1px solid #ddd; color: #000; background: #ddd; }
+	table.calculate_success_sc tr.totalrow label { font-weight: bold; font-size: 1.2em; }
+
+#leadInImg{
+	margin-left:60px;
+	float:left;
+}
+	
+/*******TABLES*******/
+#tableWrapper{
+	float:left;
+	position:relative;
+	top:0px;
+	margin: 0px;
+	padding: 0px;
+	}
+#tableWrapper h3{
+	padding: 20px 20px 10px 0;
+	}
+/*th, td {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 100%;
+	font-weight: normal;
+	}*/
+th { vertical-align: bottom; }
+
+.tableHeader{
+	clear: both;
+	width: 100%;
+}
+
+table.calculatorTable{
+	float:left;
+	clear: both;
+	margin:0;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+table.calculatorTable th{
+	background-color: #cc0000;
+	color: #fff;
+	font-weight: lighter;
+	padding: 5px 3px;
+	text-align: center;
+	border: none;
+}
+	
+table.calculatorTable th:first-child {
+	font-size: 14px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+table.calculatorTable td{
+	padding:0;
+	text-align:center;
+	background-color:#ddd;
+}
+
+table.calculatorTable td.fl { padding: 0 0 5px 0; }
+table.calculatorTable td:first-child { padding: 10px 5px; text-align: left; }
+table.calculatorTable td { padding: 10px 5px; }
+
+table.calculatorTable tr:last-child td:first-child { text-align: right; font-weight: bold; font-size: 14px; }
+
+#redBar2{
+	display: block;
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #cc0000;
+}
+
+#redBar2 p{
+	padding-top: 16px;
+	float:left;
+	color:#fff;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+	
+#redBar2 .gTotal {
+	font-size: 1.2em;
+	padding: 10px 0 10px 10px;
+	float:left;
+	color:#fff;
+	-moz-border-radius: 7px;
+    	-webkit-border-radius: 7px;
+    	border-radius: 7px;
+}
+	
+.gTotal1  {
+	font-size: 1.2em;
+	width: 20px;
+	padding: 10px 3px 10px 10px;
+	color:#fff;
+}
+input#grandTotal {
+	width: 35%;
+    	float: right;
+}
+#redBar3{
+	width:100%;
+	margin:0 ;
+	padding:5px 0px;
+	background-color:#cc0000;
+	-moz-border-radius: 7px;
+    	-webkit-border-radius: 7px;
+    	border-radius: 7px;
+}
+#redBar3 .gTotal {
+	font-size: 1.2em;
+	width: 520px;
+	padding: 10px 0 10px 10px;
+	float:right;
+	color:#fff;
+	-moz-border-radius: 7px;
+    	-webkit-border-radius: 7px;
+    	border-radius: 7px;
+}
+.gTotal3  {
+	font-size: 1.2em;
+	width: 20px;
+	position:absolute;
+	bottom: 5px;
+	left:415px;
+	padding: 10px 3px 10px 10px;
+	color:#fff;
+	}
+.grandTotal3 {
+	padding: 0px 5px 10px 0;
+	margin: -10px;
+	position:absolute;
+	bottom: 15px;
+	left:535px;
+	}	
+input[type=text]#red{
+	float:right;
+	margin:10px 15px 0 0;
+	}
+
+#save{
+	background-color: #cc0000;
+	font-color: #fff;
+	-moz-border-radius: 15px;
+    	-webkit-border-radius: 15px;
+    	border-radius: 15px;
+    	padding: 2px 10px;
+    	margin: 5px;
+}
+
+/*** JQuery Button ***/
+button{
+	border-radius: 8px;
+	background: #cc0000;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	font-size: 1em;
+	padding: 2px 5px;
+	border: solid 1px #666;
+	-moz-box-shadow: 2px 2px 3px #777;
+	-webkit-box-shadow: 2px 2px 3px #777;
+	box-shadow: 2px 2px 3px #777; 
+}
+
+/*** JQuery Toggle Buttons ***/
+button1{
+	border-radius: 10px;
+	background: #cc0000;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	font-size: 1em;
+	padding: 2px 5px;
+	border: solid 1px #666;
+	-moz-box-shadow: 2px 2px 3px #777;
+	-webkit-box-shadow: 2px 2px 3px #777;
+	box-shadow: 2px 2px 3px #777; 
+}
+button2{
+	border-radius: 10px;
+	background: #cc0000;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	font-size: 1em;
+	padding: 2px 5px;
+	border: solid 1px #666;
+	-moz-box-shadow: 2px 2px 3px #777;
+	-webkit-box-shadow: 2px 2px 3px #777;
+	box-shadow: 2px 2px 3px #777; 
+}
+
+
+
+/**
+ * @version	1.3
+ * @package	SimpleTabs
+ * @author    	Fotis Evangelou - http://nuevvo.com/labs/simpletabs
+ * @copyright	Copyright (c) 2009-2011 Fotis Evangelou / Nuevvo Webware Ltd. All rights reserved.
+ * @license	GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+ 
+div.simpleTabs { width: 100%; margin: 1% 0; }
+ul.simpleTabsNavigation { margin: 0; padding: 0; text-align: left; }
+ul.simpleTabsNavigation li { list-style: none; display: inline; margin: 0; padding:0; }
+ul.simpleTabsNavigation li a { 
+	padding: 0.35em 0.95em;  /** top/bottom padding affects 'div.simpleTabsContent' margin-top **/
+	font-size: 0.875em; 
+	text-decoration: none; 
+	border: 0.1em solid #ddd;
+	border-radius: 0.3em 0.3em 0 0;
+	color: #666; 
+	background: -webkit-linear-gradient(#ccc, #ddd); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#ccc, #ddd); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#ccc, #ddd); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#ccc, #ddd); /* Standard syntax */
+}
+ul.simpleTabsNavigation li a:hover { 
+	background: -webkit-linear-gradient(#eee, #ddd); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#eee, #ddd); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#eee, #ddd); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#eee, #ddd); /* Standard syntax */
+	color: #000; 
+}
+ul.simpleTabsNavigation li a.current { 
+	background: -webkit-linear-gradient(#fff, #eee); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#fff, #eee); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#fff, #eee); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#fff, #eee); /* Standard syntax */
+	color: #000; 
+	border-radius: 0.3em 0.3em 0 0; 
+}
+div.simpleTabsContent { 
+	border: 0.1em solid #ddd; 
+	padding: 0.8em; 
+	margin-top: 0.25em; /** adjust based on 'ul.simpleTabsNavigation li a' padding **/
+	display: none; 
+	background: -webkit-linear-gradient(#f7f7f7, #f9f9f9, #f7f7f7); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#f7f7f7, #f9f9f9, #f7f7f7); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#f7f7f7, #f9f9f9, #f7f7f7); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#f7f7f7, #f9f9f9, #f7f7f7); /* Standard syntax */
+}
+div.simpleTabsContent.currentTab { display:block; }
+
+
+/*** RESPONSIVE CODE ***/
+
+@media screen and (max-width: 1024px) {
+	
+	.groupcolumns {     
+		-webkit-column-count: 3;
+    		-moz-column-count: 3;
+    		column-count: 3;
+    	 }
+	.groupsection { margin-bottom: 2em; }
+	.groupsection2{ margin-bottom: 7em; }
+	
+	
+	.interim-form { width: 44%; }
+	
+	
+	/* Member Accounts */
+	table#fm_accts td.title	 { width: 3.5%; }
+	table#fm_accts td.fn 	 { width: 5%; }
+	table#fm_accts td.ln 	 { width: 6%; }
+	table#fm_accts td.role   { width: 6%; }
+	table#fm_accts td.pph 	 { width: 9%; }
+	table#fm_accts td.check	 { width: 1.5%; }
+	table#fm_accts td.email  { width: 18%; }
+	table#fm_accts td.sales  { width: 7%; }
+	table#fm_accts td.actions{ width: 44%; }
+				/* width = 99% + checkbox = 1% */
+	
+	/* FF Accounts */
+	table#ff_accts td.cn 	{ width: 9%; }
+	table#ff_accts td.title	{ width: 4%; }
+	table#ff_accts td.fn 	{ width: 7%; }
+	table#ff_accts td.ln 	{ width: 7%; }
+	table#ff_accts td.role  { width: 8%; }
+	table#ff_accts td.address  { width: 15%; }
+		.address #address1 { width: 70%; }
+		.address #address2 { width: 30%; }
+		.address #city     { width: 84%; }
+		.address #state    { width: 16%; }
+	table#ff_accts td.pph 	 { width: 9%; }
+	table#ff_accts td.email	 { width: 16%; }
+	table#ff_accts td.actions{ width: 25%; }
+	
+}

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#leftSideBar {
+	float:left; 
+	width:125px;
+	margin:0;
+	padding:0;
+	position:relative;
+	top:0px;
+	}
+ul#sideNav{
+	 width:150px;
+	 margin:0 0 0 0;
+	 padding:50px 0;
+	 float:left;
+	 overflow:hidden;
+	 z-index:21;
+	border-top:#999 solid thin;
+	border-bottom:#999 solid thin;
+	} 
+ul#sideNav li{
+	width:150px;
+	text-align:left;
+	padding:10px 0;
+	margin:0;
+	list-style-type:none;
+	line-height:1.2em;
+	display:block;
+	}
+ul#sideNav li a{
+	text-decoration:none;
+	
+	}
+ul#sideNav li a:hover{
+	text-decoration:underline;
+	}

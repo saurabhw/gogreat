@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*General Styles*/
+#content{
+	width:800px;
+	margin:0;
+	pading:0;
+	float:right;
+	position:relative;
+	top:0px;
+	
+	}
+h1.title{
+	margin:0 0 10px 0;
+	padding:0;
+	font-size:48px;
+	font-weight:normal;
+	color:#777;
+	position:relative;
+	top:-15px;
+	}
+ul.next{
+	margin:35px 35px 0 0;
+	float:right;
+	}
+ul.next li{
+	list-style-type:none;
+	float:left;
+	color:#cc0000;
+	}
+ul.next li a{
+	color:#cc0000;
+	text-decoration:none;
+	}
+ul.next li a:hover{
+	text-decoration:underline;
+	}
+/*leftContent*/
+#leftContent{
+	width:400px;
+	float:left;
+	margin:0;
+	padding:0;
+	}
+
+h2.subTitle{
+	color:#cc0000;
+	}
+p.intro{
+	color:#777;
+	margin:0;
+	padding:0;
+	}
+textarea{
+	margin:0 0 10px 0;
+	padding:0;
+	}
+h2.page{
+	padding:15px 60px 0 0;
+	float:right;
+	color:#cc0000;
+	}
+/*rightContent*/
+#rightContent{
+	width:350px;
+	margin:0;
+	padding:0;
+	padding:45px 0 0 25px;
+	float:left;
+	
+	}

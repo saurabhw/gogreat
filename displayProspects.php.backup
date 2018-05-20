@@ -1,0 +1,65 @@
+<?php include "redirect.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Look up a prospective Account</title>	
+		<link rel="stylesheet" type="text/css" href="greatmoods.css">
+		<style type="text/css">
+			#logout {
+				position: absolute;
+				right: 8px;
+			}
+		</style>
+		<script src="js/loadXMLDoc.js"></script> <!-- used for loadXMLDoc(page, id) function -->	
+		<script src="js/sendPost.js"></script> <!-- used for sendPost(name, value, page) to send hidden
+		post form to 'page' so that page can use the name-value pair -->
+		<?php include "connectTo.php"; ?>     <!-- used to connect to database sent in argument "connectTo($database)" -->
+	</head>
+
+	<body>
+		<button type="button" id="logout" onclick="location.href='logout.php'">Log out</button>
+		<?
+			$org = $_GET['org']; // type of organization sent by loadSubCat.js from index.html
+						//High School, Middle School, Church, Mosque, Synagogue etc.	
+			echo "<h1>$org Prospects</h1>";
+			
+			$table = "orgNames";
+			$link = connectTo("amoodf5_info_test");
+			if (mysqli_connect_errno()) { // error handeling if connection failed
+				printf("Connect failed: %s\n", mysqli_connect_error());
+				exit();
+			}
+		
+			$query = "SELECT orgName FROM $table WHERE orgType='$org'"; // construction mysql query
+			$result = mysqli_query($link, $query);
+			while ($row = mysqli_fetch_array($result) ) { // creates array from result of query of all organizations
+				$rows[] = $row;				// of type orgType	
+			}
+			if (sizeof($rows) >= 1) {  // if there are any rows to display
+				$count = 0;
+				$html = "";
+				foreach($rows as $row) { // for every row matched, display them in a <p>
+					// makes a separate id using varibale $count for every org displayed, then
+					// makes a div with a matching id to place orgs listed clubs from database 
+					$postName = "orgName";
+					$postValue = $row['orgName'];
+					$page = "addOrg.php";
+					$id = "div$count";
+					$orgName = $row['orgName'];
+					$orgName = str_replace(' ', '+', $orgName); // replaces spaces with + so it 
+					$ajaxPage = "getOrgInfo.php?name=" . $orgName; // can be sent to php page
+					$onclickEvent = "loadXMLDoc(\"$ajaxPage\", \"$id\")"; // sets onlick to ajax call to getOrgInfo.php
+											// with orgName sent in via GET
+					
+					$html = "<p onclick='$onclickEvent'>";
+					$html .= $row['orgName'] . "&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;";
+					$html .= "<button type='button'";
+					$html .= "onclick='sendPost(\"$postName\", \"$postValue\", \"$page\")'>Add club</button></p>";
+					$html .= "<div id='$id' class='subCat'></div>";	
+					echo $html;
+					$count .= 1;
+				}
+			}	
+		?>	
+	</body>
+</html>

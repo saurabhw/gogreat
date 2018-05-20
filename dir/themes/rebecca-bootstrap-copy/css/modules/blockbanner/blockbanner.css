@@ -1,0 +1,30 @@
+#header .banner a {
+  /*display: block;
+  max-width: 100%;*/
+  /*max-height: 105px;*/ }
+
+#header .banner a img {
+  	display: inline-block;
+  	position: relative;
+  	width: 80%;
+ 	float: right;
+ 	max-height: 135px;
+  	max-width: 1170px; 
+	z-index: 1;
+}
+
+header .row #header_logo {
+	display: inline-block;
+	position: absolute;
+	float: left;
+	width: 24%;
+	height: 135px;
+	margin: 1% 0.5% 0 0;
+	z-index: 10;
+}
+
+header .row #header_logo img {
+	display: inline-block;
+	float: left;
+	vertical-align: middle;
+}

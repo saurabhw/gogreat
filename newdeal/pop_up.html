@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Greatmoods</title>
+    <!-- Bootstrap core CSS -->    
+    <link href="css/bootstrap.css" rel="stylesheet">       
+
+    <!-- Custom styles for this template -->
+	<link href="css/doc.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" /> 
+
+</head>
+<body>
+<a id="read_more_btn" class="fancybox-media" href="http://www.youtube.com/watch?v=opj24KnzrWo"> &nbsp;</a>
+					
+<!-- Bootstrap core JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+<script type="text/javascript">
+// Use document ready event, or window load,
+// whichever one suits you the best...
+$(window).load(function(){
+    // Simulate click on trigger element
+    $('#read_more_btn').trigger('click');
+});
+		$(document).ready(function() {
+			
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+		});
+	</script>
+<script src="js/jPushMenu.js"></script>
+
+
+</body>
+</html>

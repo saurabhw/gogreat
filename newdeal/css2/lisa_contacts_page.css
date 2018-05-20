@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* CSS Document */
+
+div #mainContent {
+	margin: 0px;
+	margin-top: -55px;
+	padding: 0px;
+	padding-top: 16px;
+    	float: left;
+   	position: relative;
+    	width: 860px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+p { /* RESET THE STYLE FROM mainRecruitingStyles.css */
+	margin: 0px;
+	padding: 0px;
+}
+.bold {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+table {
+	width: 100%;
+	/*border: 1px solid black;*/
+}
+td, input[type=submit], .font75 { /* INPUT [SUBMIT] IS HERE OR ELSE SUBMIT BUTTON TEXT WILL SHRINK */
+	font-size: .75em;			  /* INPUT [BUTTON] IS NOT HERE BECAUSE THE TEXT INSIDE BUTTONS WITH TYPE="BUTTON" WILL SHRINK */
+}
+td.selectFont {
+	font-size: 1em;
+}
+.selectCreateEmailButtons {
+	border: thin solid #777;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 2px 2px 2px #777;
+	background-color: #C00;
+	color: white;
+	vertical-align: middle;
+	cursor: pointer;
+}
+div #table_show_current_contacts, #table_add_new_contacts {
+	background-color: #eee;
+	padding: 20px 10px 20px 10px;
+}
+.textLeft {
+	text-align: left;
+}
+.red_text {
+	color: #C00;
+}
+.cursorDefault {
+	cursor: default;
+}
+
+
+
+/* START STYLE FOR VIEW / EDIT CURRENT CONTACTS SECTION - AFTER CLICKING THE UPDATE BUTTON... */
+
+#loadingMessage, #loadingEmail {
+	z-index: 2;
+	background: white;
+	color: black;
+	left: 45%; /* needed to somewhat center the div */
+	padding: 10px;
+	position: fixed; /* must stay fixed to keep the box tight! */
+	display: none;
+	-moz-border-radius: 6px 6px 6px 6px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	border-radius: 6px 6px 6px 6px;
+}
+#loadingOver, #loadingEmailOver {
+	z-index: 1;
+	background: black;
+	width: 100%; /* needed to create the black background */
+	height: 100%; /* needed to create the black background */
+	top: 0; /* pulls the black background all the way to the top */
+	left: 0; /* pulls the black background all the way to the left */
+	position: fixed; /* must stay fixed to turn the black background on! */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	display: none;
+}
+
+/* STYLE SPECIFICALLY FOR [BUTTON] FOR UPDATING AND DELETING CONTACT OR ELSE TEXT WILL SHRINK */
+td input[type=submit].edit_contact {
+	font-size: 1em;
+}
+
+/* END STYLE FOR VIEW / EDIT CURRENT CONTACTS SECTION - AFTER CLICKING THE UPDATE BUTTON... */
+
+
+
+/* START STYLE FOR ADD NEW CONTACTS SECTION - NESTED TABLE FOR FIRST AND LAST NAME COLUMNS ONLY */
+
+.font135 {
+	text-align: left;
+	font-size: 1.35em;
+}
+.margin-left-3 {
+	width: 217px;
+	margin-left: -3px;
+}
+
+/* END STYLE FOR ADD NEW CONTACTS SECTION - NESTED TABLE FOR FIRST AND LAST NAME COLUMNS ONLY */
+
+
+
+/* START STYLING FOR EMAIL SECTION LEFT SIDE */
+
+div #websiteEmailButton { /* USED FOR THE "SEND WEBSITE INFORMATION" BUTTON */
+	background-color: white;
+	color: black;
+}
+
+div #multiple_email, #personal_email { /* USED FOR THE OTHER TWO SELECT BUTTON INFORMATION */
+	display: none;
+}
+
+div #table_email_section_left_side {
+	width: 66%;
+	float: left;
+	padding: 0px 10px 20px 10px;
+}
+div .subject_and_message {
+	padding: 5px 0px 0px 5px;
+	background-color: #eee;
+}
+@-moz-document url-prefix() {  /* for Firefox only */
+	div .sub_mes2 { padding: 5px 0px 4px 5px; } /* this fixes the padding to look nice */
+}
+.subject_message_line { /* this is just the width of the first table data */
+	width: 10%;
+}
+.message_align_top { /* this fixes the "Message:" to look nice */
+	padding-top: 4px;
+	vertical-align: top;
+}
+.message_box { /* this is just the width of the second table data for [subject] & [message]  */
+	width: 90%;
+}
+.message_box_input { /* this is the width of the actual input fields for [subject] & [message] */
+	width: 98%;
+}
+@-moz-document url-prefix() { /* this is the width of the input field [message] for FireFox only */
+	.message_box_firefox_only { width: 99%; }
+}
+
+/* END STYLING FOR EMAIL SECTION LEFT SIDE */
+
+
+
+/* START STYLING FOR EMAIL SECTION RIGHT SIDE */
+
+div #table_email_section_right_side {
+	width: 28%;
+	float: right;
+	background-color: #eee;
+	padding: 20px 10px 20px 10px;
+}
+.lineHeight {
+	line-height: 30px;
+}
+.align_left {
+	width: 55%;
+}
+.align_right {
+	width: 45%;
+	text-align: right;
+}
+
+/* END STYLING FOR EMAIL SECTION RIGHT SIDE */

@@ -1,0 +1,476 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, ul, li, h1, h2, h3, h5, h6, p, div, img{
+	margin:0; padding: 0; border: 0;
+	}
+img.spacebelow{
+	padding-bottom: 20px;
+	}
+body{
+	font: 100%/1.4 Arial, Helvetica, sans-serif;/*Sets base size*/
+/*	position: relative;
+	width: 1024px;*/
+	}
+h1,h2,h3,h4,h5,h6,p,ul,label,input{
+	font-family: Arial, Helvetica, sans-serif;
+/*	vertical-align: middle;
+*/	}
+
+/*****LAYOUT*****/
+#container{
+	width:1024px;
+	margin:0 auto;
+	padding:0;
+	height:100%;
+/*	overflow:hidden;
+	background-color: #999;*/
+	}
+#content{
+	margin:0;
+	padding:0;
+	float:left;
+	position:relative;
+	width:838px;
+	top:-40px;
+/*	background-color: yellow;
+*/}
+#headerTop{
+	background: no-repeat;
+	background-position:right top;
+	width:1024px;
+	height:130px;
+	padding:0;
+	margin:0;
+	position:relative;
+	z-index:3;
+	}
+#column1{
+	left: 0;
+	width:404px;
+	float: left;
+/*	background-color: #9FF*/
+	}
+#column2{
+	left: 50%;
+	width:404px;
+	margin-left:30px;
+	float:left;
+/*	background-color: #CFF
+*/	}
+.mainWide{
+	clear:both;
+	width: 100%
+	float:left;
+	overflow:hidden;
+	border-top: thick solid #ccc;
+	padding-top: 15px;
+	}
+/*.mainWideLast{
+	clear:both;
+	width: 100%
+	float:left;
+	overflow:hidden;
+	border-top: thick solid #ccc;
+	border-bottom: thick solid #ccc;
+	}*/
+.col1{
+	left: 0;
+	width:404px;
+	float: left;
+	}
+.col2{
+	left: 50%;
+	width:404px;
+	margin-left:30px;
+	float:left;
+	}
+
+
+/*Recruitment Pages*/
+h1 {
+	font:normal 2.9em/0% Arial, Helvetica, sans-serif;
+	color:#666;
+	padding-bottom: .5em;
+	}
+h2 {
+	font:normal 2.5em/0% Arial, Helvetica, sans-serif;
+	color: #666;
+	padding-bottom: .5em;
+	}
+h3 {
+	font:normal 1.5em/120% Arial, Helvetica, sans-serif;
+	color: #cc0000;
+	padding-top: .25em;
+	padding-bottom: .9em;
+	}
+h4 {
+	font:normal 1.25em/120% Arial, Helvetica, sans-serif;
+	color: #FFF;
+	text-align: center;
+	}
+h5 {
+	font:normal 1.25em/120% Arial, Helvetica, sans-serif;
+	color: #000;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	}
+h6 {
+	font:normal 1.05em/120% Arial, Helvetica, sans-serif;
+	color: #000;
+	padding: 16px 12px 0 12px;
+	}
+p {
+	font:normal 1em/130% Arial, Helvetica, sans-serif;
+	padding-bottom: 1.0em;
+	}
+em {padding: 0
+}
+
+/*****LIST & LINKS*****/
+a:link {
+	color:#414958;
+	text-decoration: underline; 
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+
+
+#content ul {
+	list-style:disc;
+	padding: 0 0 0 20px;
+	}
+#content ul li {
+	font:1em/130% Arial, Helvetica, sans-serif;
+	color: #000000;
+	padding: 0 0 10px 0;
+	}
+#content a:link, #content a:visited {
+	color: #0000ff;
+	text-decoration:none;
+}
+#content a:hover, #content a:active, a:focus{
+	color: #cc0000;
+	text-decoration:none;
+}
+
+#listReposition ul{
+list-style:disc;
+	padding: 0 0 0 210px;
+	}
+#listReposition ul li {
+	font:1em/130% Arial, Helvetica, sans-serif;
+	color: #000000;
+	padding: 0 0 10px 0px;
+	}
+
+
+#pcaption {
+	font:italic 0.9em/130% Arial, Helvetica, sans-serif;
+	padding-top: 0;
+	padding-bottom: 1.8em;
+	}
+#redtxt {
+	color:#cc0000;
+	}
+#leadBox{
+	width:100%;
+	padding: .5em 0 0 0;
+	}
+#leadBox #infoText{
+	width:100%;
+	background-color:#ccc;
+	float:left;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+    -webkit-border-top-left-radius: 7px;
+    -webkit-border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+	}
+#redBar1{
+	width:100%;
+	margin:0;
+	padding:5px 0px;
+	background-color:#cc0000;
+	-moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+	-moz-box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	-webkit-box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	box-shadow: 0px 3px 2px hsla(0,0%,0%,.3);
+	}
+#redBar1 h3{
+	color:#fff;
+	text-align: center;
+	padding: 8px;
+	}
+/*#redBar1 p{
+	padding:0 20px 0 20px;
+	color:#fff;
+	text-align:center;
+	}*/
+
+#boxText{
+	padding: 10px 12px 0px 12px;
+	}
+#infoText{
+	width:100%;
+	background-color:#777;
+	margin-left: 0px;
+}
+#infoText ul{
+	list-style:disc;
+	padding: 16px 12px 16px 30px;
+	}
+#infoText ul li{
+	color: #000;
+	}
+#infoText ul a, ul a:visited {
+	color: #0000ff;
+	text-decoration:none;
+	}
+#infoText ul a:hover, ul a:active, ul a:focus{
+	color: #cc0000;
+	text-decoration:none;
+	}
+#extraSpace{
+	clear: both;
+	background-color: white;
+	height: 1em;
+}
+/*To top align column with h5 header to p text*/
+h5.alignToTop {
+	margin-top: -0.5em;
+}
+
+/******Images******/
+.imgLeft{
+	float: left;
+	padding-bottom: .5em;
+	padding-right: 10px;
+	}
+.imgRight{
+	float: right;
+	padding-bottom: .5em;
+	padding-left: 10px;
+	}	
+#photoSmallRt{
+	width: 160px;
+	height: 150px;
+	text-align: center;
+	float: right;
+	margin: 10px 0px 20px 0;
+	}
+.col2 img {
+	padding-top: 1em;}
+/*.col2Img{
+	float: left;
+	padding: 10px 10px .5em 0;
+	margin-top: 20px;
+	}*/
+#basket1Left{
+	float: left;
+	margin-left: -20px;
+	padding-bottom: .5em;
+	padding-right: 10px;
+	}
+#basket2Left{
+	float: left;
+	margin-left: -20px;
+	padding-bottom: .5em;
+	padding-right: 10px;
+	}	
+/*Placeholders for photos, video, etc.
+*/
+#placeholder{
+	background-color:#999;
+	height: 220px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	}
+#placeholderSmall{
+	background-color:#999;
+	height: 150px;
+	width: 44%;
+	text-align: center;
+	float: left;
+	margin: 0 20px 20px 0;
+	}
+#placeholderSmallRt{
+	background-color:#999;
+	width: 160px;
+	height: 150px;
+	text-align: center;
+	float: right;
+	margin: 10px 0px 20px 0;
+	}
+#placeholderBob{
+	background-color:#999;
+	width: 170px;
+	height: 220px;
+	margin: 0px 20px 20px 0; 
+	text-align: center;
+	float: left;
+	}	
+#placeholderRight{
+	background-color:#999;
+	height: 200px;
+	width: 430px;
+	text-align: center;
+	margin:0 0 20px 20px;
+	float: right;
+	}
+	
+/* ~~ Miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the .container) if the .footer is removed or taken out of the .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}	
+			
+/*NOT NEEDED HERE:*/
+
+/*#leadInImg{
+	margin-left:60px;
+	float:left;
+	}
+#redBar2{
+	width:860px;
+	float:right;
+	margin:0;
+	padding:5px 0px;
+	background-color:#cc0000;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	}
+#redBar2 ul{
+	width:870px;
+	margin:0 auto;
+	padding:0px 0 0px 10px;
+	
+	}
+#redBar2 ul li{
+	width:70px;
+	height:37px;
+	float:left;
+	margin:0 0 0 3px;
+	padding:2px 10px;
+	display:inline;
+	font-size:12px;
+	line-height:12px;
+	color:#fff;
+	font-weight:lighter;
+	text-align:left;
+	border-right:thin solid #fff;
+	}
+#redBar2 ul li:last-child{
+	border:0;
+	}
+#infoTextTableWrapper{
+	float:right;
+	width:860px;
+	position:relative;
+	top:-60px;
+	}
+#infoTextTableWrapper h3{
+	margin:5px;
+	}
+table#example1{
+	float:right;
+	
+	margin:0;
+	border-radius:5px;
+	}
+
+table#example2{
+	width:550px;
+	float:right;
+	padding:10px;
+	border-radius:5px;
+	}
+table#example2 th{
+	background-color:#cc0000;
+	color:#fff;
+	font-weight:lighter;
+	padding:3px 3px 3px 3px;
+	}
+table#example2 td{
+	padding:0 0px;
+	text-align:center;
+	background-color:#ccc;
+	border:thin solid #ccc
+	}
+table, tr, td, th {
+ 
+}
+table#example1 th{
+	background-color:#cc0000;
+	color:#fff;
+	font-weight:lighter;
+	padding:3px 3px 5px 5px;
+	
+	}
+table#example1 th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+table#example1 td{
+	padding:0 0px;
+	text-align:center;
+	background-color:#ccc;
+	border:thin solid #ccc
+	}
+table#example1 td:first-child, table#example1 td:last-child{padding: 10px;}
+table#example1 td:first-child, table#example1 td:last-child{border-radius: 5px;}
+
+#redBar2{
+	width:860px;
+	margin:25px 0 50px 0 ;
+	padding:5px 0px;
+	background-color:#cc0000;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	}
+#redBar2 p{
+	margin-left:10px;
+	float:left;
+	color:#fff;
+	}
+input[type=text]#red{
+	float:right;
+	margin:10px 15px 0 0;
+	}#content ul li {
+	list-style-type: disc;
+}
+*/

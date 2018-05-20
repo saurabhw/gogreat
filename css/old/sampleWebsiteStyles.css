@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#headerMain{
+	width: 1024px;
+	height: 154px;
+	padding: 0;
+	margin: 0;
+	}
+
+#content{
+		width:800px;
+		margin:0 0 50px 0;
+		padding:50px 0px 50px 25px;
+		float:right;
+		}
+p{
+	font-size:14px;
+	}
+#leftSideContent{
+	width:400px;
+	margin:0;
+	padding:0;
+	float:left;
+	}
+h2.frTitle{
+	color:#cc0000;
+	}
+h3.reasonsTitle{
+	color:#cc0000;
+	}
+ul.reasons li{
+	font-size:14px;
+	list-style-type:disc;
+	}
+
+#rightSideContent{
+	width:400px;
+	margin:0;
+	padding:0;
+	float:left;
+	}
+#rightSideContent img{
+	margin-bottom:5px;
+	float:right;
+	}

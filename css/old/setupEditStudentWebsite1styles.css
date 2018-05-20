@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* CSS Document */
+
+img#basket1{
+	float:right;
+	
+	}
+h2{
+	line-height:22px;
+	}
+form#setupWebsite1{width:800px;}
+
+form#setupWebsite1 input[type=text]{
+	border:thin solid #777;
+	-moz-box-shadow: 3px 3px 3px #aaa;
+	-webkit-box-shadow: 3px 3px 5px #aaa;
+	box-shadow: 3px 3px 5px #aaa;
+}
+form#setupWebsite1 label { float:left; margin: 0 20px 0 0;padding-top:5px; }
+form#setupWebsite1 span { display: block; margin: 0 0 3px; font-size: 16px; font-weight: bold; }
+form#setupWebsite1 input { border: 1px solid #000; padding: 5px;margin:0px 0 0 0; }
+
+form#setupWebsite1 input#fName{width:150px;margin:0 0 0 0;}
+form#setupWebsite1 input#lName{width:150px;}
+form#setupWebsite1 input#schoolName{width:300px;}
+form#setupWebsite1 input#schoolAddress{width:300px;}
+form#setupWebsite1 input#schoolCity{width:150px;}
+form#setupWebsite1 input#schoolState{width:50px;}
+form#setupWebsite1 input#schoolZip{width:50px;}
+
+h4{margin:0;padding:0;}
+#setupWebsite1 h2#contact{margin:0; padding:0;}
+#setupWebsite1 h2#school{width:300px;margin:0;padding:50px 0 0 0;}

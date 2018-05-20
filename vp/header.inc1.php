@@ -1,0 +1,1061 @@
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/global_styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/allforms_styles.css">
+	
+	
+	<script src="../js/simpletabs_1.3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+	<link href="../jquery-ui-1.10.3/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link href="../jquery-ui-1.10.3/ui/jquery.multiselect.css" media="screen" rel="stylesheet" type="text/css">
+	
+	
+	<script src="../jquery-ui-1.10.3/ui/jquery.multiselect.js"></script>
+	
+	<!-- Optional plugins -->
+	<script src="../CSS-Tricks-AnythingSlider/js/jquery.easing.1.2.js"></script>
+	<script src="../CSS-Tricks-AnythingSlider/js/swfobject.js"></script>
+	
+	<!-- Anything Slider -->
+	<link rel="stylesheet" href="../CSS-Tricks-AnythingSlider/css/anythingslider.css">
+	<script src="../CSS-Tricks-AnythingSlider/js/jquery.anythingslider.js"></script>
+	
+	<!-- Add the stylesheet(s) you are going to use here. -->
+	<link rel="stylesheet" href="../CSS-Tricks-AnythingSlider/css/theme-cs-portfolio.css">
+	
+	<!-- AnythingSlider optional extensions -->
+	<script src="../CSS-Tricks-AnythingSlider/js/jquery.anythingslider.fx.js"></script>
+	<script src="../CSS-Tricks-AnythingSlider/js/jquery.anythingslider.video.js"></script>
+	
+        <script src="../js/jquery.maskedinput.min.js" type="text/javascript"></script>
+	<script>
+	jQuery(function($){
+        $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
+        $("#phone").mask("999-999-9999");
+        $("#tin").mask("99-9999999");
+        $("#ssn").mask("999-99-9999");
+        $("#ftin1").mask("99-9999999");
+        $("#ssn1").mask("999-99-9999");
+});
+	</script>
+	
+	<script>
+		var slideIndex = 0;
+		carousel();
+		
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mainSlides");
+		    for (i = 0; i < x.length; i++) {
+		      x[i].style.display = "none";
+		    }
+		    slideIndex++;
+		    if (slideIndex > x.length) {slideIndex = 1}
+		    x[slideIndex-1].style.display = "block";
+		    setTimeout(carousel, 2000);
+		}
+	</script>
+	<script>
+        $( function() {
+        $( "#accordion" ).accordion({
+         header: "h4",
+         heightStyle: "Content",
+         collapsible: true,
+         active: 0,
+         autoHeight: true   
+    });
+  } );
+  </script>
+  <script type="text/javascript">
+
+  function checkForm(form)
+  {
+ 
+
+    if(form.pass1.value != "" && form.pass1.value == form.pass2.value) {
+      if(form.pass1.value.length < 6) {
+        //alert("Error: Password must contain at least six characters!");
+        document.getElementById("error").innerHTML = "Error: Password must contain at least six characters!";
+        form.pass1.focus();
+        return false;
+      }
+      if(form.pass1.value == form.email.value) {
+        //alert("Error: Password must be different from Username!");
+        document.getElementById("error").innerHTML = "Error: Password must be different from email address!";
+        form.pass1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.pass1.value)) {
+        //alert("Error: password must contain at least one number (0-9)!");
+        document.getElementById("error").innerHTML = "Error: password must contain at least one number (0-9)!";
+        form.pass1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.pass1.value)) {
+        //alert("Error: password must contain at least one lowercase letter (a-z)!");
+        document.getElementById("error").innerHTML = "Error: password must contain at least one lowercase letter (a-z)!";
+        form.pass1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.pass1.value)) {
+        //alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        document.getElementById("error").innerHTML = "Error: password must contain at least one uppercase letter (A-Z)!";
+        form.pass1.focus();
+        return false;
+      }
+    } else {
+      //alert("Error: Please check that you've entered and confirmed your password!");
+      document.getElementById("error").innerHTML = "Error: Please check that you've entered and confirmed your password!";
+      form.pass1.focus();
+      return false;
+    }
+
+    //alert("You entered a valid password: " + form.pass1.value);
+    return true;
+  }
+
+</script>
+ <script>
+        function myToggle() {
+        var x = document.getElementById('example1');
+        var y = document.getElementById('example2');
+        if (x.style.display === 'none') {
+        x.style.display = 'block'; 
+        y.style.display = 'none';
+        } else {
+          x.style.display = 'none';
+        }
+       }
+       </script>
+       <script>
+        function myToggle2() {
+        var x = document.getElementById('example2');
+        var y = document.getElementById('example1');
+        if (x.style.display === 'none') {
+        x.style.display = 'block'; 
+        y.style.display = 'none';
+        } else {
+          x.style.display = 'none';
+        }
+       }
+       </script>
+  <script>
+  function checkPass()
+{
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match!"
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+    }
+}  
+  </script>
+  <script>
+	function atleast_onecheckbox(e) {
+	var other = document.getElementById("clubs1");
+	var gen = document.getElementById("general1");
+	var ath = document.getElementById("athletics1");
+	var error = document.getElementById("error");
+        if ($("input[type=checkbox]:checked").length === 0) {
+        if(myForm.clubs1.value == "" && myForm.general1.value == "" && myForm.athletics1.value == "")
+        {  
+         
+             e.preventDefault();
+             document.getElementById("error").innerHTML="You must select a checkbox or fill in club name.";
+             return false;
+        }
+       }
+       //return true; 
+      }
+      </script>
+      <script>
+	function atleast_onecheckbox2(e) 
+	{
+	var other = document.getElementById("clubs1").value;
+	var gen = document.getElementById("general1").value;
+	var ath = document.getElementById("athletics1").value;
+         if ($("input[type=checkbox]:checked").length === 0 ) 
+         {
+            if (other === "" && gen === "" && ath === "")
+            {
+              e.preventDefault();
+              alert('You must select a checkbox or fill in club name.');
+              return false;
+            }
+         }
+        } 
+       </script>
+       <script>
+	function allInputs(e) 
+	{
+	var other = document.getElementById("clubs1").value;
+	var gen = document.getElementById("general1").value;
+	var ath = document.getElementById("athletics1").value;
+         if ($("input[type=checkbox]:checked").length === 0 ) 
+         {
+            if (other === "" && gen === "" && ath === "")
+            {
+              e.preventDefault();
+              alert('You must select a checkbox or fill in club name.');
+              return false;
+            }
+         }
+        } 
+       </script>
+	<script type="text/javascript">
+    $(function () {
+        $("#submit").click(function () {
+            var le = $("#leader");
+            var ty = $("#logdropdown1");
+            if (le.val() == "") {
+                //If the "Please Select" option is selected display error.
+                alert("Please select a Sender!");
+                document.getElementById("leader").focus();
+                document.getElementById("leader").style.border="3px solid red";
+                return false;
+            }
+            if (ty.val() == "") {
+                //If the "Please Select" option is selected display error.
+                alert("Please select an email type!");
+                document.getElementById("logdropdown1").focus();
+                document.getElementById("logdropdown1").style.border="3px solid red";
+                return false;
+            }
+            return true;
+        });
+    });
+</script>
+        
+        <script> //select-deselect all recipients in emails
+		function setCheckboxes1(act) {
+		  var e = document.getElementsByClassName('leaders');
+		  var elts_cnt  = (typeof(e.length) != 'undefined') ? e.length : 0;
+		  if (!elts_cnt) {
+		    return;
+		  }
+		  for (var i = 0; i < elts_cnt; i++) {
+		    e[i].checked = (act == 1 || act == 0) ? act : (e[i].checked ? 0 : 1);
+		  }
+		}
+		function setCheckboxes2(act) {
+		  var e = document.getElementsByClassName('members');
+		  var elts_cnt  = (typeof(e.length) != 'undefined') ? e.length : 0;
+		  if (!elts_cnt) {
+		    return;
+		  }
+		  for (var i = 0; i < elts_cnt; i++) {
+		    e[i].checked = (act == 1 || act == 0) ? act : (e[i].checked ? 0 : 1);
+		  }
+		}
+		function setCheckboxes3(act) {
+		  var e = document.getElementsByClassName('contacts');
+		  var elts_cnt  = (typeof(e.length) != 'undefined') ? e.length : 0;
+		  if (!elts_cnt) {
+		    return;
+		  }
+		  for (var i = 0; i < elts_cnt; i++) {
+		    e[i].checked = (act == 1 || act == 0) ? act : (e[i].checked ? 0 : 1);
+		  }
+		}
+	</script>
+	<script>
+	
+		function fetch_select2(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_reps.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("rpid").innerHTML=response; 
+		       			document.getElementById("groupid").innerHTML='';
+		       			document.getElementById("clubs").innerHTML='';  
+		     		}
+		   	});
+		  }
+		  
+		function fetch_select3(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_groups.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("groupid").innerHTML=response; 
+		     		}
+		   	});
+		  }
+		  
+		function fetch_select(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_members.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("memberid").innerHTML=response; 
+		     		}
+		   	});
+		  }
+		  function fetch_select4(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'displayCoordinator.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("cd").innerHTML=response; 
+		     		}
+		   	});
+		  }
+	</script>
+	<script>
+	function fetch_select5(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_contact_datax.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("memberContacts").innerHTML=response; 
+		     		}
+		   	});
+		  }
+		function fetch_select6(val) {
+		var group = document.getElementById("groupid").value;
+		   	$.ajax({
+		     		type: 'post',
+		      		url: 'getGroupSales.php',
+		     		data: {
+		       			get_option:val, get_option2:group
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("goalreport").innerHTML=response; 
+		     		}
+		   	});
+		   
+		}
+		function fetch_select7(val) {
+		var group = document.getElementById("groupid").value;
+		   	$.ajax({
+		     		type: 'post',
+		      		url: 'sortReport.php',
+		     		data: {
+		       			get_option:val, get_option2:group
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("goalreport").innerHTML=response; 
+		     		}
+		   	});
+		   
+		} 
+		function fetch_select8(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_groups2.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("groupid").innerHTML=response;
+		       			document.getElementById("clubs").innerHTML='';  
+		     		}
+		   	});
+		  }
+		  
+		  function fetch_select9(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetchEmails.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("recipients").innerHTML=response;
+		       			document.getElementById("memid").value=val;  
+		       			
+		     		}
+		   	});
+		}
+		  
+		function fetch_select10(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'getMemberSales.php',
+		     		data: {
+		       			get_option:val
+		       			
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("goalreport").innerHTML=response; 
+		       			
+		     		}
+		   	});
+		}
+		  function fetch_select11(val) {
+		var group = document.getElementById("memberid").value;
+		   	$.ajax({
+		     		type: 'post',
+		      		url: 'sortReport.php',
+		     		data: {
+		       			get_option:val, get_option2:group
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("goalreport").innerHTML=response; 
+		     		}
+		   	});
+		   
+		}
+		
+	
+	function fetch_select12(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_group.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("new_select").innerHTML=response; 
+		       			document.getElementById("new_select2").innerHTML='';
+		       			
+		     		}
+		   	}); 
+		   	}
+		   	</script>
+	 <script>
+	function fetch_select15(val) {
+		
+		   	$.ajax({
+		   	    // var option = $('input[type="radio"]:checked').val();
+		     		type: 'post',
+		     		url: 'fetch_orgs.php',
+		     		data: {
+		       			//"fundSelect":radio_button_value
+		       			 get_option : val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("selection").innerHTML=response;
+		       			
+		       			
+		     		}
+		   	}); 
+		   }    
+	 </script>
+	 <script>
+	 function fetch_select16(val) {
+		
+		       			document.getElementById("selection").innerHTML='';
+		       
+		   }    
+	 </script>
+	 <script>
+	 function fetch_select17(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_groups.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("groupid2").innerHTML=response;
+		       			
+		     		}
+		   	});
+		  }
+		  
+		  function fetch_select18(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetch_reps.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("rpid2").innerHTML=response; 
+		     		}
+		   	});
+		  }
+		  function fetch_select19(val) {
+		
+		   	$.ajax({
+		     		type: 'post',
+		     		url: 'fetchEmails3.php',
+		     		data: {
+		       			get_option:val
+		     		},
+		     		success: function (response) {
+		       			document.getElementById("recipients").innerHTML=response; 
+		       			
+		     		}
+		   	});
+		}
+		  </script>
+	<script type="text/javascript">
+        function ValidateRadios() {
+         var radios = document.getElementsByName('fundtype');
+
+         for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+        //alert("Selected Value = " + radios[i].value);
+        return true; // checked
+    }
+    //return false;
+    };
+
+    // not checked, show error
+    document.getElementById('ValidationError').innerHTML = 'Error! You must select one group.';
+    return false;
+     }
+</script>
+<script type="text/javascript">
+        function ValidateRadios2() {
+         var radios = document.getElementsByName('clubs[]')
+
+         for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+        //alert("Selected Value = " + radios[i].value);
+        return true; // checked
+    }
+    };
+
+    // not checked, show error
+    document.getElementById('ValidationError').innerHTML = 'Error! You must select one group.';
+    return false;
+     }
+</script>
+        
+    <!-- <script>
+  
+      // Form validation code will come here.
+      function validate()
+      {
+      
+         if( document.myForm.fname.value == "" )
+         {
+            alert( "Please provide your first name!" );
+            document.myForm.fname.focus() ;
+            return false;
+         }
+         
+          if( document.myForm.lname.value == "" )
+         {
+            alert( "Please provide your last name!" );
+            document.myForm.lname.focus() ;
+            return false;
+         }
+         
+          if( document.myForm.address1.value == "" )
+         {
+            alert( "Please enter your address" );
+            document.myForm.address1.focus() ;
+            return false;
+         }
+         if( document.myForm.city.value == "" )
+         {
+            alert( "Please enter your city" );
+            document.myForm.state.focus() ;
+            return false;
+         }
+         if( document.myForm.state.value == "" )
+         {
+            alert( "Please enter your state " );
+            document.myForm.state.focus() ;
+            return false;
+         }
+         if( document.myForm.zip.value == "" )
+         {
+            alert( "Please enter your zip code" );
+            document.myForm.zip.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.zip.value == "" ||
+         isNaN( document.myForm.zip.value ) ||
+         document.myForm.Zip.value.length != 5 )
+         {
+            alert( "Please provide a zip in the format #####." );
+            document.myForm.zip.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.Country.value == "-1" )
+         {
+            alert( "Please provide your country!" );
+            return false;
+         }
+         return( true );
+      }
+      
+      var checked=false;
+	var elements = document.getElementsByName("clubs[]");
+	for(var i=0; i < elements.length; i++){
+		if(elements[i].checked) {
+			checked = true;
+		}
+	}
+	if (!checked) {
+		alert('You Must Select At Least One Club Type');
+		return false;
+	}
+	//return checked;
+  
+</script>--> 
+<script>
+      function validate()
+      {
+         var pass = document.getElementsById("password");
+         var cpass = document.getElementsById("cpassword");
+         if( cpass !=== pass )
+         {
+            alert( "password!" );
+            e.preventDefault();
+            document.myForm.password.focus();
+            document.myForm.cpassword.focus() ;
+            return false;
+         }
+     }
+</script>
+<script>
+		var LHtotal;
+		var AHtotal;
+		var LMtotal;
+		var AMtotal;
+		var schoolTotal;
+		var churchTotal;
+		var grandTotal1;
+		function calculateSchool(orgType) {
+		        //large high schools
+		        var num = Number(document.getElementById("LHnum").value);
+			var fund = Number(document.getElementById("LHfund").value);
+			var people = Number(document.getElementById("LHpeople").value);
+			var percent = (Number(document.getElementById("LHpercent").value))/100;
+			var active = people * percent;
+			active = Number(active);
+			//document.getElementById("LHactive").innerHTML = active;
+			var baskets = Number(document.getElementById("LHbaskets").value);
+			var numPerYear = Number(document.getElementById("LHnumPerYear").value);
+			var price = 26.00;
+			var commission = 0.005;
+			var total1 = fund * active * baskets * numPerYear * price * commission * num;
+			var result1 = format(total1,2);
+			grandTotal1 = result1;
+			schoolTotal = result1;
+			document.getElementById("LHtotal").innerHTML = result1;
+			document.getElementById("schoolTotal").innerHTML = schoolTotal;
+			document.getElementById("grandTotal").value = grandTotal1;
+			
+			//average high schools
+			var num2 = Number(document.getElementById("AHnum").value);
+			var fund2 = Number(document.getElementById("AHfund").value);
+			var people2 = Number(document.getElementById("AHpeople").value);
+			var percent2 = (Number(document.getElementById("AHpercent").value))/100;
+			var active2 = people2 * percent2;
+			active2 = Number(active2);
+			//document.getElementById("AHactive").innerHTML = active2;
+			var baskets2 = Number(document.getElementById("AHbaskets").value);
+			var numPerYear2 = Number(document.getElementById("AHnumPerYear").value);
+			var total2 = fund2 * active2 * baskets2 * numPerYear2 * price * commission * num2;
+			var result2 =  format(total2,2);
+			document.getElementById("AHtotal").innerHTML = result2;
+			grandTotal1 += result2;
+			schoolTotal += result2;
+			schoolTotal = format(schoolTotal,2);
+			document.getElementById("schoolTotal").innerHTML = schoolTotal;
+			document.getElementById("grandTotal").value = grandTotal1;
+			
+			//large middle schools
+			var num3 = Number(document.getElementById("LMnum").value);
+			var fund = Number(document.getElementById("LMfund").value);
+			var fund3 = Number(document.getElementById("LMfund").value);
+			var people3 = Number(document.getElementById("LMpeople").value);
+			var percent3 = (Number(document.getElementById("LMpercent").value))/100;
+			var active3 = people3 * percent3;
+			active3 = Number(active3);
+			//document.getElementById("LMactive").innerHTML = active3;
+			var baskets3 = Number(document.getElementById("LMbaskets").value);
+			var numPerYear3 = Number(document.getElementById("LMnumPerYear").value);
+			var total3 = fund3 * active3 * baskets3 * numPerYear3 * price * commission * num3;
+			var result3 =  format(total3,2);
+			document.getElementById("LMtotal").innerHTML = result3;
+			grandTotal1 += result3;
+			schoolTotal += result3;
+			schoolTotal = format(schoolTotal,2);
+			document.getElementById("schoolTotal").innerHTML = schoolTotal;
+			document.getElementById("grandTotal").value = grandTotal1;
+			
+			//average middle schools
+			var num4 = Number(document.getElementById("AMnum").value);
+			var fund4 = Number(document.getElementById("AMfund").value);
+			var people4 = Number(document.getElementById("AMpeople").value);
+			var percent4 = (Number(document.getElementById("AMpercent").value))/100;
+			var active4 = people4 * percent4;
+			active4 = Number(active4);
+			//document.getElementById("AMactive").innerHTML = active4;
+			var baskets4 = Number(document.getElementById("AMbaskets").value);
+			var numPerYear4 = Number(document.getElementById("AMnumPerYear").value);
+			var total4 = fund4 * active4 * baskets4 * numPerYear4 * price * commission * num4;
+			var result4 =  format(total4,2);
+			document.getElementById("AMtotal").innerHTML = result4;
+			grandTotal1 += result4;
+			schoolTotal += result4;
+			document.getElementById("schoolTotal").innerHTML = schoolTotal;
+			document.getElementById("grandTotal").value = grandTotal1;
+			
+			//elementary schools
+			var num7 = Number(document.getElementById("Enum").value);
+			var fund7 = Number(document.getElementById("Efund").value);
+			var people7 = Number(document.getElementById("Epeople").value);
+			var percent7 = (Number(document.getElementById("Epercent").value))/100;
+			var active7 = people7 * percent7;
+			active7 = Number(active7);
+			//document.getElementById("Eactive").innerHTML = active7;
+			var baskets7 = Number(document.getElementById("Ebaskets").value);
+			var numPerYear7 = Number(document.getElementById("EnumPerYear").value);
+			var total7 = fund7 * active7 * baskets7 * numPerYear7 * price * commission * num7;
+			var result7 =  format(total7,2);
+			grandTotal1 += result7;
+			schoolTotal += result7;
+			document.getElementById("Etotal").innerHTML = result7;
+			document.getElementById("schoolTotal").innerHTML = schoolTotal;
+			document.getElementById("grandTotal").value = grandTotal1;
+			
+			
+			//large churches
+			var num5 = Number(document.getElementById("LCnum").value);
+			var fund5 = Number(document.getElementById("LCfund").value);
+			var people5 = Number(document.getElementById("LCpeople").value);
+			var percent5 = (Number(document.getElementById("LCpercent").value))/100;
+			var active5 = people5 * percent5;
+			active5 = Number(active5);
+			//document.getElementById("LCactive").innerHTML = active5;
+			var baskets5 = Number(document.getElementById("LCbaskets").value);
+			var numPerYear5 = Number(document.getElementById("LCnumPerYear").value);
+			var total5 = fund5 * active5* baskets5 * numPerYear5 * price * commission * num5;
+			var result5 =  format(total5,2);
+			document.getElementById("LCtotal").innerHTML = result5;
+			grandTotal1 += result5;
+			churchTotal = result5;
+			document.getElementById("churchTotal").innerHTML = churchTotal;
+			document.getElementById("grandTotal").value = grandTotal1;
+			
+			//average churches
+			var num6 = Number(document.getElementById("ACnum").value);
+			var fund6 = Number(document.getElementById("ACfund").value);
+			var people6 = Number(document.getElementById("ACpeople").value);
+			var percent6 = (Number(document.getElementById("ACpercent").value))/100;
+			var active6 = people6 * percent6;
+			active6 = Number(active6);
+			//document.getElementById("ACactive").innerHTML = active6;
+			var baskets6 = Number(document.getElementById("ACbaskets").value);
+			var numPerYear6 = Number(document.getElementById("ACnumPerYear").value);
+			var total6 = fund6 * active6 * baskets6 * numPerYear6 * price * commission * num6;
+			var result6 =  format(total6,2);
+			document.getElementById("ACtotal").innerHTML = result6;
+			grandTotal1 += result6;
+			churchTotal += result6;
+			document.getElementById("churchTotal").innerHTML = churchTotal;
+			document.getElementById("grandTotal").value = grandTotal1;
+			
+			
+			
+			//organizations
+			var num8 = Number(document.getElementById("Onum").value);
+			var fund8 = Number(document.getElementById("Ofund").value);
+			var people8 = Number(document.getElementById("Opeople").value);
+			var percent8 = (Number(document.getElementById("Opercent").value))/100;
+			var active8 = people8 * percent8;
+			active8 = Number(active8);
+			//document.getElementById("Oactive").innerHTML = active8;
+			var baskets8 = Number(document.getElementById("Obaskets").value);
+			var numPerYear8 = Number(document.getElementById("OnumPerYear").value);
+			var total8 = fund8 * active8 * baskets8 * numPerYear8 * price * commission * num8;
+			var result8 =  format(total8,2);
+			//document.getElementById("Ototal").innerHTML = result6;
+			grandTotal1 += result8;
+			orgTotal = result8;
+			document.getElementById("Ototal").innerHTML = result8;
+			document.getElementById("orgTotal").innerHTML = orgTotal;
+			document.getElementById("grandTotal").value = grandTotal1;	
+		}
+		function format(num, dec) {
+	        	return Math.round(num*Math.pow(10,dec))/Math.pow(10,dec);
+	        }
+	</script>
+ 
+<script type="text/javascript">
+    
+    function CheckForm(){
+	var checked=false;
+	var elements = document.getElementsByName("clubs[]");
+	for(var i=0; i < elements.length; i++){
+		if(elements[i].checked) {
+			checked = true;
+		}
+	}
+	if (!checked) {
+		alert('You Must Select At Least One Club Type');
+		return false;
+	}
+	//return checked;
+}
+</script>
+<script>
+		function showUser(str) {
+			if (str=="") {
+	  			document.getElementById("txtHint").innerHTML="";
+	  			//var z = $(this).find(':selected').data('year');
+	  			return;
+	  		} 
+			if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  			xmlhttp=new XMLHttpRequest();
+	  		}
+			else {// code for IE6, IE5
+	  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  		}
+			xmlhttp.onreadystatechange=function() {
+	  			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+	    				document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+	    			}
+	  		}
+	  		var div = str.split(/,/);
+	  		var name = div[0];
+                        var z = div[1];
+			xmlhttp.open("GET","getclub.php?q="+name+"&z="+z,true);
+			xmlhttp.send();
+		}
+	</script>
+	
+	<script>
+		function showUser2(str) {
+			if (str=="") {
+	  			document.getElementById("clubs").innerHTML="";
+	  			//var z = $(this).find(':selected').data('year');
+	  			return;
+	  		} 
+			if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+	  			xmlhttp=new XMLHttpRequest();
+	  		}
+			else {// code for IE6, IE5
+	  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	  		}
+			xmlhttp.onreadystatechange=function() {
+	  			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+	    				document.getElementById("clubs").innerHTML=xmlhttp.responseText;
+	    			}
+	  		}
+	  		var div = str.split(/,/);
+	  		var name = div[0];
+                        var z = div[1];
+			xmlhttp.open("GET","getClub2.php?q="+name+"&z="+z,true);
+			xmlhttp.send();
+		}
+	</script>
+	
+	<script>
+		function toggle(source) {
+	  		checkboxes = document.getElementsByName('clubs[]');
+	  		for(var i in checkboxes)
+	  		checkboxes[i].checked = source.checked;
+	  		
+	  		checkboxes1 = document.getElementsByName('general[]');
+	  		for(var e in checkboxes1)
+	  		checkboxes1[e].checked = source.checked;
+	  		
+	  		checkboxes2 = document.getElementsByName('athletics[]');
+	  		for(var f in checkboxes2)
+	  		checkboxes2[f].checked = source.checked;
+	  		
+		}
+		
+		
+		$(document).ready(function(){
+	  		$('input[name="all"],input[name="clubs[]"]').bind('click', function(){
+	  			var status = $(this).is(':checked');
+	  			$('input[type="checkbox"]', $(this).parent('li')).attr('checked', status);
+	  		});
+	  		});
+	  		
+	  		
+	</script>
+	
+	<script>
+		function toggle2(source) {
+	  		checkboxes = document.getElementsByName('recipents[]');
+	  		for(var i in checkboxes)
+	  		checkboxes[i].checked = source.checked;
+		}
+		
+		$(document).ready(function(){
+	  		$('input[name="all"],input[name="recipents[]"]').bind('click', function(){
+	  			var status = $(this).is(':checked');
+	  			$('input[type="checkbox"]', $(this).parent('li')).attr('checked', status);
+	  		});
+	  	});
+	</script>
+	<!--google analytics-->
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88659906-1', 'auto');
+  ga('send', 'pageview');
+
+      </script>
+      <script>
+	function getParameterByName(name) {
+         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+             results = regex.exec(location.search);
+         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+       }
+        function checkCookies() {
+        //var sent = GetURLParameter('cs');
+        var sent = getParameterByName('cs');
+         if(sent == 1)
+         {
+           
+           document.getElementById("emessage").innerHTML="email sent";
+           $("#emessage").html("Email(s) Sent").fadeIn(5000).fadeOut(5000);
+
+         }
+        }
+       </script>
+       <script>
+		$(function(){
+		 $('#slider')
+		   .anythingSlider() // add any non-default options here
+		});
+	</script>
+	
+</head>
+
+<div id="headerMain">
+	<div id="bannerwrap"><a href="../index.php"><img id="logo2" src="../images/whitelogo.png" alt="GreatMoods Logo"></a>
+  	<img id="banner" src="../images/Header-new_Homepage-Collage.png" width="1024" height="150" alt="GreatMoods Photo Collage" /></div>
+  	
+	<div id="menuWrapper"> </div> <!--end menuWrapper-->
+
+      <ul class="nav">
+        <li><a href="#">Women</a>
+	        <?php include 'menu_women_home.php'; ?>
+	    </li>
+	    <li><a href="#">Accessories</a>
+	        <?php include 'menu_accessories_home.php'; ?>
+	    </li>
+	    <li><a href="#">Men</a>
+	        <?php include 'menu_men_home.php'; ?>
+	    </li>
+	    <li><a href="#">Juniors</a>
+	        <?php include 'menu_juniors_home.php'; ?>
+	    </li>
+	    <li><a href="#">Kids</a>
+	        <?php include 'menu_kids_home.php'; ?>
+	    </li>
+	    <li><a href="#">Fitness</a>
+	        <?php include 'menu_fitness_home.php'; ?>
+	    </li>
+	   <li><a href="#">Food</a>
+	        <?php include 'menu_food_home.php'; ?>
+	    </li>
+	    <li><a href="#">Entertainment</a>
+	        <?php include 'menu_entertainment_home.php'; ?>
+	    </li>
+	    <li><a href="#">Home</a>
+	        <?php include 'menu_housewares_home.php'; ?>
+	    </li>
+	    <li><a href="#">Health</a>
+	        <?php include 'menu_health_home.php'; ?>
+	    </li>
+	    <li><a href="#">Inspirational</a>
+	        <?php include 'menu_inspirational_home.php'; ?>
+	    </li>
+	    <li><a href="#">Holiday</a>
+	        <?php include 'menu_holiday_home.php'; ?>
+	    </li>
+	    <li class="rtborder"><a href="#">Business</a>
+	        <?php include 'menu_business_home.php'; ?>
+	    </li>
+	    
+	    <span class="examplesDropdown">Fundraiser Examples</span>
+	    <li class="examplesEdu"><a class="titleLink" href="#">Schools</a><?php include 'menu_education_examples.php'; ?></li>
+	    <li class="examplesOrg"><a class="titleLink" href="#">Organizations</a><?php include 'menu_organization_examples.php'; ?></li>
+	    
+	    <li class="lfborder"><a class="logintitle" href="#">My Account</a>
+    		<div class="newlogin">
+		        <?php
+		            if(!isset($_SESSION['LOGIN']) || $_SESSION['LOGIN'] == "FALSE") {
+		                echo '<form id="newlogin" action="../logInUser.php" method="post">';
+		                echo '<h5>sign in</h5>';
+		                echo '<input id="loginemail" type="text" name="email" value="" placeholder="email address">';
+		                echo '<br>
+		                      <input id="loginpassword" type="password" name="password" value="" placeholder="password">';
+		                echo '<br>';
+		                echo '<input id="redbutton" class="user" name="login" type="submit" value="sign in">';
+		                echo '</form>';
+		                
+		            } elseif($_SESSION['LOGIN'] == "TRUE") {
+		            	echo '<div class="loggedinMenu">';
+		                echo '<h5>my account</h5>';
+		                echo '<span><a href="../index.php">GreatMoods Homepage</a></span>';
+		         	echo '<span><a href="vpLogin.php">Login Home</a></span>';
+		         	echo '<span><a href="accounts.php" />Account Home</a></span>';
+		         	echo '<span><a href="../reset.php">Change My Password</a></span>';
+		         	echo '<br>';
+		         	include('../includes/logout.inc.php');
+		         	echo '</div>';
+		              }
+		         ?>
+      		</div> <!--end login-->
+    	</li>
+	  </ul>
+	</div><!--end mainNav-->

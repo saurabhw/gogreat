@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+
+form#addStudentMember{
+	display:inline;
+	}
+table#addStudentMember td{
+	border:0;
+	}
+#addNew1{
+	color:#fff;
+	background:#00F;	
+	}
+#addMember2Fr{
+	color:#fff;
+	background:#cc0000;
+	}
+#xcelTemp{
+	color:#fff;
+	background:#093;
+		}
+#uploadExcel{
+			
+			}
+input[type=submit]#editView{
+	color:#fff;
+	background:#093;
+	}
+input[type=submit]#delete{
+	color:#fff;
+	background:#cc0000;
+	}
+input[type=submit]#reset{
+	color:#fff;
+	background:#00f;
+	}
+#editExisting{
+	margin-top:25px;
+	}
+#editExisting td{
+	border:none;
+	}

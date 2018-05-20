@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Lazy Mofo Datagrid for PHP + MySQL - Free PHPGrid - PHP CRUD</title>
+	<meta name="keywords" content="PHPGrid Free, PHP DataGrid, Automatic CRUD, PHP CRUD" />
+	<meta name="description" content="Lazy Mofo is a SQL meta driven form and grid generator for PHP and MySQL." />
+    <style>
+        pre { color: blue; margin-left: 50px; }
+    </style>
+</head>
+<body>
+
+<img src='http://lazymofo.wdschools.com/images/logo_color.png' alt='logo' align='left' style='margin: 10px; clear: both;' />
+
+<a href='http://lazymofo.wdschools.com/code/2013-10-31/_demo.php' target='_blank' rel='nofollow'><b>live demo</b></a> | 
+<a href='http://lazymofo.wdschools.com/code/2013-10-31/lazy_mofo.zip' target='_blank'><b>download</b></a> | 
+<a href='http://lazymofo.wdschools.com/code/2013-10-31/_show_source.php' target='_blank'>class source</a> | 
+<a href='http://lazymofo.wdschools.com/code/2013-10-31/_show_source.php?demo=1' target='_blank'>demo source</a> | 
+<a href='http://lazymofo.wdschools.com/code/2013-10-31/changelog.txt' target='_blank'>changelog.txt</a> | 
+<a href='mailto&#58;&#108;&#97;zymo%66o%&#52;0w&#37;64s&#37;63h&#111;ol%73&#46;c&#111;%&#54;D'>email me</a>
+
+<br>current version: 2013-10-31
+<br>project home: <a href='http://lazymofo.wdschools.com/'>http://lazymofo.wdschools.com/</a>
+
+<h1 style='clear:left;'>What is Lazy Mofo (LM) PHP Datagrid?</h1>
+LM is a single PHP5 class for performing CRUD (create, read, update and delete) operations on a MySQL database table.
+<br />What can LM do?
+<ul>
+    <li>Render a grids and forms from a table name or SQL statement</li>
+    <li>Grid features include pagination, sorting, search, and inline editing</li>
+    <li>Define select, radio, and checkbox inputs with SQL statements</li>
+    <li>Upload documents, resize or crop images</li>
+    <li>Also perform CRUD operations on related child data while editing a record</li>
+    <li>LM can be used for reporting since grids can be generated from SQL statements</li>
+    <li>Grid uses both a count query and limit offset query for efficiency and low memory usage on large datasets</li>
+    <li>Lightweight; a single class</li>
+</ul>
+
+<h1>What's Bad About LM</h1>
+<ul>
+    <li>To identify date, numeric and textarea fields, Lazy Mofo uses PDO getColumnMeta which is an "experimental" function. This can be easily disabled by setting auto_populate_controls = false.</li>
+    <li>No built-in validation. Server-side validation can be added (see details below).</li>
+    <li>
+    Lazy Mofo parses and manipulates sql strings which has limitations and is hypothetically exploitable. LM is best suited for admin areas.<br> 
+    Complex sql queries may require an additional grid_sql_count query to count results. <br>
+    Depending on query, grid_run_search may need to be disabled, requiring search to be handled manually in the grid_sql statement.
+    </li>
+</ul>
+
+
+<h1>Requirements</h1>
+PHP 5 and MySQL 5<br />
+Magic Quotes should be turned off<br />
+PDO MySQL module installed for PHP<br />
+Database table must have a primary key identity<br />
+Multibyte Support / mbstring must be enabled
+
+
+
+<h1>Example 1 - Basic Usage</h1>
+<pre>
+
+// connect to database with pdo
+$dbh = new PDO("mysql:host=localhost;dbname=test;", 'user', 'password');
+
+// create LM object, pass in PDO connection
+$lm = new lazy_mofo($dbh); 
+
+// table name for updates, inserts and deletes
+$lm-&gt;table = 'market';
+
+// identity / primary key column name
+$lm-&gt;identity_name = 'market_id';
+
+// use the lm controller 
+$lm-&gt;run();
+</pre>
+
+
+<h1>Example 2 - Advanced Usage</h1>
+<pre>
+
+// connect to database with pdo
+$dbh = new PDO("mysql:host=localhost;dbname=test;", 'user', 'password');
+
+
+// create LM object, pass in PDO connection
+$lm = new lazy_mofo($dbh); 
+
+
+// table name for updates, inserts and deletes
+$lm-&gt;table = 'market';
+
+
+// identity / primary key column name
+$lm-&gt;identity_name = 'market_id';
+
+
+// make friendly names
+$lm-&gt;rename = array('country_id' =&gt; 'Country');
+
+
+// define input controls on the form
+$lm-&gt;form_input_control = array('photo' =&gt; '--image', 'is_active' =&gt; '--checkbox', 'country_id' =&gt; 'select country_id as val, country_name as opt from country; --select');
+
+
+// define editable input controls on the grid
+$lm-&gt;grid_input_control = array('is_active' =&gt; '--checkbox');
+
+
+// define output control on the grid; make email clickable and the photo a clickable link
+$lm-&gt;grid_output_control = array('contact_email' =&gt; '--email', 'photo' =&gt; '--image');
+
+
+// query for grid(). if the last column selected is the primary key identity, then the [edit] and [delete] links are displayed
+$lm-&gt;grid_sql = "select m.market_name, m.photo, m.contact_email, c.country_name, m.is_active, m.create_date, m.notes, m.market_id from market m left join country c on m.country_id = c.country_id order by m.market_id desc";
+
+
+// query for form()
+$lm-&gt;form_sql = 'select * from market where market_id = :market_id';
+$lm-&gt;form_sql_param = array(':market_id' =&gt; intval($_REQUEST['market_id']));
+
+
+// optional, display a related table under the edit record form
+$lm-&gt;child_title = 'Sub Markets';
+$lm-&gt;child_table = 'sub_market';
+$lm-&gt;child_identity_name = 'sub_market_id';
+$lm-&gt;child_parent_identity_name = 'market_id';
+$lm-&gt;child_input_control = array('photo' =&gt; '--image');
+
+
+// use the lm controller
+$lm-&gt;run();
+</pre>
+
+
+<h1>Redirect to Edit Screen After Update and Insert</h1>
+By default the user is redirected back to the edit form after making updates or inserting a record. <br>
+The user may be redirected to the opening grid screen with the following settings:
+
+<pre>
+$lm->return_to_edit_after_insert = false;
+$lm->return_to_edit_after_update = false; 
+</pre>
+
+
+<h1>Input and Output Controls - define how a field is rendered</h1>
+<p>
+Input and Output Controls are associative arrays used to define how to render input or output for a field. Inputs render form inputs like: text, checkbox, radio, etc. Outputs render: text, links, and images.
+</p>
+
+<ul>
+<li><b>Define Inputs on edit form()</b> &nbsp; $lm-&gt;form_input_control = array('field_name_1' =&gt; '[sql] --command','field_name_2' =&gt; '[sql] --command', ...);</li>
+<li><b>Define Inputs on grid()</b> &nbsp; $lm-&gt;grid_input_control = array('field_name_1' =&gt; '[sql] --command','field_name_2' =&gt; '[sql] --command', ...);</li>
+<li><b>Define Input on child_grid()</b> &nbsp; $lm-&gt;child_input_control = array('field_name_1' =&gt; '[sql] --command','field_name_2' =&gt; '[sql] --command', ...);</li>
+<li><b>Define Output on grid()</b> &nbsp; $lm-&gt;grid_output_control = array('field_name_1' =&gt; '--command','field_name_2' =&gt; '--command', ...);</li>
+</ul>
+
+
+<pre>
+Example: 
+$lm->form_input_control['client_pic'] = '--image';
+$lm->form_input_control['pdf'] = '--document';
+$lm->form_input_control['weird_data']  = '--my_user_function';
+$lm->form_input_control['will_you_attend'] = "select 1 as key, 'Yes' as val union select 0, 'No' union select 3, 'Maybe'; --radio";
+$lm->form_input_control['country_id'] = 'select country_id as val, country_name as opt from country; --select';
+</pre>
+<p>
+</p>
+
+<h2>Defining Custom Input and Output Controls</h2>
+User defined functions can be defined to render an input or output control. 
+
+<pre>
+Example: $lm->form_input_control['weird_data'] = '--my_user_function';
+
+function my_user_function($column_name, $value, $command, $called_from){
+
+    // $column_name: field name
+    // $value: field value  
+    // $command: full command as defined in the arrays: form_input_control, grid_input_control or grid_output_control
+    // $called_from: which function called this user function; form or grid
+
+    $val = htmlspecialchars($value, ENT_QUOTES, 'UTF-8')
+    return "&lt;input type='text' name='$column_name' value='$val' size='100' /&gt;";
+
+}
+</pre>
+
+
+<h2>Auto Populated Controls</h2>
+If auto_populate_controls = true, get_columns() will populate form_input_control and grid_output_control with --date, --datetime, --number and --textarea according to meta data.
+
+
+<h2>Generating Select, Checkbox, and Radio Inputs</h2>
+--select, --checkbox, --radio can be preceeded by a two column sql statement to popuplate the control. 
+Note: a space required after the sql statement, before the comment/command.
+
+<pre>Examples: 
+
+$lm-&gt;form_input_control['country_id'] = 'select country_id, country_name from country; --select';
+
+$lm-&gt;form_input_control['is_active'] = 
+"
+select 0, 'No' 
+union 
+select 1, 'Yes' 
+union 
+select 2, 'Maybe';
+--radio
+";
+</pre>
+
+
+
+<h2>Commands for Input Controls</h2>
+<ul>
+<li>form_input_control</li>
+<li>grid_input_control</li>
+<li>child_input_control</li>
+</ul>
+<table border='1'>
+<tr>
+    <th>Command</th>
+    <th>Description</th>
+</tr>
+<tr>
+	<td>--my_input_control</td><td>define your own function and return any HTML. example: function my_input_control($column_name, $value, $command, $called_from)</td>
+</tr>
+<tr>
+	<td>--text</td><td>text input (default)</td>
+</tr>
+<tr>
+	<td>--password</td><td>password input</td>
+</tr>
+<tr>
+	<td>--number</td><td>text input for number, when cast numbers are filtered through restricted_numeric_input pattern.</td>
+</tr>
+<tr>
+	<td>--date</td><td>text input, date is formatted according to public $date_format variable</td>
+</tr>
+<tr>
+	<td>--datetime</td><td>text input, date is formatted according to public $date_format variable</td>
+</tr>
+<tr>
+	<td>--textarea</td><td>textarea input</td>
+</tr>
+<tr>
+	<td>--readonly</td><td>plain text (not an input, just displays field)</td>
+</tr>
+<tr>
+	<td>--image</td><td>file input for uploading, if image exists then image is displayed with 'delete' checkbox.</td>
+</tr>
+<tr>
+	<td>--document</td><td>file input for uploading, if document exists then display link with 'delete' checkbox.</td>
+</tr>
+<tr>
+	<td>[sql] --select</td><td>select dropdown</td>
+</tr>
+<tr>
+	<td>[sql] --selectmultiple</td><td>select dropdown with multiple options. values are stored in a delimited list.</td>
+</tr>
+<tr>
+	<td>[sql] --checkbox</td><td>input checkboxes. values are stored in a delimited list.</td>
+</tr>
+<tr>
+	<td>[sql] --radio</td><td>radio buttons</td>
+</tr>
+</table>
+
+
+<h2>Commands for Output Control</h1>
+<ul>
+    <li>grid_output_control</li>
+</ul>
+<table border='1'>
+<tr>
+    <th>Command</th>
+    <th>Description</th>
+</tr>
+<tr>
+	<td>--my_output_control</td><td>define your own function and return any HTML. example: function my_output_control($column_name, $value, $command, $called_from)</td>
+</tr>
+<tr>
+	<td>--text</td><td>outputs plain text (default)</td>
+</tr>
+<tr>
+	<td>--date</td><td>outputs date according to date_out setting</td>
+</tr>
+<tr>
+	<td>--datetime</td><td>outputs datetime according to datetime_out setting</td>
+</tr>
+<tr>
+	<td>--email</td><td>outputs a clickable email link</td>
+</tr>
+<tr>
+	<td>--image</td><td>outputs a clickable link to the image, or display image if grid_show_images = true</td>
+</tr>
+<tr>
+	<td>--document</td><td>outputs a clickable link to the document</td>
+</tr>
+<tr>
+	<td>--html</td><td>outputs html without tags or formatting</td>
+</tr>
+</table>
+
+
+<h1>Customizing the Search Form</h1>
+<pre>
+Example:
+
+$lm->grid_show_search_box = false; // hide the default search box
+
+// use unique variable names. these are prefixed by '_' to conflicts
+$_new_search1 = htmlentities($_REQUEST['_new_search1'], ENT_QUOTES); 
+$_new_search2 = htmlentities($_REQUEST['_new_search2'], ENT_QUOTES);
+
+// display our own search form
+if($_REQUEST['mode'] == ''){
+    echo "
+    &lt;form action='$uri' method='post'&gt;
+    &lt;input type='text' name='_new_search1' value='$_new_search1'&gt;
+    &lt;input type='text' name='_new_search2' value='$_new_search2'&gt;
+    &lt;input type='hidden' name='_csrf' value='$_SESSION[_csrf]'&gt;
+    &lt;input type='Submit' value='Search'&gt;
+    &lt;/form&gt;
+    ";
+}
+
+$lm->query_string_list = "_new_search1,_new_search2"; // add variable names to querystring so search is perserved when paging, sorting, and editing.
+
+</pre>
+
+
+
+<h1>Customizing the Search Query</h1>
+LM alters the sql statement to inject search clause. To control how the search is performed, or if LM generated query is failing, a custom search query may be defined.
+<pre>
+Example: 
+
+$lm-&gt;grid_run_search = false; // disable automatic search
+
+$lm-&gt;grid_sql = "
+    select m.market_name, m.photo, m.contact_email, c.country_name, m.is_active, m.create_date, m.notes, m.market_id 
+    from   market m 
+    left   
+    join   country c 
+    on     m.country_id = c.country_id 
+    where  coalesce(m.market_name, '') like :_new_search1
+    and    coalesce(c.country_name, '') like :_new_search2
+    order  by m.market_id desc
+";
+
+$lm-&gt;grid_sql_param[':_new_search1'] = '%' . $_REQUEST['_new_search1'] . '%';
+$lm-&gt;grid_sql_param[':_new_search2'] = '%' . $_REQUEST['_new_search2'] . '%';
+</pre>
+
+
+<h1>Counting Records</h1>
+For efficiency when working on large datasets, LM runs a sql count() statement to find the number of results. <br>
+Depending on the complexity of the grid_sql statement, LM may fail to create working count() query. In this case, you must define the grid_sql_count.
+
+<pre>
+$lm-&gt;grid_sql = "select * from market where coalesce(market_name, '') like :market_name";
+$lm-&gt;grid_sql_param = array(':market_name' =&gt; '%' . $_REQUEST['_search'] . '%')
+
+// only requied if LM fails to generate a working count statement
+// make this query identical to grid_sql but with a count() 
+$lm-&gt;grid_sql_count = "select count(1) from market where market_name like :market_name"; 
+</pre>
+
+
+
+
+<h1>Server-Side Validation</h1>
+Server-side validation can be added by defining user function names in:<br>
+<ul>
+<li>on_insert_user_function</li>
+<li>on_update_user_function</li>
+<li>on_delete_user_function</li>
+<li>on_update_grid_user_function</li>
+<li>on_update_child_grid_user_function</li>
+</ul>
+
+<pre>
+Example: 
+
+$lm->on_insert_user_function = 'my_validate';
+$lm->on_update_user_function = 'my_validate';
+
+function my_validate(){
+
+    if($_POST['email'] == '')
+        return 'Email is Required';
+}
+</pre>
+
+<h1>Cross Site Request Forgery - csrf</h1>
+<p>This script does not validate csrf itself but has a placeholder csrf variable from loaded from $_SESSION['_csrf']. To protect from csrf, place your nonce token in $_SESSION['_csrf'] and validate the csrf on POST commands.</p>
+
+
+<h1>Non US date formats</h1>
+<pre>
+Example: 
+
+$lm->date_out = 'd/m/Y';
+$lm->datetime_out = 'd/m/Y h:i A';
+$lm->date_out_mysql = '%d/%M/%Y';
+</pre>
+
+
+
+<h1>Export to CSV</h1>
+<p>Output buffering (ob_start) must be used at the beginning of the script for the export to CSV feature to function properly.</p>
+
+<h1>More Features and Settings</h1>
+<p>View class source code to see all the available settings and features.</p>
+
+
+<a name='bottom'></a>
+
+
+<br /><br /><br />
+<b>Project Sponsored By:</b>
+<div>
+    <div align='center'>
+        <a href="http://www.animationschoolsindex.com/" class="footer">Computer Animation Schools</a> | 
+        <a href="http://www.gdschools.com/" class="footer">Graphic Design Degrees</a> | 
+        <a href="http://www.wdschools.com/" class="footer">Web Design School</a> | 
+        <a href="http://www.legaldegrees.net/" class="footer">Criminal Justice and Paralegal Schools</a>
+    </div>
+    <div align='center'>
+        <a href="http://www.accountantschools.com/" class="footer">Accounting Schools</a> |
+        <a href="http://www.massagetherapistschools.com/" class="footer">Massage Therapy Schools</a> |
+        <a href="http://www.pharmtechschools.com/" class="footer">Pharmacy Tech Schools</a> |
+        <a href="http://www.themechanicschools.com/" class="footer">Auto Mechanic Schools</a>
+    </div>
+    <div align='center'>
+        <a href="http://www.dhschools.com/" class="footer">Dental Hygienist Schools</a> |
+        <a href="http://www.medicaltrainingindex.com/" class="footer">Medical Tech Training</a> |
+        <a href="http://www.phlebotomyschools.net/" class="footer">Phlebotomy Schools</a> |
+        <a href="http://www.technicianschoolsu.com/" class="footer">Technician Schools</a>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
